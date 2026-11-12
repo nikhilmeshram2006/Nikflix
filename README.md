@@ -48,7 +48,7 @@ It runs entirely on vanilla HTML, CSS, and JavaScript (no frameworks or build st
 - **Local Profile & My List** saved in `localStorage` so your watchlist and watch progress stay on your device.
 
 ---
-## user should know 
+## Important Notes
 
 - **Multi-server playback**
 Supports multiple external streaming sources. Availability and playback quality depend on the selected provider, and some sources may occasionally be unavailable.
@@ -92,6 +92,6 @@ Then open `http://localhost:8080` in your browser (or double-click `start-nikfli
 
 ---
 
-## About the developer 
+## About the Developer 
 
 **Nikhil Meshram** ([@nikhilmeshram2006](https://github.com/nikhilmeshram2006))
