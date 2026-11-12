@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Categories – Anime, Horror, Romance, Tragedy &amp; More – Nikflix</title>
+  <meta name="description" content="Browse Nikflix by category: anime, horror, romance, tragedy, action, comedy, sci-fi, thriller, crime, drama, fantasy and family movies and series.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="categories">
+  <main id="main" class="container page">
+    <h1 class="page-title" id="page-title">Categories</h1>
+    <p class="page-sub" id="page-sub">Pick a mood. From heart-pounding horror to tear-jerking tragedy.</p>
+    <div class="chips" id="type-chips" role="group" aria-label="Filter by type"></div>
+    <div class="chips" id="cat-chips" role="group" aria-label="Filter by category"></div>
+    <div id="content"></div>
+    <noscript><div class="notice error">Please enable JavaScript to browse categories.</div></noscript>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  (function () {
+    const { $, esc, CATALOG, CATEGORIES, CAT_MAP, inCat, gridHTML, emptyHTML, noticeHTML, params } = SF;
+    const p = params();
+    const cat = p.get("cat");
+    const type = ["movie", "series"].includes(p.get("type")) ? p.get("type") : "all";
+    const content = $("#content");
+
+    const link = (c, t) => {
+      const q = new URLSearchParams();
+      if (c) q.set("cat", c);
+      if (t && t !== "all") q.set("type", t);
+      return "categories.html" + (q.toString() ? "?" + q : "");
+    };
+
+    // Type chips (All / Movies / Series)
+    $("#type-chips").innerHTML = [["all", "All"], ["movie", "Movies"], ["series", "Series"]]
+      .map(([k, label]) => `<a class="chip${k === type ? " active" : ""}" href="${link(cat, k)}"${k === type ? ' aria-current="true"' : ""}>${label}</a>`).join("");
+
+    const pool = type === "all" ? CATALOG : CATALOG.filter((x) => x.type === type);
+    const typeWord = type === "movie" ? "Movies" : type === "series" ? "Series" : "Titles";
+
+    if (cat && !CAT_MAP[cat]) {
+      // Unknown category in URL -> helpful error
+      document.title = "Category not found – Nikflix";
+      $("#page-title").textContent = "Category not found";
+      $("#page-sub").textContent = "";
+      content.innerHTML = noticeHTML("error", `We couldn't find the category “${esc(cat)}”. <a href="categories.html" style="text-decoration:underline">See all categories</a>.`);
+      return;
+    }
+
+    if (!cat && type === "all") {
+      // Category tiles
+      $("#cat-chips").hidden = true;
+      content.innerHTML = `<div class="cat-grid">${CATEGORIES.map((c) => {
+        const items = inCat(c.key);
+        const cover = items[0];
+        return `<a class="cat-tile" href="${link(c.key)}" style="background:${c.grad}">
+          ${cover ? `<img class="cat-poster" src="${esc(cover.poster)}" alt="" width="64" height="96" loading="lazy">` : ""}
+          ${esc(c.name)}<small>${items.length} titles</small>
+        </a>`;
+      }).join("")}</div>`;
+      return;
+    }
+
+    // Category chips for filtering
+    $("#cat-chips").innerHTML = `<a class="chip${!cat ? " active" : ""}" href="${link(null, type)}">All genres</a>` +
+      CATEGORIES.map((c) => `<a class="chip${c.key === cat ? " active" : ""}" href="${link(c.key, type)}"${c.key === cat ? ' aria-current="true"' : ""}>${esc(c.name)}</a>`).join("");
+
+    const items = cat ? inCat(cat, pool) : pool;
+    const heading = cat ? `${CAT_MAP[cat].name} ${typeWord}` : typeWord === "Titles" ? "All Titles" : typeWord;
+    document.title = `${heading} – Nikflix`;
+    $("#page-title").textContent = heading;
+    $("#page-sub").textContent = `${items.length} ${items.length === 1 ? "title" : "titles"} to explore.`;
+    const meta = document.querySelector('meta[name="description"]');
+    meta.setAttribute("content", `Browse ${heading.toLowerCase()} on Nikflix – posters, ratings and details for every title.`);
+
+    content.innerHTML = items.length
+      ? gridHTML(items)
+      : emptyHTML(`No ${heading.toLowerCase()} yet`, `Try <a href="${link(cat, "all")}" style="text-decoration:underline">all types</a> or another category.`);
+  })();
+  </script>
+</body>
+</html>
+

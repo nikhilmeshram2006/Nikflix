@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Title Details – Nikflix</title>
+  <meta name="description" content="See the poster, synopsis, genres and trailer for this movie or series on Nikflix, and add it to your list.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="title">
+  <main id="main">
+    <div id="detail"><div class="container page"><div class="spinner" role="status" aria-label="Loading"></div></div></div>
+    <div class="container" id="episodes-wrap"></div>
+    <div class="container" id="more"></div>
+    <noscript><div class="container"><div class="notice error">Please enable JavaScript to view title details.</div></div></noscript>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  (async function () {
+    const { $, esc, ICONS, CATALOG, CAT_MAP, byId, params, MyList, History, toast, rowHTML, initRows, trailerUrl, watchUrl, noticeHTML } = SF;
+    const p = params();
+    const detail = $("#detail");
+    const metaDesc = document.querySelector('meta[name="description"]');
+
+    function notFound(msg) {
+      document.title = "Title not found – Nikflix";
+      detail.innerHTML = `<div class="container page">
+        <h1 class="page-title">Title not found</h1>
+        ${noticeHTML("error", esc(msg))}
+        <div class="hero-actions" style="margin-top:16px">
+          <a class="btn btn-red" href="index.html">${ICONS.home} Back to Home</a>
+          <a class="btn btn-ghost" href="search.html">${ICONS.search} Search titles</a>
+        </div></div>`;
+    }
+
+    let item = null;
+    if (p.get("id")) {
+      item = byId(p.get("id"));
+      if (!item) return notFound("Sorry, we couldn't find that movie or series. It may have been removed.");
+    } else if (/^\d+$/.test(p.get("tvmaze") || "")) {
+      // Live title from TVmaze (found through search)
+      const local = CATALOG.find((x) => x.tvmaze === +p.get("tvmaze"));
+      if (local) { location.replace("title.html?id=" + encodeURIComponent(local.id)); return; }
+      try {
+        const res = await fetch("https://api.tvmaze.com/shows/" + p.get("tvmaze"));
+        if (res.status === 404) return notFound("This series doesn't exist on TVmaze.");
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const s = await res.json();
+        item = {
+          id: "tvmaze-" + s.id, external: true, type: "series", title: s.name,
+          year: s.premiered ? +s.premiered.slice(0, 4) : null, rating: s.rating?.average || null,
+          genres: [], extGenres: s.genres || [],
+          desc: (s.summary || "No description available.").replace(/<[^>]+>/g, ""),
+          poster: s.image?.medium?.replace(/^http:/, "https:") || null, backdrop: null,
+        };
+      } catch {
+        return notFound("We couldn't load this series. Check your internet connection and try again.");
+      }
+    } else {
+      return notFound("No title was selected. Pick something from Home or Search.");
+    }
+
+    if (!item.external) History.add(item.id);
+    document.title = `${item.title}${item.year ? " (" + item.year + ")" : ""} – ${item.type === "movie" ? "Movie" : "Series"} – Nikflix`;
+    metaDesc.setAttribute("content", (item.desc || "").slice(0, 155));
+
+    const genreNames = item.external ? item.extGenres : item.genres;
+    const render = () => {
+      const inList = !item.external && MyList.has(item.id);
+      const bg = item.backdrop || item.poster;
+      detail.innerHTML = `
+        <section class="detail-hero">
+          ${bg ? `<div class="hero-bg ${item.backdrop ? "" : "blurred"}"><img src="${esc(bg)}" alt="" fetchpriority="high"></div>` : ""}
+          <div class="container">
+            <div class="detail">
+              <div class="detail-poster">${item.poster ? `<img src="${esc(item.poster)}" alt="${esc(item.title)} poster" width="342" height="513">` : `<span class="card-fallback">${esc(item.title)}</span>`}</div>
+              <div>
+                <span class="hero-badge"><b>N</b> ${item.type === "movie" ? "Film" : "Series"}</span>
+                <h1>${esc(item.title)}</h1>
+                <div class="meta-line">
+                  ${item.rating ? `<span class="match">★ ${item.rating}/10</span>` : ""}
+                  ${item.year ? `<span>${item.year}</span>` : ""}
+                  <span class="pill">${item.type === "movie" ? "Movie" : "TV Series"}</span>
+                </div>
+                <p class="desc">${esc(item.desc)}</p>
+                <div class="genre-links">
+                  ${item.external
+                    ? genreNames.map((g) => `<a class="chip" href="search.html?q=${encodeURIComponent(g)}">${esc(g)}</a>`).join("")
+                    : genreNames.map((g) => `<a class="chip" href="categories.html?cat=${g}">${esc(CAT_MAP[g]?.name || g)}</a>`).join("")}
+                </div>
+                <div class="hero-actions">
+                  <a class="btn btn-primary" href="${watchUrl(item)}">${ICONS.play} Watch Now</a>
+                  <a class="btn btn-secondary" href="${trailerUrl(item)}" target="_blank" rel="noopener noreferrer">Trailer ↗</a>
+                  ${item.external ? "" : `<button class="btn btn-secondary" type="button" id="list-btn" aria-pressed="${inList}">${inList ? ICONS.check + " In My List" : ICONS.plus + " My List"}</button>`}
+                  <button class="btn btn-secondary" type="button" id="share-btn">${ICONS.share} Share</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>`;
+
+      $("#list-btn")?.addEventListener("click", () => { MyList.toggle(item.id); render(); });
+      $("#share-btn").addEventListener("click", async () => {
+        const data = { title: item.title + " – Nikflix", text: `Check out ${item.title} on Nikflix`, url: location.href };
+        try {
+          if (navigator.share) { await navigator.share(data); toast("Thanks for sharing!", "success"); }
+          else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); toast("Link copied to clipboard", "success"); }
+          else throw new Error("unsupported");
+        } catch (e) {
+          if (e && e.name === "AbortError") return; // user cancelled the share sheet
+          toast("Couldn't share this link. Please copy it from the address bar.", "error");
+        }
+      });
+    };
+    render();
+
+    // Load seasons & episodes for series/anime from TVmaze
+    const tvmazeId = item.tvmaze || (item.external && /^\d+$/.test(p.get("tvmaze") || "") ? +p.get("tvmaze") : null);
+    if (item.type === "series" && tvmazeId) {
+      try {
+        const res = await fetch(`https://api.tvmaze.com/shows/${tvmazeId}/episodes`);
+        if (res.ok) {
+          const eps = await res.json();
+          if (eps.length) {
+            const seasons = Array.from(new Set(eps.map((e) => e.season || 1))).sort((a, b) => a - b);
+            let curSeason = seasons[0];
+            const wrap = $("#episodes-wrap");
+            wrap.innerHTML = `
+              <section class="section" aria-labelledby="ep-sec-title">
+                <div class="row-head">
+                  <h2 id="ep-sec-title">Episodes</h2>
+                  <div>
+                    <label class="sr-only" for="title-season-sel">Select season</label>
+                    <select id="title-season-sel" class="season-select">
+                      ${seasons.map((s) => `<option value="${s}">Season ${s} (${eps.filter((e) => (e.season || 1) === s).length} eps)</option>`).join("")}
+                    </select>
+                  </div>
+                </div>
+                <div id="title-ep-grid" class="ep-grid"></div>
+              </section>`;
+            const renderEps = () => {
+              const list = eps.filter((e) => (e.season || 1) === curSeason);
+              $("#title-ep-grid").innerHTML = list.map((ep, i) => {
+                const sNum = ep.season || 1;
+                const eNum = ep.number || i + 1;
+                const img = ep.image?.medium?.replace(/^http:/, "https:");
+                const sum = (ep.summary || "Watch this episode on Nikflix.").replace(/<[^>]+>/g, "").trim();
+                return `<a class="ep-card" href="${watchUrl(item, sNum, eNum)}">
+                  <div class="ep-thumb">
+                    ${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : `<span class="ep-num">E${eNum}</span>`}
+                    <span class="ep-play">${ICONS.play}</span>
+                  </div>
+                  <div class="ep-body">
+                    <div class="ep-head"><strong>${eNum}. ${esc(ep.name || "Episode " + eNum)}</strong>${ep.runtime ? `<span>${ep.runtime}m</span>` : ""}</div>
+                    <p>${esc(sum)}</p>
+                  </div>
+                </a>`;
+              }).join("");
+            };
+            $("#title-season-sel").addEventListener("change", (e) => { curSeason = Number(e.target.value); renderEps(); });
+            renderEps();
+          }
+        }
+      } catch {}
+    }
+
+    // More like this: titles sharing the most genres
+    if (!item.external) {
+      const similar = CATALOG.filter((x) => x.id !== item.id)
+        .map((x) => ({ x, n: x.genres.filter((g) => item.genres.includes(g)).length }))
+        .filter((o) => o.n > 0).sort((a, b) => b.n - a.n).slice(0, 18).map((o) => o.x);
+      $("#more").innerHTML = rowHTML("More Like This", similar, item.genres[0] ? `categories.html?cat=${item.genres[0]}` : null);
+      initRows($("#more"));
+    }
+  })();
+  </script>
+</body>
+</html>
+

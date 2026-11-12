@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nikflix – Watch Movies, Series &amp; Anime Online</title>
+  <meta name="description"
+    content="Nikflix is a Netflix-style streaming demo. Browse trending movies, TV series and anime, explore categories like horror, romance and tragedy, and build your own list.">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta property="og:title" content="Nikflix – Movies, Series &amp; Anime">
+  <meta property="og:description"
+    content="Browse trending movies, TV series and anime by category, search any title and build your list.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="home">
+  <main id="main">
+    <section class="hero" id="hero" aria-label="Featured title"></section>
+    <div class="container rows" id="rows"></div>
+    <noscript>
+      <div class="container">
+        <div class="notice error">Please enable JavaScript to browse Nikflix.</div>
+      </div>
+    </noscript>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    (function () {
+      const { $, esc, ICONS, CATALOG, CATEGORIES, MyList, History, byId, movies, series, inCat, rowHTML, initRows, trailerUrl, titleUrl, watchUrl } = SF;
+
+      /* ----- Hero: a random featured series with a backdrop ----- */
+      const featuredPool = CATALOG.filter((x) => x.backdrop);
+      const hero = $("#hero");
+      if (featuredPool.length) {
+        const f = featuredPool[Math.floor(Math.random() * featuredPool.length)];
+        const renderHero = () => {
+          const inList = MyList.has(f.id);
+          hero.innerHTML = `
+          <div class="hero-bg"><img src="${esc(f.backdrop)}" alt="" width="1280" height="720" fetchpriority="high"></div>
+          <div class="container"><div class="hero-content">
+            <span class="hero-badge"><b>N</b> ${f.type === "movie" ? "Film" : "Series"}</span>
+            <h1>${esc(f.title)}</h1>
+            <div class="meta-line">
+              ${f.rating ? `<span class="match">★ ${f.rating}/10</span>` : ""}
+              ${f.year ? `<span>${f.year}</span>` : ""}
+              <span class="pill">${f.genres.map((g) => SF.CAT_MAP[g]?.name || g).slice(0, 3).join(" · ")}</span>
+            </div>
+            <p>${esc(f.desc)}</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="${watchUrl(f)}">${ICONS.play} Watch Now</a>
+              <a class="btn btn-secondary" href="${titleUrl(f)}">${ICONS.info} More Info</a>
+              <button class="btn btn-secondary" type="button" id="hero-list" aria-pressed="${inList}">${inList ? ICONS.check : ICONS.plus} My List</button>
+            </div>
+          </div></div>`;
+          $("#hero-list").addEventListener("click", () => { MyList.toggle(f.id); renderHero(); });
+        };
+        renderHero();
+      } else {
+        hero.hidden = true;
+      }
+
+      /* ----- Rows ----- */
+      // Stable "trending" shuffle that changes once per day.
+      const seed = Number(new Date().toISOString().slice(0, 10).replace(/-/g, ""));
+      const seeded = (arr) => arr.map((x, i) => ({ x, k: Math.sin(seed + i * 99.7) })).sort((a, b) => a.k - b.k).map((o) => o.x);
+
+      const renderRows = () => {
+        const recent = History.ids().map(byId);
+        const myList = MyList.ids().map(byId);
+        const topRated = series().filter((x) => x.rating).sort((a, b) => b.rating - a.rating);
+        let html = "";
+        html += rowHTML("Continue Exploring", recent, null);
+        html += rowHTML("My List", myList, "profile.html#my-list");
+        html += rowHTML("Full-Length Direct Streams", CATALOG.filter((x) => x.stream), "search.html");
+        html += rowHTML("Trending Now", seeded(CATALOG).slice(0, 18), "search.html");
+        html += rowHTML("Popular Movies", movies().slice(0, 20), "categories.html?type=movie");
+        html += rowHTML("Binge-worthy Series", series().slice(0, 20), "categories.html?type=series");
+        html += rowHTML("Top Rated Series", topRated.slice(0, 15), "categories.html?type=series");
+        CATEGORIES.forEach((c) => { html += rowHTML(c.name, inCat(c.key), `categories.html?cat=${c.key}`); });
+        $("#rows").innerHTML = html || SF.emptyHTML("Nothing to show yet", "The catalog is empty. Please try again later.");
+        initRows($("#rows"));
+      };
+      renderRows();
+      document.addEventListener("mylist:change", renderRows);
+    })();
+  </script>
+</body>
+
+</html>

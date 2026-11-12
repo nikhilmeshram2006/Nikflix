@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Your Profile &amp; My List – Nikflix</title>
+  <meta name="description" content="Manage your Nikflix profile: change your name and avatar, set playback preferences, and see your saved list and recently viewed titles.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="profile">
+  <main id="main" class="container page">
+    <h1 class="page-title">Profile</h1>
+    <p class="page-sub">Your account, preferences and saved titles.</p>
+
+    <div class="profile-card" id="profile-card"></div>
+    <div class="stats" id="stats"></div>
+
+    <section class="section" id="my-list" aria-labelledby="my-list-title">
+      <div class="row-head">
+        <h2 id="my-list-title">My List</h2>
+        <button class="btn btn-ghost" type="button" id="clear-list" style="padding:6px 12px;font-size:.85rem">Clear list</button>
+      </div>
+      <div id="my-list-body"></div>
+    </section>
+
+    <section class="section" aria-labelledby="recent-title">
+      <div class="row-head">
+        <h2 id="recent-title">Recently Viewed</h2>
+        <button class="btn btn-ghost" type="button" id="clear-history" style="padding:6px 12px;font-size:.85rem">Clear history</button>
+      </div>
+      <div id="recent-body"></div>
+    </section>
+
+    <section class="section" aria-labelledby="edit-title">
+      <h2 id="edit-title">Edit Profile</h2>
+      <form class="form" id="profile-form" novalidate>
+        <div id="profile-msg"></div>
+        <div class="field" id="name-field">
+          <label for="name">Profile name</label>
+          <input id="name" name="name" type="text" maxlength="30" autocomplete="nickname" aria-describedby="name-error name-hint">
+          <div class="hint" id="name-hint">2–20 characters. Letters, numbers and spaces.</div>
+          <div class="field-error" id="name-error" role="alert"></div>
+        </div>
+        <fieldset class="field" style="border:0;padding:0;margin:0">
+          <legend style="font-weight:600;margin-bottom:6px">Avatar colour</legend>
+          <div class="avatar-choices" id="avatar-choices" role="radiogroup" aria-label="Avatar colour"></div>
+        </fieldset>
+        <div class="field">
+          <label for="maturity">Maturity rating</label>
+          <select id="maturity" name="maturity">
+            <option value="all">All maturity ratings</option>
+            <option value="teen">Teens and below (13+)</option>
+            <option value="kids">Kids only</option>
+          </select>
+        </div>
+        <div>
+          <div class="switch-row">
+            <span>Autoplay next episode<small>Automatically play the next episode in a series.</small></span>
+            <label class="switch"><input type="checkbox" id="autoplay" aria-label="Autoplay next episode"><span class="track"></span></label>
+          </div>
+          <div class="switch-row">
+            <span>Autoplay previews<small>Play previews while browsing.</small></span>
+            <label class="switch"><input type="checkbox" id="previews" aria-label="Autoplay previews"><span class="track"></span></label>
+          </div>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-red" type="submit">Save changes</button>
+          <button class="btn btn-ghost" type="button" id="reset">Reset profile</button>
+        </div>
+      </form>
+    </section>
+    <noscript><div class="notice error">Please enable JavaScript to manage your profile.</div></noscript>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  (function () {
+    const { $, $$, esc, AVATAR_COLORS, Profile, MyList, History, byId, gridHTML, emptyHTML, noticeHTML, toast, initial } = SF;
+    let profile = Profile.get();
+    let chosenColor = profile.color;
+
+    function renderCard() {
+      $("#profile-card").innerHTML = `
+        <div class="avatar-lg" style="background:${esc(profile.color)}">${esc(initial(profile.name))}</div>
+        <div><h2>${esc(profile.name)}</h2><p>Nikflix member · Preferences saved on this device</p></div>`;
+      $$(".avatar-mini").forEach((el) => { el.textContent = initial(profile.name); el.style.background = profile.color; });
+      const listCount = MyList.ids().length, histCount = History.ids().length;
+      const genres = new Set(MyList.ids().concat(History.ids()).flatMap((id) => byId(id).genres)).size;
+      $("#stats").innerHTML = `
+        <div class="stat"><b>${listCount}</b><span>In My List</span></div>
+        <div class="stat"><b>${histCount}</b><span>Viewed</span></div>
+        <div class="stat"><b>${genres}</b><span>Genres explored</span></div>`;
+    }
+
+    function renderLists() {
+      const list = MyList.ids().map(byId);
+      $("#my-list-body").innerHTML = list.length ? gridHTML(list)
+        : emptyHTML("Your list is empty", "Tap <b>+ My List</b> on any movie or series to save it here.", '<a class="btn btn-red" href="index.html" style="margin-top:8px">Browse titles</a>');
+      $("#clear-list").hidden = !list.length;
+      const recent = History.ids().map(byId);
+      $("#recent-body").innerHTML = recent.length ? gridHTML(recent)
+        : emptyHTML("Nothing viewed yet", "Titles you open will show up here.");
+      $("#clear-history").hidden = !recent.length;
+      renderCard();
+    }
+
+    function fillForm() {
+      $("#name").value = profile.name;
+      $("#maturity").value = profile.maturity;
+      $("#autoplay").checked = !!profile.autoplay;
+      $("#previews").checked = !!profile.previews;
+      chosenColor = profile.color;
+      $("#avatar-choices").innerHTML = AVATAR_COLORS.map((c, i) =>
+        `<button type="button" class="avatar-choice" role="radio" aria-checked="${c === chosenColor}" aria-label="Colour ${i + 1}" data-color="${c}" style="background:${c}">${esc(initial(profile.name))}</button>`).join("");
+    }
+
+    $("#avatar-choices").addEventListener("click", (e) => {
+      const b = e.target.closest(".avatar-choice");
+      if (!b) return;
+      chosenColor = b.dataset.color;
+      $$(".avatar-choice").forEach((x) => x.setAttribute("aria-checked", String(x === b)));
+    });
+
+    function validateName() {
+      const v = $("#name").value.trim();
+      let err = "";
+      if (!v) err = "Please enter a profile name.";
+      else if (v.length < 2) err = "Name must be at least 2 characters.";
+      else if (v.length > 20) err = "Name must be 20 characters or fewer.";
+      else if (!/^[\p{L}\p{N} ]+$/u.test(v)) err = "Use only letters, numbers and spaces.";
+      $("#name-field").classList.toggle("invalid", !!err);
+      $("#name").setAttribute("aria-invalid", String(!!err));
+      $("#name-error").textContent = err;
+      return !err;
+    }
+    $("#name").addEventListener("input", () => { if ($("#name-field").classList.contains("invalid")) validateName(); });
+
+    $("#profile-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const msg = $("#profile-msg");
+      if (!validateName()) {
+        msg.innerHTML = noticeHTML("error", "Please fix the highlighted field and try again.");
+        toast("Profile not saved — check the form for errors.", "error");
+        $("#name").focus();
+        return;
+      }
+      const next = { name: $("#name").value.trim(), color: chosenColor, maturity: $("#maturity").value, autoplay: $("#autoplay").checked, previews: $("#previews").checked };
+      if (!Profile.save(next)) { msg.innerHTML = noticeHTML("error", "We couldn't save your changes on this device."); return; }
+      profile = Profile.get();
+      msg.innerHTML = noticeHTML("success", "Your profile has been updated.");
+      toast("Profile saved", "success");
+      fillForm(); renderCard();
+    });
+
+    $("#reset").addEventListener("click", () => {
+      if (!confirm("Reset your profile name, avatar and preferences?")) return;
+      if (Profile.reset()) { profile = Profile.get(); fillForm(); renderCard(); $("#profile-msg").innerHTML = ""; toast("Profile reset to defaults", "success"); }
+    });
+    $("#clear-list").addEventListener("click", () => {
+      if (!confirm("Remove every title from My List?")) return;
+      if (MyList.clear()) { renderLists(); toast("My List cleared", "success"); }
+    });
+    $("#clear-history").addEventListener("click", () => {
+      if (History.clear()) { renderLists(); toast("Viewing history cleared", "success"); }
+    });
+
+    fillForm();
+    renderLists();
+  })();
+  </script>
+</body>
+</html>
+

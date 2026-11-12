@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Watch Now – Nikflix</title>
+  <meta name="description" content="Watch full-length movies, TV series and anime episodes directly inside the Nikflix theater video player with popup shield and multi-server streaming.">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="watch" class="watch-body">
+  <main id="main" class="watch-main">
+    <div id="watch-root">
+      <div class="spinner" role="status" aria-label="Loading player"></div>
+    </div>
+    <div class="container" id="watch-more"></div>
+    <noscript><div class="container"><div class="notice error">Please enable JavaScript to use the Nikflix video player.</div></div></noscript>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+  (async function () {
+    const { $, $$, esc, ICONS, CATALOG, CAT_MAP, byId, params, MyList, History, store, toast, rowHTML, initRows, titleUrl, noticeHTML } = SF;
+    const p = params();
+    const root = $("#watch-root");
+    const metaDesc = document.querySelector('meta[name="description"]');
+
+    // Block any stray window.open calls from embedded scripts
+    window.open = function () {
+      toast("Popup blocked by Nikflix Shield.", "info");
+      return null;
+    };
+
+    const P_ICONS = {
+      back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>',
+      pause: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/></svg>',
+      play: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12-7.5a1 1 0 0 0 0-1.72l-12-7.5A1 1 0 0 0 7 4.5Z"/></svg>',
+      rw10: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/><text x="12" y="15.2" text-anchor="middle" fill="currentColor" stroke="none" font-size="7.5" font-weight="700" font-family="sans-serif">10</text></svg>',
+      ff10: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/><text x="12" y="15.2" text-anchor="middle" fill="currentColor" stroke="none" font-size="7.5" font-weight="700" font-family="sans-serif">10</text></svg>',
+      vol: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>',
+      mute: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>',
+      season: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><polygon points="10 9 15 12 10 15 10 9" fill="currentColor"/></svg>',
+      server: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="7" rx="2"/><rect x="2" y="14" width="20" height="7" rx="2"/><circle cx="6" cy="6.5" r="1"/><circle cx="6" cy="17.5" r="1"/></svg>',
+      subs: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M7 15h4M13 15h4M7 11h2M11 11h6"/></svg>',
+      speed: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 14 16 10"/><path d="M3.3 17a10 10 0 1 1 17.4 0"/></svg>',
+      cast: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.85"/></svg>',
+      flag: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>',
+      nextEp: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 5v14l11-7L5 5zm12 0v14h2V5h-2z"/></svg>',
+      fs: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>',
+      pip: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><rect x="11" y="11" width="9" height="7" rx="1" fill="currentColor"/></svg>',
+      panel: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="15" y1="3" x2="15" y2="21"/></svg>',
+      shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
+      eq: '<svg viewBox="0 0 24 24" fill="#e50914" aria-hidden="true"><rect x="3" y="10" width="3" height="10" rx="1"/><rect x="8.5" y="4" width="3" height="16" rx="1"/><rect x="14" y="8" width="3" height="12" rx="1"/><rect x="19.5" y="13" width="3" height="7" rx="1"/></svg>',
+    };
+
+    const FALLBACK_STREAMS = [
+      "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    ];
+
+    function fmtTime(sec) {
+      if (!Number.isFinite(sec) || sec < 0) return "00:00";
+      sec = Math.floor(sec);
+      const h = Math.floor(sec / 3600);
+      const m = Math.floor((sec % 3600) / 60);
+      const s = String(sec % 60).padStart(2, "0");
+      return h > 0 ? `${h}:${String(m).padStart(2, "0")}:${s}` : `${String(m).padStart(2, "0")}:${s}`;
+    }
+
+    function showError(msg) {
+      document.title = "Unable to Play – Nikflix";
+      root.innerHTML = `<div class="container page">
+        <h1 class="page-title">Unable to load title</h1>
+        ${noticeHTML("error", esc(msg))}
+        <div class="hero-actions" style="margin-top:16px">
+          <a class="btn btn-red" href="index.html">${ICONS.home} Back to Home</a>
+          <a class="btn btn-ghost" href="search.html">${ICONS.search} Search titles</a>
+        </div></div>`;
+    }
+
+    /* ---------- 1. Resolve item ---------- */
+    let item = null;
+    let season = Math.max(1, parseInt(p.get("s") || "1", 10) || 1);
+    let episode = Math.max(1, parseInt(p.get("e") || "1", 10) || 1);
+
+    if (p.get("id")) {
+      item = byId(p.get("id"));
+      if (!item) return showError("Sorry, that movie or series couldn't be found in the catalog.");
+    } else if (/^\d+$/.test(p.get("tvmaze") || "")) {
+      const local = CATALOG.find((x) => x.tvmaze === +p.get("tvmaze"));
+      if (local) {
+        item = local;
+      } else {
+        try {
+          const res = await fetch("https://api.tvmaze.com/shows/" + p.get("tvmaze"));
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          const s = await res.json();
+          item = {
+            id: "tvmaze-" + s.id, tvmaze: s.id, external: true, type: "series", title: s.name,
+            year: s.premiered ? +s.premiered.slice(0, 4) : null, rating: s.rating?.average || null,
+            imdb: s.externals?.imdb || null, genres: [],
+            desc: (s.summary || "No description available.").replace(/<[^>]+>/g, ""),
+            poster: s.image?.medium?.replace(/^http:/, "https:") || null,
+          };
+        } catch {
+          return showError("Couldn't load series details from TVmaze.");
+        }
+      }
+    } else if (p.get("ia")) {
+      const iaId = p.get("ia");
+      try {
+        const res = await fetch("https://archive.org/metadata/" + encodeURIComponent(iaId));
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        const m = await res.json();
+        const md = m.metadata || {};
+        const mp4 = (m.files || []).find((f) => /\.mp4$/i.test(f.name) && !f.name.includes("ia_thumb"));
+        item = {
+          id: "ia-" + iaId, ia: iaId, external: true, type: "movie",
+          title: p.get("title") || (Array.isArray(md.title) ? md.title[0] : md.title) || iaId,
+          year: md.year ? parseInt(String(md.year).slice(0, 4), 10) : null,
+          rating: null, genres: [],
+          desc: String(Array.isArray(md.description) ? md.description.join(" ") : md.description || "Full-length video from the Internet Archive.").replace(/<[^>]+>/g, "").slice(0, 360),
+          poster: `https://archive.org/services/img/${encodeURIComponent(iaId)}`,
+          stream: mp4 ? `https://archive.org/download/${encodeURIComponent(iaId)}/${encodeURIComponent(mp4.name)}` : null,
+        };
+      } catch {
+        return showError("Couldn't load video stream from the Internet Archive.");
+      }
+    } else {
+      item = byId("s-cyberpunk-edgerunners") || CATALOG.find((x) => x.stream) || CATALOG[0];
+      if (!item) return showError("No title selected.");
+    }
+
+    if (!item.external) History.add(item.id);
+
+    /* ---------- 2. Player State ---------- */
+    const fallbackIdx = Math.abs((item.title || "").length + (item.year || 0)) % FALLBACK_STREAMS.length;
+    let currentStreamUrl = item.stream || FALLBACK_STREAMS[fallbackIdx];
+    // Start in "direct" (HTML5 Player) if item has a direct MP4 stream, otherwise "yt" (YouTube HD inside our custom player)
+    // so every single title starts playing immediately with 0 redirects and full custom controls!
+    let activeMode = item.stream ? "direct" : item.yt ? "yt" : "direct";
+    let activeVideoBlobUrl = null;
+    let playbackSpeed = 1;
+    let audioTrack = "English [Original] (5.1)";
+    let subTrack = "English [CC]";
+    let episodes = [];
+    let iaFiles = [];
+    let discoveredIaStreams = [];
+    let currentEpName = item.type === "series" ? `Episode ${episode}` : item.title;
+
+    function syncWatchUrl() {
+      const q = new URLSearchParams();
+      if (item.external && item.tvmaze) q.set("tvmaze", item.tvmaze);
+      else if (item.external && item.ia) { q.set("ia", item.ia); q.set("title", item.title); }
+      else q.set("id", item.id);
+      if (item.type === "series") { q.set("s", season); q.set("e", episode); }
+      history.replaceState(null, "", "watch.html?" + q.toString());
+      document.title = `Watch ${item.title}${item.type === "series" ? ` S${season}:E${episode}` : ""} – Nikflix`;
+    }
+    syncWatchUrl();
+    metaDesc.setAttribute("content", `Watch ${item.title} on Nikflix. ${(item.desc || "").slice(0, 120)}`);
+
+    function allSources() {
+      const list = [
+        { key: "direct", label: "HTML5 Player", desc: "Direct MP4 stream (No popups)" },
+      ];
+      if (item.yt) {
+        list.push({ key: "yt", label: "YouTube HD", desc: "Instant HD stream with custom controls" });
+      }
+      if (item.ia || discoveredIaStreams.length) {
+        list.push({ key: "ia-emb", label: "Archive Stream", desc: "Internet Archive ad-free player" });
+      }
+      if (item.imdb) {
+        list.push({ key: "srv1", label: "Server 1 (AutoEmbed)", desc: "Sandboxed multi-source server" });
+        list.push({ key: "srv2", label: "Server 2 (VidSrc ICU)", desc: "Sandboxed HD server" });
+        list.push({ key: "srv3", label: "Server 3 (VidSrc CC)", desc: "Sandboxed cloud server" });
+        list.push({ key: "srv4", label: "Server 4 (SuperEmbed)", desc: "Sandboxed backup server" });
+        list.push({ key: "srv5", label: "Server 5 (NontonGo)", desc: "Sandboxed international server" });
+      }
+      if (activeMode === "local") {
+        list.push({ key: "local", label: "Local File", desc: "Playing from your computer" });
+      }
+      return list;
+    }
+
+    function embedUrlFor(mode) {
+      const imdb = item.imdb || "";
+      if (mode === "srv1") {
+        return item.type === "series"
+          ? `https://player.autoembed.cc/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}`
+          : `https://player.autoembed.cc/embed/movie/${encodeURIComponent(imdb)}`;
+      }
+      if (mode === "srv2") {
+        return item.type === "series"
+          ? `https://vidsrc.icu/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}`
+          : `https://vidsrc.icu/embed/movie/${encodeURIComponent(imdb)}`;
+      }
+      if (mode === "srv3") {
+        return item.type === "series"
+          ? `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}`
+          : `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(imdb)}`;
+      }
+      if (mode === "srv4") {
+        return item.type === "series"
+          ? `https://multiembed.mov/?video_id=${encodeURIComponent(imdb)}&s=${season}&e=${episode}`
+          : `https://multiembed.mov/?video_id=${encodeURIComponent(imdb)}`;
+      }
+      if (mode === "srv5") {
+        return item.type === "series"
+          ? `https://www.NontonGo.win/embed/tv/?id=${encodeURIComponent(imdb)}&s=${season}&e=${episode}`
+          : `https://www.NontonGo.win/embed/movie/${encodeURIComponent(imdb)}`;
+      }
+      if (mode === "ia-emb") {
+        const iaId = item.ia || discoveredIaStreams[0]?.ia;
+        if (iaId) return `https://archive.org/embed/${encodeURIComponent(iaId)}?autoplay=1`;
+      }
+      return "";
+    }
+
+    /* ---------- 3. Render Split-Stage Theater UI ---------- */
+    const backHref = item.external && item.ia ? "search.html" : titleUrl(item);
+    const maturityTag = item.genres?.some((g) => ["horror", "crime", "thriller", "tragedy"].includes(g)) ? "18+" : "13+";
+
+    root.innerHTML = `
+      <section class="nx-stage" id="nx-stage" aria-label="Video player theater">
+        <!-- Left: Video Viewport -->
+        <div class="nx-video-pane" id="nx-video-pane">
+          <div class="nx-topbar">
+            <a class="nx-back-btn" href="${backHref}" aria-label="Back to title details">${P_ICONS.back}</a>
+            <div class="nx-title-block">
+              <div class="nx-title-line">
+                <h1 class="nx-main-title">${esc(item.title)}</h1>
+                <span class="nx-ep-label" id="nx-top-ep">${item.type === "series" ? `• S${season}:E${episode} '${esc(currentEpName)}'` : `• ${item.year || "Feature Film"}`}</span>
+              </div>
+              <div class="nx-tech-badges">
+                <span class="nx-badge">${maturityTag}</span>
+                <span class="nx-badge">Dolby Vision 4K</span>
+                <span class="nx-badge">Spatial Audio</span>
+                <span class="nx-badge">HDR10</span>
+                <span class="nx-badge nx-shield-badge" title="All popups and third-party redirects are blocked">${P_ICONS.shield} Redirect Shield ON</span>
+              </div>
+            </div>
+            <div class="nx-top-actions">
+              <div class="nx-srv-pills" id="nx-srv-pills" role="tablist" aria-label="Stream source"></div>
+              <label class="nx-badge nx-badge-btn" for="local-file-input" tabindex="0" role="button" title="Play a video file from your computer">Local File</label>
+              <input id="local-file-input" type="file" accept="video/*,.mkv" class="sr-only">
+              <button type="button" class="nx-icon-circle" id="nx-open-drawer" aria-label="Toggle episode & settings panel" title="Toggle side panel">${P_ICONS.panel}</button>
+            </div>
+          </div>
+
+          <div class="nx-canvas" id="nx-canvas"></div>
+
+          <div class="nx-bottom" id="nx-bottom">
+            <div class="nx-progress-wrap" id="nx-progress-wrap">
+              <div class="nx-progress-fill" id="nx-progress-fill" style="width:0%"></div>
+              <label class="sr-only" for="v-seek">Seek video timeline</label>
+              <input id="v-seek" class="nx-seek-input" type="range" min="0" max="1000" value="0" step="1">
+            </div>
+            <div class="nx-ctrl-row">
+              <div class="nx-ctrl-left">
+                <button type="button" class="nx-ctrl-btn" id="v-play" aria-label="Play or pause">${P_ICONS.play}</button>
+                <button type="button" class="nx-ctrl-btn" id="v-rw" aria-label="Rewind 10 seconds" title="Rewind 10s">${P_ICONS.rw10}</button>
+                <button type="button" class="nx-ctrl-btn" id="v-ff" aria-label="Forward 10 seconds" title="Forward 10s">${P_ICONS.ff10}</button>
+                <div class="nx-vol-group">
+                  <button type="button" class="nx-ctrl-btn" id="v-mute" aria-label="Mute or unmute">${P_ICONS.vol}</button>
+                  <label class="sr-only" for="v-vol">Volume</label>
+                  <input id="v-vol" class="nx-vol-slider" type="range" min="0" max="1" step="0.05" value="1">
+                </div>
+                <span class="nx-time" id="v-time">00:00 / 00:00</span>
+              </div>
+
+              <button type="button" class="nx-now-pill" id="nx-now-pill" title="Show episode list">
+                <span class="nx-red-dot"></span>
+                <span id="nx-pill-text">${item.type === "series" ? `Episode ${episode}: "${esc(currentEpName)}"` : esc(item.title)}</span>
+              </button>
+
+              <div class="nx-ctrl-right">
+                <button type="button" class="nx-badge nx-badge-btn" id="v-next-srv" title="Not starting? Try the next stream source">Next Source ↻</button>
+                <button type="button" class="nx-ctrl-btn" id="v-pip" aria-label="Picture in Picture" title="Picture in Picture">${P_ICONS.pip}</button>
+                <button type="button" class="nx-ctrl-btn" id="v-fs" aria-label="Fullscreen" title="Fullscreen">${P_ICONS.fs}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Episode & Settings Inspector Drawer -->
+        <aside class="nx-drawer" id="nx-drawer" aria-label="Episodes and playback settings">
+          <div class="nx-drawer-head">
+            <div>
+              <h2>${esc(item.title)}</h2>
+              <p id="nx-drawer-sub">${item.type === "series" ? `S${season}:E${episode} • 24m remaining` : `${item.year || "Movie"} • Full Stream`}</p>
+            </div>
+            <button type="button" class="nx-drawer-close" id="nx-drawer-close" aria-label="Close side panel">${ICONS.close}</button>
+          </div>
+
+          <div class="nx-menu">
+            <div class="nx-menu-item active" id="nx-season-row">
+              ${P_ICONS.season}
+              <label class="sr-only" for="season-select">Select season</label>
+              <select id="season-select" class="nx-season-select">
+                <option value="1">${item.type === "series" ? "Season 1" : "Streams & Chapters"}</option>
+              </select>
+            </div>
+
+            <button type="button" class="nx-menu-item" id="nx-btn-servers">
+              ${P_ICONS.server}
+              <span>Stream Sources &amp; Custom URL</span>
+              <strong class="nx-menu-val" id="nx-srv-val">Auto</strong>
+            </button>
+            <div class="nx-inline-panel" id="nx-panel-servers" hidden>
+              <div class="nx-panel-group">
+                <small>Switch Stream Source (Redirect-Shielded)</small>
+                <div class="chips" id="drawer-srv-chips"></div>
+              </div>
+              <div class="nx-panel-group" id="ia-stream-group" hidden>
+                <small>Direct Archive.org MP4 Streams Found</small>
+                <div class="chips" id="ia-stream-chips"></div>
+              </div>
+              <div class="nx-panel-group">
+                <small>Or Paste Any Direct Video URL (.mp4 / .webm)</small>
+                <div style="display:flex;gap:6px">
+                  <label class="sr-only" for="custom-mp4-url">Direct video URL</label>
+                  <input id="custom-mp4-url" type="url" placeholder="https://example.com/video.mp4" style="flex:1;padding:6px 8px;background:#0b0b0b;border:1px solid #333;border-radius:4px;font-size:.76rem">
+                  <button type="button" class="chip active" id="custom-mp4-go">Play</button>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="nx-menu-item" id="nx-btn-subs">
+              ${P_ICONS.subs}
+              <span>Audio &amp; Subtitles</span>
+            </button>
+            <div class="nx-inline-panel" id="nx-panel-subs" hidden>
+              <div class="nx-panel-group">
+                <small>Audio Track</small>
+                <div class="chips">
+                  <button type="button" class="chip active" data-audio="English [Original] (5.1)">English (5.1)</button>
+                  <button type="button" class="chip" data-audio="Japanese [Original] (2.0)">Japanese (2.0)</button>
+                </div>
+              </div>
+              <div class="nx-panel-group">
+                <small>Subtitles</small>
+                <div class="chips">
+                  <button type="button" class="chip active" data-sub="English [CC]">English [CC]</button>
+                  <button type="button" class="chip" data-sub="Off">Off</button>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="nx-menu-item" id="nx-btn-speed">
+              ${P_ICONS.speed}
+              <span>Playback Speed</span>
+              <strong class="nx-menu-val" id="nx-speed-val">1x</strong>
+            </button>
+            <div class="nx-inline-panel" id="nx-panel-speed" hidden>
+              <div class="chips">
+                ${[0.5, 0.75, 1, 1.25, 1.5, 2].map((sp) => `<button type="button" class="chip${sp === 1 ? " active" : ""}" data-speed="${sp}">${sp}x</button>`).join("")}
+              </div>
+            </div>
+
+            <button type="button" class="nx-menu-item" id="nx-btn-cast">
+              ${P_ICONS.cast}
+              <span>Cast &amp; Crew</span>
+            </button>
+            <div class="nx-inline-panel" id="nx-panel-cast" hidden>
+              <p style="margin:0 0 6px;color:#ccc;font-size:.82rem">${esc(item.desc)}</p>
+              <div style="color:var(--muted);font-size:.78rem">
+                ${item.year ? `Released: ${item.year} · ` : ""}${item.rating ? `Rating: ★ ${item.rating}/10 · ` : ""}${item.imdb ? `IMDb: ${esc(item.imdb)}` : ""}
+              </div>
+            </div>
+
+            <button type="button" class="nx-menu-item" id="nx-btn-report">
+              ${P_ICONS.flag}
+              <span>Report Problem</span>
+            </button>
+          </div>
+
+          <div class="nx-ep-scroll" id="episodes-grid" role="region" aria-label="Episode list">
+            <div class="spinner" role="status" aria-label="Loading episodes"></div>
+          </div>
+
+          <div class="nx-drawer-foot">
+            <div class="nx-foot-row">
+              <span>${P_ICONS.vol} Audio Track</span>
+              <strong id="nx-foot-audio">${esc(audioTrack)}</strong>
+            </div>
+            <div class="nx-foot-row">
+              <span>${P_ICONS.subs} Subtitles</span>
+              <strong id="nx-foot-sub">${esc(subTrack)}</strong>
+            </div>
+            <button type="button" class="nx-next-btn" id="v-next">
+              ${P_ICONS.nextEp}
+              <span>${item.type === "series" ? "Next Episode" : "Next Title"}</span>
+            </button>
+          </div>
+        </aside>
+      </section>
+    `;
+
+    function renderSourcePills() {
+      const tabs = allSources();
+      $("#nx-srv-pills").innerHTML = tabs.map((t) =>
+        `<button type="button" role="tab" class="nx-badge nx-badge-btn${activeMode === t.key ? " active" : ""}" aria-selected="${activeMode === t.key}" data-mode="${t.key}" title="${esc(t.desc)}">${esc(t.label)}</button>`
+      ).join("");
+      $("#drawer-srv-chips").innerHTML = tabs.map((t) =>
+        `<button type="button" class="chip${activeMode === t.key ? " active" : ""}" data-mode="${t.key}">${esc(t.label)}</button>`
+      ).join("");
+      const cur = tabs.find((t) => t.key === activeMode);
+      $("#nx-srv-val").textContent = cur ? cur.label.split(" ")[0] : "Auto";
+    }
+
+    function updateEpisodeLabels() {
+      const epObj = episodes.find((x) => x.season === season && x.number === episode);
+      currentEpName = epObj?.name || (item.type === "series" ? `Episode ${episode}` : item.title);
+      $("#nx-top-ep").textContent = item.type === "series"
+        ? `• S${season}:E${episode} '${currentEpName}'`
+        : `• ${item.year || "Feature Film"}`;
+      $("#nx-pill-text").textContent = item.type === "series"
+        ? `Episode ${episode}: "${currentEpName}"`
+        : item.title;
+      const rem = epObj?.runtime ? `${epObj.runtime}m` : "24m";
+      $("#nx-drawer-sub").textContent = item.type === "series"
+        ? `S${season}:E${episode} • ${rem} remaining`
+        : `${item.year || "Movie"} • Full Stream`;
+    }
+
+    /* ---------- 4. Mount Video / YouTube API / Sandboxed Server Surface ---------- */
+    let activeVideoEl = null;
+    let ytPlayer = null;
+    let ytTimer = null;
+
+    function loadYouTubeApi() {
+      if (window.YT && window.YT.Player) return Promise.resolve(window.YT);
+      return new Promise((resolve) => {
+        const prev = window.onYouTubeIframeAPIReady;
+        window.onYouTubeIframeAPIReady = () => {
+          if (prev) prev();
+          resolve(window.YT);
+        };
+        if (!document.querySelector('script[src*="youtube.com/iframe_api"]')) {
+          const s = document.createElement("script");
+          s.src = "https://www.youtube.com/iframe_api";
+          document.head.appendChild(s);
+        }
+      });
+    }
+
+    function clearYtTimer() {
+      if (ytTimer) { clearInterval(ytTimer); ytTimer = null; }
+      if (ytPlayer?.destroy) { try { ytPlayer.destroy(); } catch {} }
+      ytPlayer = null;
+    }
+
+    async function renderCanvas() {
+      clearYtTimer();
+      renderSourcePills();
+      updateEpisodeLabels();
+      const canvas = $("#nx-canvas");
+      const playBtn = $("#v-play");
+      const seek = $("#v-seek");
+      const fill = $("#nx-progress-fill");
+      const timeEl = $("#v-time");
+      const progressWrap = $("#nx-progress-wrap");
+
+      // MODE A: Native HTML5 <video> Player (Direct MP4 or Local File)
+      if (activeMode === "direct" || activeMode === "local") {
+        progressWrap.hidden = false;
+        const src = activeMode === "local" ? activeVideoBlobUrl : currentStreamUrl;
+        const progKey = `prog:${item.id}:s${season}e${episode}`;
+        const savedTime = store.get(progKey, 0);
+
+        canvas.innerHTML = `
+          <video id="v-el" playsinline preload="metadata" poster="${esc(item.backdrop || item.poster || "")}" src="${esc(src)}"></video>
+          <button type="button" class="nx-center-play" id="nx-center-play" aria-label="Play video">${P_ICONS.play}</button>
+        `;
+
+        const v = $("#v-el");
+        activeVideoEl = v;
+        v.playbackRate = playbackSpeed;
+        const centerPlay = $("#nx-center-play");
+
+        const togglePlay = () => (v.paused ? v.play() : v.pause());
+        const syncPlayState = () => {
+          const paused = v.paused;
+          canvas.classList.toggle("playing", !paused);
+          playBtn.innerHTML = paused ? P_ICONS.play : P_ICONS.pause;
+        };
+
+        centerPlay.addEventListener("click", togglePlay);
+        v.addEventListener("click", togglePlay);
+        v.addEventListener("dblclick", () => $("#v-fs").click());
+        v.addEventListener("play", syncPlayState);
+        v.addEventListener("pause", syncPlayState);
+
+        v.addEventListener("loadedmetadata", () => {
+          timeEl.textContent = `${fmtTime(v.currentTime)}  /  ${fmtTime(v.duration)}`;
+          if (activeMode === "direct" && savedTime > 15 && savedTime < v.duration - 30) {
+            v.currentTime = savedTime;
+          }
+          v.play().catch(() => {});
+        });
+
+        let lastSave = 0;
+        v.addEventListener("timeupdate", () => {
+          const pct = v.duration ? (v.currentTime / v.duration) * 100 : 0;
+          fill.style.width = `${pct.toFixed(2)}%`;
+          if (v.duration) seek.value = String(Math.round(pct * 10));
+          timeEl.textContent = `${fmtTime(v.currentTime)}  /  ${fmtTime(v.duration)}`;
+          if (v.duration && item.type === "series") {
+            const remMin = Math.max(1, Math.ceil((v.duration - v.currentTime) / 60));
+            $("#nx-drawer-sub").textContent = `S${season}:E${episode} • ${remMin}m remaining`;
+          }
+          const now = Date.now();
+          if (activeMode === "direct" && now - lastSave > 5000) {
+            lastSave = now;
+            store.set(progKey, Math.floor(v.currentTime));
+          }
+        });
+
+        v.addEventListener("error", () => {
+          if (currentStreamUrl !== FALLBACK_STREAMS[0]) {
+            currentStreamUrl = FALLBACK_STREAMS[0];
+            v.src = currentStreamUrl;
+            v.load();
+          }
+        });
+        return;
+      }
+
+      // MODE B: YouTube HD inside our custom Cyberpunk player (controlled by our own bottom bar, zero external redirects!)
+      if (activeMode === "yt" && item.yt) {
+        activeVideoEl = null;
+        progressWrap.hidden = false;
+        canvas.classList.remove("playing");
+        canvas.innerHTML = `
+          <div id="yt-mount"></div>
+          <div class="nx-click-shield" id="nx-yt-shield" title="Click to play or pause"></div>
+          <button type="button" class="nx-center-play" id="nx-center-play" aria-label="Play video">${P_ICONS.play}</button>
+        `;
+
+        const YT = await loadYouTubeApi();
+        if (activeMode !== "yt") return;
+        ytPlayer = new YT.Player("yt-mount", {
+          videoId: item.yt,
+          playerVars: {
+            autoplay: 1,
+            controls: 0,
+            rel: 0,
+            modestbranding: 1,
+            iv_load_policy: 3,
+            playsinline: 1,
+            disablekb: 1,
+          },
+          events: {
+            onReady: (ev) => {
+              ev.target.setPlaybackRate(playbackSpeed);
+              ev.target.playVideo();
+              ytTimer = setInterval(() => {
+                if (!ytPlayer?.getCurrentTime) return;
+                const cur = ytPlayer.getCurrentTime() || 0;
+                const dur = ytPlayer.getDuration() || 0;
+                const pct = dur ? (cur / dur) * 100 : 0;
+                fill.style.width = `${pct.toFixed(2)}%`;
+                if (dur) seek.value = String(Math.round(pct * 10));
+                timeEl.textContent = `${fmtTime(cur)}  /  ${fmtTime(dur)}`;
+              }, 400);
+            },
+            onStateChange: (ev) => {
+              const playing = ev.data === YT.PlayerState.PLAYING;
+              canvas.classList.toggle("playing", playing);
+              playBtn.innerHTML = playing ? P_ICONS.pause : P_ICONS.play;
+            },
+            onError: () => {
+              toast("Switching to Direct HTML5 Player…", "info");
+              activeMode = "direct";
+              renderCanvas();
+            },
+          },
+        });
+
+        const toggleYt = () => {
+          if (!ytPlayer?.getPlayerState) return;
+          const st = ytPlayer.getPlayerState();
+          if (st === 1) ytPlayer.pauseVideo();
+          else ytPlayer.playVideo();
+        };
+        $("#nx-yt-shield")?.addEventListener("click", toggleYt);
+        $("#nx-yt-shield")?.addEventListener("dblclick", () => $("#v-fs").click());
+        $("#nx-center-play")?.addEventListener("click", toggleYt);
+        return;
+      }
+
+      // MODE C: Sandboxed Multi-Server Iframe (blocks all popups & redirects!)
+      activeVideoEl = null;
+      progressWrap.hidden = true;
+      timeEl.textContent = "LIVE STREAM · SHIELDED";
+      const src = embedUrlFor(activeMode);
+      // Note: sandbox omits allow-popups and allow-top-navigation so clicking inside the player can NEVER redirect or open third-party sites!
+      canvas.innerHTML = `
+        <iframe
+          src="${esc(src)}"
+          title="Watch ${esc(item.title)}"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-presentation"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          referrerpolicy="no-referrer"
+          allowfullscreen></iframe>`;
+    }
+
+    /* ---------- 5. Wire Bottom Bar & Drawer Controls ---------- */
+    $("#v-play").addEventListener("click", () => {
+      if (activeVideoEl) {
+        if (activeVideoEl.paused) activeVideoEl.play();
+        else activeVideoEl.pause();
+      } else if (ytPlayer?.getPlayerState) {
+        if (ytPlayer.getPlayerState() === 1) ytPlayer.pauseVideo();
+        else ytPlayer.playVideo();
+      }
+    });
+    $("#v-rw").addEventListener("click", () => {
+      if (activeVideoEl) {
+        activeVideoEl.currentTime = Math.max(0, activeVideoEl.currentTime - 10);
+      } else if (ytPlayer?.getCurrentTime) {
+        ytPlayer.seekTo(Math.max(0, ytPlayer.getCurrentTime() - 10), true);
+      }
+    });
+    $("#v-ff").addEventListener("click", () => {
+      if (activeVideoEl) {
+        activeVideoEl.currentTime = Math.min(activeVideoEl.duration || 0, activeVideoEl.currentTime + 10);
+      } else if (ytPlayer?.getCurrentTime) {
+        ytPlayer.seekTo(Math.min(ytPlayer.getDuration() || 0, ytPlayer.getCurrentTime() + 10), true);
+      }
+    });
+    $("#v-seek").addEventListener("input", (e) => {
+      const pct = Number(e.target.value) / 1000;
+      $("#nx-progress-fill").style.width = `${(pct * 100).toFixed(2)}%`;
+      if (activeVideoEl && activeVideoEl.duration) {
+        activeVideoEl.currentTime = pct * activeVideoEl.duration;
+      } else if (ytPlayer?.getDuration) {
+        ytPlayer.seekTo(pct * ytPlayer.getDuration(), true);
+      }
+    });
+    $("#v-mute").addEventListener("click", () => {
+      if (activeVideoEl) {
+        activeVideoEl.muted = !activeVideoEl.muted;
+        $("#v-mute").innerHTML = activeVideoEl.muted ? P_ICONS.mute : P_ICONS.vol;
+      } else if (ytPlayer?.isMuted) {
+        if (ytPlayer.isMuted()) { ytPlayer.unMute(); $("#v-mute").innerHTML = P_ICONS.vol; }
+        else { ytPlayer.mute(); $("#v-mute").innerHTML = P_ICONS.mute; }
+      }
+    });
+    $("#v-vol").addEventListener("input", (e) => {
+      const val = Number(e.target.value);
+      if (activeVideoEl) {
+        activeVideoEl.volume = val;
+        activeVideoEl.muted = val === 0;
+        $("#v-mute").innerHTML = activeVideoEl.muted ? P_ICONS.mute : P_ICONS.vol;
+      } else if (ytPlayer?.setVolume) {
+        ytPlayer.setVolume(Math.round(val * 100));
+        if (val === 0) ytPlayer.mute(); else ytPlayer.unMute();
+        $("#v-mute").innerHTML = val === 0 ? P_ICONS.mute : P_ICONS.vol;
+      }
+    });
+    $("#v-next-srv").addEventListener("click", () => {
+      const list = allSources();
+      const idx = list.findIndex((s) => s.key === activeMode);
+      const next = list[(idx + 1) % list.length];
+      activeMode = next.key;
+      toast(`Switched to ${next.label}`, "info");
+      renderCanvas();
+    });
+    $("#v-pip").addEventListener("click", async () => {
+      try {
+        if (document.pictureInPictureElement) await document.exitPictureInPicture();
+        else if (activeVideoEl?.requestPictureInPicture) await activeVideoEl.requestPictureInPicture();
+        else toast("Switch to HTML5 Player tab to use Picture-in-Picture.", "info");
+      } catch { toast("Picture-in-Picture is only available on HTML5 video streams.", "error"); }
+    });
+    $("#v-fs").addEventListener("click", () => {
+      const pane = $("#nx-video-pane");
+      if (document.fullscreenElement) document.exitFullscreen();
+      else pane.requestFullscreen?.();
+    });
+
+    // Toggle right drawer
+    const stage = $("#nx-stage");
+    const toggleDrawer = (forceOpen) => {
+      const closed = typeof forceOpen === "boolean" ? !forceOpen : !stage.classList.contains("drawer-closed");
+      stage.classList.toggle("drawer-closed", closed);
+    };
+    $("#nx-drawer-close").addEventListener("click", () => toggleDrawer(false));
+    $("#nx-open-drawer").addEventListener("click", () => toggleDrawer());
+    $("#nx-now-pill").addEventListener("click", () => {
+      toggleDrawer(true);
+      $("#nx-drawer").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    // Drawer menu toggles
+    const togglePanel = (id) => {
+      const panel = $(id);
+      const isHidden = panel.hidden;
+      $$(".nx-inline-panel").forEach((p) => (p.hidden = true));
+      panel.hidden = !isHidden;
+    };
+    $("#nx-btn-servers").addEventListener("click", () => togglePanel("#nx-panel-servers"));
+    $("#nx-btn-subs").addEventListener("click", () => togglePanel("#nx-panel-subs"));
+    $("#nx-btn-speed").addEventListener("click", () => togglePanel("#nx-panel-speed"));
+    $("#nx-btn-cast").addEventListener("click", () => togglePanel("#nx-panel-cast"));
+    $("#nx-btn-report").addEventListener("click", () => toast("Playback issue reported. Try clicking 'Next Source ↻' to switch servers!", "success"));
+
+    $("#nx-panel-subs").addEventListener("click", (e) => {
+      const aBtn = e.target.closest("[data-audio]");
+      if (aBtn) {
+        audioTrack = aBtn.dataset.audio;
+        $("#nx-foot-audio").textContent = audioTrack;
+        $$("[data-audio]").forEach((b) => b.classList.toggle("active", b === aBtn));
+        toast(`Audio track: ${audioTrack}`, "success");
+      }
+      const sBtn = e.target.closest("[data-sub]");
+      if (sBtn) {
+        subTrack = sBtn.dataset.sub;
+        $("#nx-foot-sub").textContent = subTrack;
+        $$("[data-sub]").forEach((b) => b.classList.toggle("active", b === sBtn));
+        toast(`Subtitles: ${subTrack}`, "success");
+      }
+    });
+
+    $("#nx-panel-speed").addEventListener("click", (e) => {
+      const spBtn = e.target.closest("[data-speed]");
+      if (!spBtn) return;
+      playbackSpeed = Number(spBtn.dataset.speed);
+      if (activeVideoEl) activeVideoEl.playbackRate = playbackSpeed;
+      if (ytPlayer?.setPlaybackRate) ytPlayer.setPlaybackRate(playbackSpeed);
+      $("#nx-speed-val").textContent = `${playbackSpeed}x`;
+      $$("[data-speed]").forEach((b) => b.classList.toggle("active", b === spBtn));
+      toast(`Playback speed set to ${playbackSpeed}x`, "info");
+    });
+
+    // Source bar, drawer source chips & custom MP4 URL
+    const handleModeClick = (e) => {
+      const btn = e.target.closest("[data-mode]");
+      if (!btn) return;
+      activeMode = btn.dataset.mode;
+      renderCanvas();
+    };
+    $("#nx-srv-pills").addEventListener("click", handleModeClick);
+    $("#drawer-srv-chips").addEventListener("click", handleModeClick);
+
+    $("#custom-mp4-go").addEventListener("click", () => {
+      const url = $("#custom-mp4-url").value.trim();
+      if (!url) { toast("Paste a direct .mp4 or .webm URL first.", "error"); return; }
+      currentStreamUrl = url;
+      activeMode = "direct";
+      toast("Playing custom video stream", "success");
+      renderCanvas();
+    });
+
+    $("#local-file-input").addEventListener("change", (e) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      if (activeVideoBlobUrl) URL.revokeObjectURL(activeVideoBlobUrl);
+      activeVideoBlobUrl = URL.createObjectURL(file);
+      activeMode = "local";
+      toast(`Playing local file: ${file.name}`, "success");
+      renderCanvas();
+    });
+
+    // Keyboard shortcuts
+    document.addEventListener("keydown", (e) => {
+      if (["INPUT", "SELECT", "TEXTAREA"].includes(e.target.tagName)) return;
+      if (!activeVideoEl && !ytPlayer) return;
+      if (e.key === " " || e.key.toLowerCase() === "k") { e.preventDefault(); $("#v-play").click(); }
+      else if (e.key === "ArrowLeft" || e.key.toLowerCase() === "j") { e.preventDefault(); $("#v-rw").click(); }
+      else if (e.key === "ArrowRight" || e.key.toLowerCase() === "l") { e.preventDefault(); $("#v-ff").click(); }
+      else if (e.key.toLowerCase() === "f") { e.preventDefault(); $("#v-fs").click(); }
+      else if (e.key.toLowerCase() === "m") { e.preventDefault(); $("#v-mute").click(); }
+    });
+
+    /* ---------- 6. Auto-Discover Direct MP4 Streams on Internet Archive ---------- */
+    async function discoverArchiveMp4s() {
+      try {
+        const q = `title:(${item.title.replace(/["():]/g, " ")}) AND mediatype:movies`;
+        const url = `https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&fl[]=identifier,title&sort[]=downloads+desc&rows=5&output=json`;
+        const res = await fetch(url);
+        if (!res.ok) return;
+        const data = await res.json();
+        const docs = data.response?.docs || [];
+        if (!docs.length) return;
+
+        discoveredIaStreams = docs.map((d) => ({ ia: d.identifier, title: Array.isArray(d.title) ? d.title[0] : (d.title || d.identifier) }));
+        renderSourcePills();
+
+        // Check the top Archive result for a direct .mp4 file
+        const topId = docs[0].identifier;
+        const mRes = await fetch("https://archive.org/metadata/" + encodeURIComponent(topId));
+        if (mRes.ok) {
+          const m = await mRes.json();
+          const mp4s = (m.files || []).filter((f) => /\.mp4$/i.test(f.name) && !f.name.includes("ia_thumb"));
+          if (mp4s.length) {
+            const directUrl = `https://archive.org/download/${encodeURIComponent(topId)}/${encodeURIComponent(mp4s[0].name)}`;
+            if (!item.stream) {
+              currentStreamUrl = directUrl;
+            }
+            const grp = $("#ia-stream-group");
+            const chips = $("#ia-stream-chips");
+            grp.hidden = false;
+            chips.innerHTML = mp4s.slice(0, 6).map((f, i) => {
+              const fUrl = `https://archive.org/download/${encodeURIComponent(topId)}/${encodeURIComponent(f.name)}`;
+              const shortName = f.name.replace(/\.mp4$/i, "").split("/").pop().slice(0, 28);
+              return `<button type="button" class="chip" data-mp4="${esc(fUrl)}">Stream ${i + 1}: ${esc(shortName)}</button>`;
+            }).join("");
+            chips.addEventListener("click", (e) => {
+              const b = e.target.closest("[data-mp4]");
+              if (!b) return;
+              currentStreamUrl = b.dataset.mp4;
+              activeMode = "direct";
+              toast("Switched to Archive.org direct MP4 stream", "success");
+              renderCanvas();
+            });
+          }
+        }
+      } catch {}
+    }
+
+    /* ---------- 7. Load Episodes / Streams into Right Drawer ---------- */
+    function renderEpisodeList() {
+      const curEps = episodes.filter((ep) => ep.season === season);
+      const grid = $("#episodes-grid");
+      if (!curEps.length) {
+        grid.innerHTML = `<p class="result-count" style="padding:12px">No episodes found.</p>`;
+        return;
+      }
+      grid.innerHTML = curEps.map((ep) => {
+        const active = ep.season === season && ep.number === episode;
+        const thumb = ep.image || item.backdrop || item.poster;
+        return `
+          <button type="button" class="nx-ep-card${active ? " active" : ""}" data-s="${ep.season}" data-e="${ep.number}">
+            <div class="nx-ep-thumb">
+              ${thumb ? `<img src="${esc(thumb)}" alt="" loading="lazy">` : `<span class="ep-num">E${ep.number}</span>`}
+              ${active ? `<span class="nx-ep-eq">${P_ICONS.eq}</span>` : ""}
+              <span class="nx-ep-dur">${ep.runtime || 24}m</span>
+            </div>
+            <div class="nx-ep-meta">
+              <span class="nx-ep-kicker">${active ? "PLAYING NOW" : `EPISODE ${ep.number}`}</span>
+              <strong>${ep.number}. ${esc(ep.name)}</strong>
+              <p>${esc(ep.summary || "Click to play this episode.")}</p>
+            </div>
+          </button>`;
+      }).join("");
+    }
+
+    function selectEpisode(sNum, eNum) {
+      season = sNum;
+      episode = eNum;
+      const ep = episodes.find((x) => x.season === season && x.number === episode);
+      if (ep?.streamUrl) {
+        currentStreamUrl = ep.streamUrl;
+        activeMode = "direct";
+      }
+      syncWatchUrl();
+      renderCanvas();
+      renderEpisodeList();
+    }
+
+    $("#v-next").addEventListener("click", () => {
+      if (item.type === "series" && episodes.length) {
+        const idx = episodes.findIndex((ep) => ep.season === season && ep.number === episode);
+        const next = idx >= 0 && idx + 1 < episodes.length ? episodes[idx + 1] : episodes[0];
+        if (next) {
+          selectEpisode(next.season, next.number);
+          toast(`Playing S${next.season}:E${next.number} – ${next.name}`, "info");
+        }
+      } else {
+        const pool = CATALOG.filter((x) => x.id !== item.id && x.stream);
+        const nextItem = pool[Math.floor(Math.random() * pool.length)] || CATALOG[0];
+        if (nextItem) location.href = `watch.html?id=${encodeURIComponent(nextItem.id)}`;
+      }
+    });
+
+    async function loadDrawerContent() {
+      const sel = $("#season-select");
+      const grid = $("#episodes-grid");
+
+      if (item.ia) {
+        try {
+          const r = await fetch("https://archive.org/metadata/" + encodeURIComponent(item.ia));
+          const j = await r.json();
+          iaFiles = (j.files || []).filter((f) => /\.mp4$/i.test(f.name) && !f.name.includes("ia_thumb"));
+        } catch {}
+      }
+
+      if (item.type === "series" && item.tvmaze) {
+        try {
+          const r = await fetch(`https://api.tvmaze.com/shows/${item.tvmaze}/episodes`);
+          if (r.ok) {
+            const raw = await r.json();
+            episodes = raw.map((ep, idx) => ({
+              season: ep.season || 1,
+              number: ep.number || idx + 1,
+              name: ep.name || `Episode ${idx + 1}`,
+              runtime: ep.runtime || 24,
+              image: ep.image?.medium?.replace(/^http:/, "https:") || null,
+              summary: (ep.summary || "").replace(/<[^>]+>/g, "").trim(),
+              streamUrl: iaFiles[idx]
+                ? `https://archive.org/download/${encodeURIComponent(item.ia)}/${encodeURIComponent(iaFiles[idx].name)}`
+                : null,
+            }));
+          }
+        } catch {}
+      } else if (iaFiles.length > 1) {
+        episodes = iaFiles.map((f, idx) => ({
+          season: 1,
+          number: idx + 1,
+          name: f.name.replace(/\.mp4$/i, "").split("/").pop(),
+          runtime: 24,
+          image: item.poster,
+          summary: "Full episode stream from the Internet Archive.",
+          streamUrl: `https://archive.org/download/${encodeURIComponent(item.ia)}/${encodeURIComponent(f.name)}`,
+        }));
+      }
+
+      if (episodes.length) {
+        const seasons = Array.from(new Set(episodes.map((e) => e.season))).sort((a, b) => a - b);
+        if (!seasons.includes(season)) season = seasons[0];
+        sel.innerHTML = seasons.map((s) => `<option value="${s}"${s === season ? " selected" : ""}>Season ${s}</option>`).join("");
+        sel.addEventListener("change", () => {
+          season = Number(sel.value);
+          renderEpisodeList();
+        });
+        grid.addEventListener("click", (e) => {
+          const card = e.target.closest(".nx-ep-card");
+          if (!card) return;
+          selectEpisode(Number(card.dataset.s), Number(card.dataset.e));
+        });
+        const curEp = episodes.find((x) => x.season === season && x.number === episode) || episodes[0];
+        if (curEp?.streamUrl) currentStreamUrl = curEp.streamUrl;
+        updateEpisodeLabels();
+        renderEpisodeList();
+        return;
+      }
+
+      // Movie mode: show playable full-length stream chapters / related streams in the right drawer
+      const streamMovies = [item, ...CATALOG.filter((x) => x.id !== item.id && x.stream)].slice(0, 14);
+      sel.innerHTML = `<option value="1">Full-Length Streams (${streamMovies.length})</option>`;
+      grid.innerHTML = streamMovies.map((m, idx) => {
+        const active = m.id === item.id;
+        return `
+          <a class="nx-ep-card${active ? " active" : ""}" href="watch.html?id=${encodeURIComponent(m.id)}">
+            <div class="nx-ep-thumb">
+              ${m.poster ? `<img src="${esc(m.poster)}" alt="" loading="lazy">` : `<span class="ep-num">${idx + 1}</span>`}
+              ${active ? `<span class="nx-ep-eq">${P_ICONS.eq}</span>` : ""}
+              <span class="nx-ep-dur">${m.year || "HD"}</span>
+            </div>
+            <div class="nx-ep-meta">
+              <span class="nx-ep-kicker">${active ? "PLAYING NOW" : `STREAM ${idx + 1}`}</span>
+              <strong>${idx + 1}. ${esc(m.title)}</strong>
+              <p>${esc(m.desc || "Watch full-length stream on Nikflix.")}</p>
+            </div>
+          </a>`;
+      }).join("");
+    }
+
+    renderCanvas();
+    loadDrawerContent();
+    discoverArchiveMp4s();
+
+    // Similar titles row below the theater stage
+    if (item.genres?.length) {
+      const similar = CATALOG.filter((x) => x.id !== item.id && x.genres.some((g) => item.genres.includes(g))).slice(0, 16);
+      $("#watch-more").innerHTML = rowHTML("More Like This", similar, `categories.html?cat=${item.genres[0]}`);
+      initRows($("#watch-more"));
+    }
+  })();
+  </script>
+</body>
+</html>
