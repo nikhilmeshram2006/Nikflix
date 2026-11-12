@@ -50,10 +50,9 @@ It runs entirely on vanilla HTML, CSS, and JavaScript (no frameworks or build st
 ---
 ## Important Notes
 
-- **Multi-server playback**
-Supports multiple external streaming sources. Availability and playback quality depend on the selected provider, and some sources may occasionally be unavailable.
-- **Popup and redirect protection**
-Includes basic safeguards that attempt to prevent unwanted popups and redirects from embedded video players. These safeguards are not a replacement for browser security or an ad blocker.
+- **External streaming sources:** Playback availability and quality depend on the selected provider. Some sources may occasionally be unavailable.
+
+- **Popup and redirect safeguards:** Nikflix includes basic measures to reduce unwanted popups and redirects from embedded players. These are not a replacement for browser security or an ad blocker.
 
 ## How to Use
 
