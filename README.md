@@ -20,8 +20,6 @@
 
 <br><br>
 
-**Live URL:** [https://nikhilmeshram2006.github.io/Nikflix/](https://nikhilmeshram2006.github.io/Nikflix/)
-
 </div>
 
 ---
