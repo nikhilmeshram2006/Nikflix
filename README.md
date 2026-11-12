@@ -48,6 +48,11 @@ It runs entirely on vanilla HTML, CSS, and JavaScript (no frameworks or build st
 - **Local Profile & My List** saved in `localStorage` so your watchlist and watch progress stay on your device.
 
 ---
+## user should know 
+**Multi-server playback**
+Supports multiple external streaming sources. Availability and playback quality depend on the selected provider, and some sources may occasionally be unavailable.
+**Popup and redirect protection**
+Includes basic safeguards that attempt to prevent unwanted popups and redirects from embedded video players. These safeguards are not a replacement for browser security or an ad blocker.
 
 ## How to Use
 
