@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b0b"/>
+      <stop offset="55%" stop-color="#150708"/>
+      <stop offset="100%" stop-color="#2a0508"/>
+    </linearGradient>
+    <linearGradient id="redGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e50914"/>
+      <stop offset="100%" stop-color="#ff3b47"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="280" rx="18" fill="url(#bg)" stroke="#262626" stroke-width="2"/>
+  <circle cx="1060" cy="140" r="220" fill="#e50914" opacity="0.08"/>
+  <circle cx="980" cy="60" r="120" fill="#e50914" opacity="0.06"/>
+
+  <!-- N Icon -->
+  <g transform="translate(64, 62)">
+    <rect width="76" height="76" rx="16" fill="#e50914"/>
+    <path d="M23 16h10.2l8.8 25V16H52v44h-9.9L33.1 35v25H23z" fill="#ffffff"/>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="160" y="114" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="48" font-weight="900" letter-spacing="2">NIKFLIX</text>
+  <rect x="382" y="84" width="142" height="28" rx="6" fill="#1f090b" stroke="#e50914" stroke-width="1.2"/>
+  <text x="453" y="103" text-anchor="middle" fill="#ff4d57" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">STREAMING APP</text>
+
+  <text x="64" y="172" fill="#d4d4d4" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="400">
+    Watch and explore Movies, TV Series, and Anime with a custom Theater Video Player, Live Search, and Category Browsing.
+  </text>
+
+  <!-- Pill Badges -->
+  <g transform="translate(64, 202)" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600" fill="#cfcfcf">
+    <rect x="0" y="0" width="128" height="32" rx="8" fill="#171717" stroke="#2f2f2f"/>
+    <text x="64" y="21" text-anchor="middle">106+ Titles Ready</text>
+
+    <rect x="140" y="0" width="164" height="32" rx="8" fill="#171717" stroke="#2f2f2f"/>
+    <text x="222" y="21" text-anchor="middle">HTML5 Theater Player</text>
+
+    <rect x="316" y="0" width="162" height="32" rx="8" fill="#171717" stroke="#2f2f2f"/>
+    <text x="397" y="21" text-anchor="middle">Redirect Shield ON</text>
+
+    <rect x="490" y="0" width="154" height="32" rx="8" fill="#171717" stroke="#2f2f2f"/>
+    <text x="567" y="21" text-anchor="middle">12 Genre Categories</text>
+
+    <rect x="656" y="0" width="150" height="32" rx="8" fill="#171717" stroke="#2f2f2f"/>
+    <text x="731" y="21" text-anchor="middle">Mobile &amp; PWA Ready</text>
+  </g>
+</svg>
