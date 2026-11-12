@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Categories – Anime, Horror, Romance, Tragedy &amp; More – Nikflix</title>
+  <title>Categories - Anime, Horror, Romance, Tragedy &amp; More - Nikflix</title>
   <meta name="description" content="Browse Nikflix by category: anime, horror, romance, tragedy, action, comedy, sci-fi, thriller, crime, drama, fantasy and family movies and series.">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -48,10 +48,10 @@
 
     if (cat && !CAT_MAP[cat]) {
       // Unknown category in URL -> helpful error
-      document.title = "Category not found – Nikflix";
+      document.title = "Category not found - Nikflix";
       $("#page-title").textContent = "Category not found";
       $("#page-sub").textContent = "";
-      content.innerHTML = noticeHTML("error", `We couldn't find the category “${esc(cat)}”. <a href="categories.html" style="text-decoration:underline">See all categories</a>.`);
+      content.innerHTML = noticeHTML("error", `We couldn't find the category "${esc(cat)}". <a href="categories.html" style="text-decoration:underline">See all categories</a>.`);
       return;
     }
 
@@ -75,11 +75,11 @@
 
     const items = cat ? inCat(cat, pool) : pool;
     const heading = cat ? `${CAT_MAP[cat].name} ${typeWord}` : typeWord === "Titles" ? "All Titles" : typeWord;
-    document.title = `${heading} – Nikflix`;
+    document.title = `${heading} - Nikflix`;
     $("#page-title").textContent = heading;
     $("#page-sub").textContent = `${items.length} ${items.length === 1 ? "title" : "titles"} to explore.`;
     const meta = document.querySelector('meta[name="description"]');
-    meta.setAttribute("content", `Browse ${heading.toLowerCase()} on Nikflix – posters, ratings and details for every title.`);
+    meta.setAttribute("content", `Browse ${heading.toLowerCase()} on Nikflix - posters, ratings and details for every title.`);
 
     content.innerHTML = items.length
       ? gridHTML(items)

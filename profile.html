@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Your Profile &amp; My List – Nikflix</title>
+  <title>Your Profile &amp; My List - Nikflix</title>
   <meta name="description" content="Manage your Nikflix profile: change your name and avatar, set playback preferences, and see your saved list and recently viewed titles.">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -43,7 +43,7 @@
         <div class="field" id="name-field">
           <label for="name">Profile name</label>
           <input id="name" name="name" type="text" maxlength="30" autocomplete="nickname" aria-describedby="name-error name-hint">
-          <div class="hint" id="name-hint">2–20 characters. Letters, numbers and spaces.</div>
+          <div class="hint" id="name-hint">2-20 characters. Letters, numbers and spaces.</div>
           <div class="field-error" id="name-error" role="alert"></div>
         </div>
         <fieldset class="field" style="border:0;padding:0;margin:0">
@@ -146,7 +146,7 @@
       const msg = $("#profile-msg");
       if (!validateName()) {
         msg.innerHTML = noticeHTML("error", "Please fix the highlighted field and try again.");
-        toast("Profile not saved — check the form for errors.", "error");
+        toast("Profile not saved - check the form for errors.", "error");
         $("#name").focus();
         return;
       }

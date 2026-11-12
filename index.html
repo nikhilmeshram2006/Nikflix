@@ -4,11 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Nikflix – Watch Movies, Series &amp; Anime Online</title>
+  <title>Nikflix - Watch Movies, Series &amp; Anime Online</title>
   <meta name="description"
-    content="Nikflix is a Netflix-style streaming demo. Browse trending movies, TV series and anime, explore categories like horror, romance and tragedy, and build your own list.">
+    content="Nikflix is a Stream movies, TV series and anime online. Browse trending movies, TV series and anime, explore categories like horror, romance and tragedy, and build your own list.">
   <meta name="theme-color" content="#0b0b0b">
-  <meta property="og:title" content="Nikflix – Movies, Series &amp; Anime">
+  <meta property="og:title" content="Nikflix - Movies, Series &amp; Anime">
   <meta property="og:description"
     content="Browse trending movies, TV series and anime by category, search any title and build your list.">
   <meta property="og:type" content="website">
@@ -36,7 +36,7 @@
     (function () {
       const { $, esc, ICONS, CATALOG, CATEGORIES, MyList, History, byId, movies, series, inCat, rowHTML, initRows, trailerUrl, titleUrl, watchUrl } = SF;
 
-      /* ----- Hero: a random featured series with a backdrop ----- */
+      // Hero: a random featured series with a backdrop
       const featuredPool = CATALOG.filter((x) => x.backdrop);
       const hero = $("#hero");
       if (featuredPool.length) {
@@ -67,7 +67,7 @@
         hero.hidden = true;
       }
 
-      /* ----- Rows ----- */
+      // Rows
       // Stable "trending" shuffle that changes once per day.
       const seed = Number(new Date().toISOString().slice(0, 10).replace(/-/g, ""));
       const seeded = (arr) => arr.map((x, i) => ({ x, k: Math.sin(seed + i * 99.7) })).sort((a, b) => a.k - b.k).map((o) => o.x);

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Search Movies &amp; Series – Nikflix</title>
+  <title>Search Movies &amp; Series - Nikflix</title>
   <meta name="description" content="Search Nikflix for movies, TV series and anime by title, genre or year. Find horror, romance, tragedy, sci-fi and more in seconds.">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -20,7 +20,7 @@
     <form class="search-box" id="search-form" role="search" action="search.html" method="get">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <label class="sr-only" for="q">Search movies and series</label>
-      <input id="q" name="q" type="search" placeholder="e.g. Naruto, horror, 2019…" autocomplete="off" autofocus>
+      <input id="q" name="q" type="search" placeholder="e.g. Naruto, horror, 2019..." autocomplete="off" autofocus>
       <button class="icon-btn clear-btn" type="button" id="clear" aria-label="Clear search" hidden>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
@@ -85,8 +85,8 @@
 
       const found = search(q, type);
       results.innerHTML = found.length
-        ? `<p class="result-count">${found.length} result${found.length === 1 ? "" : "s"} for “${esc(q)}”</p>${gridHTML(found)}`
-        : emptyHTML(`No results for “${q}”`, "Try a different title, a genre like <b>anime</b> or <b>horror</b>, or a year like <b>2019</b>.");
+        ? `<p class="result-count">${found.length} result${found.length === 1 ? "" : "s"} for "${esc(q)}"</p>${gridHTML(found)}`
+        : emptyHTML(`No results for "${q}"`, "Try a different title, a genre like <b>anime</b> or <b>horror</b>, or a year like <b>2019</b>.");
       liveSearch(q);
     }
 
@@ -111,7 +111,7 @@
                 year: s.premiered ? +s.premiered.slice(0, 4) : null, rating: s.rating?.average || null,
                 poster: s.image?.medium ? s.image.medium.replace(/^http:/, "https:") : null, genres: [],
               }));
-            liveBody.innerHTML = items.length ? gridHTML(items) : `<p class="result-count">No extra series found on TVmaze for “${esc(q)}”.</p>`;
+            liveBody.innerHTML = items.length ? gridHTML(items) : `<p class="result-count">No extra series found on TVmaze for "${esc(q)}".</p>`;
           })
           .catch((err) => {
             if (err.name === "AbortError") return;
@@ -141,7 +141,7 @@
             poster: `https://archive.org/services/img/${encodeURIComponent(d.identifier)}`,
             genres: [],
           }));
-          liveIaBody.innerHTML = items.length ? gridHTML(items) : `<p class="result-count">No full-length streams found on Internet Archive for “${esc(q)}”.</p>`;
+          liveIaBody.innerHTML = items.length ? gridHTML(items) : `<p class="result-count">No full-length streams found on Internet Archive for "${esc(q)}".</p>`;
         })
         .catch((err) => {
           if (err.name === "AbortError") return;

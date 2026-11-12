@@ -1,4 +1,4 @@
-/* Auto-generated catalog - do not edit by hand. */
+// Catalog data
 window.CATALOG = [
  {
   "id": "s-cyberpunk-edgerunners",
@@ -12,7 +12,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 8.3,
-  "desc": "In a dystopia riddled with corruption and cybernetic implants, a talented but reckless street kid strives to become a mercenary outlaw — an edgerunner.",
+  "desc": "In a dystopia riddled with corruption and cybernetic implants, a talented but reckless street kid strives to become a mercenary outlaw - an edgerunner.",
   "poster": "assets/posters/s-cyberpunk-edgerunners.webp",
   "backdrop": "assets/backdrops/s-cyberpunk-edgerunners.webp",
   "tvmaze": 48945,
@@ -29,7 +29,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "House on Haunted Hill is a 1958 American horror film produced and directed by William Castle, written by Robb White and starring Vincent Price, Carol Ohmart, Richard Long, Alan Marshal, Carolyn Craig, Julie Mitchum, and Elisha Cook Jr. Price plays an eccentric millionaire, Frederick Loren, who, along with his wife…",
+  "desc": "House on Haunted Hill is a 1958 American horror film produced and directed by William Castle, written by Robb White and starring Vincent Price, Carol Ohmart, Richard Long, Alan Marshal, Carolyn Craig, Julie Mitchum, and Elisha Cook Jr. Price plays an eccentric millionaire, Frederick Loren, who, along with his wife...",
   "poster": "assets/posters/m-house-on-haunted-hill.webp",
   "backdrop": null,
   "imdb": "tt0051744",
@@ -68,7 +68,7 @@ window.CATALOG = [
    "family"
   ],
   "rating": 8.1,
-  "desc": "Astro Boy is a Japanese anime television series based on Osamu Tezuka's manga of the same name. It premiered on Fuji TV on New Year's Day, 1963 and is the first popular animated Japanese television series that embodied the aesthetic that later became familiar worldwide as anime. It lasted for four seasons, with a…",
+  "desc": "Astro Boy is a Japanese anime television series based on Osamu Tezuka's manga of the same name. It premiered on Fuji TV on New Year's Day, 1963 and is the first popular animated Japanese television series that embodied the aesthetic that later became familiar worldwide as anime. It lasted for four seasons, with a...",
   "poster": "assets/posters/s-astro-boy-1963.webp",
   "backdrop": null,
   "imdb": "tt0056739",
@@ -87,7 +87,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "Sherlock Holmes and the Secret Weapon (1942) is the fourth in the Basil Rathbone/Nigel Bruce series of 14 Sherlock Holmes films, which updated the characters created by Sir Arthur Conan Doyle to the then-present day. The film is credited as an adaptation of Conan Doyle's 1903 short story \"The Adventure of the Dancing…",
+  "desc": "Sherlock Holmes and the Secret Weapon (1942) is the fourth in the Basil Rathbone/Nigel Bruce series of 14 Sherlock Holmes films, which updated the characters created by Sir Arthur Conan Doyle to the then-present day. The film is credited as an adaptation of Conan Doyle's 1903 short story \"The Adventure of the Dancing...",
   "poster": "assets/posters/m-sherlock-holmes-and-the-secret-weapon.webp",
   "backdrop": null,
   "imdb": "tt0035317",
@@ -106,7 +106,7 @@ window.CATALOG = [
    "anime"
   ],
   "rating": null,
-  "desc": "Gulliver's Travels is a 1939 American animated musical fantasy film produced by Fleischer Studios and released by Paramount Pictures. Loosely based on the first part of Jonathan Swift's 1726 novel, it was the first of two feature-length animated films by Fleischer Studios and the second animated film produced by an…",
+  "desc": "Gulliver's Travels is a 1939 American animated musical fantasy film produced by Fleischer Studios and released by Paramount Pictures. Loosely based on the first part of Jonathan Swift's 1726 novel, it was the first of two feature-length animated films by Fleischer Studios and the second animated film produced by an...",
   "poster": "assets/posters/m-gulliver-s-travels.webp",
   "backdrop": null,
   "imdb": "tt0031397",
@@ -125,7 +125,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": null,
-  "desc": "Sintel is a 2010 animated fantasy short film and the third Blender \"open movie\". It was produced by Ton Roosendaal, chairman of the Blender Foundation, written by Esther Wouda, directed by Colin Levy, at the time an artist at Pixar and art direction by David Revoy, who is known for Pepper&Carrot, a free and open…",
+  "desc": "Sintel is a 2010 animated fantasy short film and the third Blender \"open movie\". It was produced by Ton Roosendaal, chairman of the Blender Foundation, written by Esther Wouda, directed by Colin Levy, at the time an artist at Pixar and art direction by David Revoy, who is known for Pepper&Carrot, a free and open...",
   "poster": "assets/posters/m-sintel.webp",
   "backdrop": null,
   "imdb": "tt1727587",
@@ -143,7 +143,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": null,
-  "desc": "The General is a 1926 American silent comedy film released by United Artists. It was inspired by the Great Locomotive Chase, a true story of an event that occurred during the American Civil War. The story was adapted from the 1889 memoir The Great Locomotive Chase by William Pittenger. The film stars Buster Keaton…",
+  "desc": "The General is a 1926 American silent comedy film released by United Artists. It was inspired by the Great Locomotive Chase, a true story of an event that occurred during the American Civil War. The story was adapted from the 1889 memoir The Great Locomotive Chase by William Pittenger. The film stars Buster Keaton...",
   "poster": "assets/posters/m-the-general.webp",
   "backdrop": null,
   "imdb": "tt0017925",
@@ -162,7 +162,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": null,
-  "desc": "Metropolis is a 1927 German expressionist science-fiction, silent film directed by Fritz Lang and written by Thea von Harbou in collaboration with Lang, based on von Harbou's 1925 novel of the same name. It stars Brigitte Helm, Gustav Fröhlich, Alfred Abel, and Rudolf Klein-Rogge. Erich Pommer produced it in the…",
+  "desc": "Metropolis is a 1927 German expressionist science-fiction, silent film directed by Fritz Lang and written by Thea von Harbou in collaboration with Lang, based on von Harbou's 1925 novel of the same name. It stars Brigitte Helm, Gustav Fröhlich, Alfred Abel, and Rudolf Klein-Rogge. Erich Pommer produced it in the...",
   "poster": "assets/posters/m-metropolis.webp",
   "backdrop": null,
   "imdb": "tt0017136",
@@ -180,7 +180,7 @@ window.CATALOG = [
    "romance"
   ],
   "rating": null,
-  "desc": "His Girl Friday is a 1940 American screwball comedy film directed by Howard Hawks, starring Cary Grant and Rosalind Russell and featuring Ralph Bellamy and Gene Lockhart. It was released by Columbia Pictures. The plot centers on a newspaper editor named Walter Burns who is about to lose his ace reporter and ex-wife…",
+  "desc": "His Girl Friday is a 1940 American screwball comedy film directed by Howard Hawks, starring Cary Grant and Rosalind Russell and featuring Ralph Bellamy and Gene Lockhart. It was released by Columbia Pictures. The plot centers on a newspaper editor named Walter Burns who is about to lose his ace reporter and ex-wife...",
   "poster": "assets/posters/m-his-girl-friday.webp",
   "backdrop": null,
   "imdb": "tt0032599",
@@ -198,7 +198,7 @@ window.CATALOG = [
    "horror"
   ],
   "rating": null,
-  "desc": "The Little Shop of Horrors is a 1960 American comedy horror film directed and produced by Roger Corman, from a screenplay by Charles B. Griffith. The film is a farce about a florist's assistant who cultivates a plant that feeds on human blood. It stars Jonathan Haze, Jackie Joseph, Mel Welles, and Dick Miller, who had…",
+  "desc": "The Little Shop of Horrors is a 1960 American comedy horror film directed and produced by Roger Corman, from a screenplay by Charles B. Griffith. The film is a farce about a florist's assistant who cultivates a plant that feeds on human blood. It stars Jonathan Haze, Jackie Joseph, Mel Welles, and Dick Miller, who had...",
   "poster": "assets/posters/m-the-little-shop-of-horrors.webp",
   "backdrop": null,
   "imdb": "tt0054033",
@@ -216,7 +216,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "Carnival of Souls is a 1962 American neo-noir psychological horror film produced and directed by Herk Harvey. The screenplay was written by John Clifford, and the film stars Candace Hilligoss. Its plot follows Mary Henry, a young woman whose life is disturbed after a car accident. She relocates to a new city, where…",
+  "desc": "Carnival of Souls is a 1962 American neo-noir psychological horror film produced and directed by Herk Harvey. The screenplay was written by John Clifford, and the film stars Candace Hilligoss. Its plot follows Mary Henry, a young woman whose life is disturbed after a car accident. She relocates to a new city, where...",
   "poster": "assets/posters/m-carnival-of-souls.webp",
   "backdrop": null,
   "imdb": "tt0055830",
@@ -252,7 +252,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "Night of the Living Dead is a 1968 American zombie horror film directed, photographed, and edited by George A. Romero, written by Romero and John Russo, and produced by Russell W. Streiner and Karl Hardman. The independent film's ensemble cast—which includes Duane Jones, Judith O'Dea, Marilyn Eastman, Karl Hardman…",
+  "desc": "Night of the Living Dead is a 1968 American zombie horror film directed, photographed, and edited by George A. Romero, written by Romero and John Russo, and produced by Russell W. Streiner and Karl Hardman. The independent film's ensemble cast-which includes Duane Jones, Judith O'Dea, Marilyn Eastman, Karl Hardman...",
   "poster": "assets/posters/m-night-of-the-living-dead.webp",
   "backdrop": null,
   "imdb": "tt0063350",
@@ -271,7 +271,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "Inception is a 2010 science fiction heist film written and directed by Christopher Nolan, who also produced it with his wife Emma Thomas. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating his targets' subconscious. He is offered a chance to have his criminal history erased…",
+  "desc": "Inception is a 2010 science fiction heist film written and directed by Christopher Nolan, who also produced it with his wife Emma Thomas. The film stars Leonardo DiCaprio as a professional thief who steals information by infiltrating his targets' subconscious. He is offered a chance to have his criminal history erased...",
   "poster": "assets/posters/m-inception.webp",
   "backdrop": null,
   "imdb": "tt1375666",
@@ -288,7 +288,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "The Dark Knight is a 2008 superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan. Based on the DC Comics superhero Batman, it is the sequel to Batman Begins (2005), and the second installment in The Dark Knight trilogy. The plot follows the vigilante Batman, police…",
+  "desc": "The Dark Knight is a 2008 superhero film directed by Christopher Nolan, who co-wrote the screenplay with his brother Jonathan. Based on the DC Comics superhero Batman, it is the sequel to Batman Begins (2005), and the second installment in The Dark Knight trilogy. The plot follows the vigilante Batman, police...",
   "poster": "assets/posters/m-the-dark-knight.webp",
   "backdrop": null,
   "imdb": "tt0468569",
@@ -304,7 +304,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "Interstellar is a 2014 epic science fiction drama film directed by Christopher Nolan, who co-wrote the screenplay with his brother, Jonathan Nolan. It features an ensemble cast led by Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn, and Michael Caine. Set in a dystopian future where…",
+  "desc": "Interstellar is a 2014 epic science fiction drama film directed by Christopher Nolan, who co-wrote the screenplay with his brother, Jonathan Nolan. It features an ensemble cast led by Matthew McConaughey, Anne Hathaway, Jessica Chastain, Bill Irwin, Ellen Burstyn, and Michael Caine. Set in a dystopian future where...",
   "poster": "assets/posters/m-interstellar.webp",
   "backdrop": null,
   "imdb": "tt0816692",
@@ -321,7 +321,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "Titanic is a 1997 American historical romance film written and directed by James Cameron. Incorporating both historical and fictional aspects, it is based on accounts of the sinking of RMS Titanic in 1912. Leonardo DiCaprio and Kate Winslet star as members of different social classes who fall in love during the ship's…",
+  "desc": "Titanic is a 1997 American historical romance film written and directed by James Cameron. Incorporating both historical and fictional aspects, it is based on accounts of the sinking of RMS Titanic in 1912. Leonardo DiCaprio and Kate Winslet star as members of different social classes who fall in love during the ship's...",
   "poster": "assets/posters/m-titanic.webp",
   "backdrop": null,
   "imdb": "tt0120338",
@@ -336,7 +336,7 @@ window.CATALOG = [
    "horror"
   ],
   "rating": null,
-  "desc": "The Conjuring is a 2013 American supernatural horror film directed by James Wan and written by Chad Hayes and Carey W. Hayes. It is the inaugural film in The Conjuring Universe franchise. Patrick Wilson and Vera Farmiga star as Ed and Lorraine Warren, paranormal investigators and authors associated with prominent…",
+  "desc": "The Conjuring is a 2013 American supernatural horror film directed by James Wan and written by Chad Hayes and Carey W. Hayes. It is the inaugural film in The Conjuring Universe franchise. Patrick Wilson and Vera Farmiga star as Ed and Lorraine Warren, paranormal investigators and authors associated with prominent...",
   "poster": "assets/posters/m-the-conjuring.webp",
   "backdrop": null,
   "imdb": "tt1457767",
@@ -352,7 +352,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "Get Out is a 2017 American psychological horror film written, co-produced, and directed by Jordan Peele in his directorial debut. It stars Daniel Kaluuya, Allison Williams, Lil Rel Howery, LaKeith Stanfield, Bradley Whitford, Caleb Landry Jones, Stephen Root, Catherine Keener, and Betty Gabriel. The plot follows a…",
+  "desc": "Get Out is a 2017 American psychological horror film written, co-produced, and directed by Jordan Peele in his directorial debut. It stars Daniel Kaluuya, Allison Williams, Lil Rel Howery, LaKeith Stanfield, Bradley Whitford, Caleb Landry Jones, Stephen Root, Catherine Keener, and Betty Gabriel. The plot follows a...",
   "poster": "assets/posters/m-get-out.webp",
   "backdrop": null,
   "imdb": "tt5052448",
@@ -384,7 +384,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": null,
-  "desc": "Hereditary is a 2018 American supernatural psychological horror film written and directed by Ari Aster in his feature directorial debut. Starring Toni Collette, Alex Wolff, Milly Shapiro, Ann Dowd, and Gabriel Byrne, the film follows Annie Graham (Collette), a grieving miniature artist who uncovers disturbing secrets…",
+  "desc": "Hereditary is a 2018 American supernatural psychological horror film written and directed by Ari Aster in his feature directorial debut. Starring Toni Collette, Alex Wolff, Milly Shapiro, Ann Dowd, and Gabriel Byrne, the film follows Annie Graham (Collette), a grieving miniature artist who uncovers disturbing secrets...",
   "poster": "assets/posters/m-hereditary.webp",
   "backdrop": null,
   "imdb": "tt7784604",
@@ -399,7 +399,7 @@ window.CATALOG = [
    "horror"
   ],
   "rating": null,
-  "desc": "It is a 2017 American supernatural horror film directed by Andy Muschietti and written by Chase Palmer, Cary Joji Fukunaga, and Gary Dauberman. It is the first of a two-part adaptation of the 1986 novel of the same name by Stephen King, as well as the second adaptation following Tommy Lee Wallace's 1990 miniseries.…",
+  "desc": "It is a 2017 American supernatural horror film directed by Andy Muschietti and written by Chase Palmer, Cary Joji Fukunaga, and Gary Dauberman. It is the first of a two-part adaptation of the 1986 novel of the same name by Stephen King, as well as the second adaptation following Tommy Lee Wallace's 1990 miniseries....",
   "poster": "assets/posters/m-it.webp",
   "backdrop": null,
   "imdb": "tt1396484",
@@ -415,7 +415,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. It is based on Stephen King's 1977 novel and stars Jack Nicholson, Shelley Duvall, Danny Lloyd and Scatman Crothers. The film presents the descent into insanity of a recovering alcoholic…",
+  "desc": "The Shining is a 1980 psychological horror film produced and directed by Stanley Kubrick and co-written with novelist Diane Johnson. It is based on Stephen King's 1977 novel and stars Jack Nicholson, Shelley Duvall, Danny Lloyd and Scatman Crothers. The film presents the descent into insanity of a recovering alcoholic...",
   "poster": "assets/posters/m-the-shining.webp",
   "backdrop": null,
   "imdb": "tt0081505",
@@ -431,7 +431,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": null,
-  "desc": "Train to Busan (Korean: 부산행) is a 2016 South Korean action horror film directed by Yeon Sang-ho and written by Park Joo-suk. It stars Gong Yoo, Jung Yu-mi, Ma Dong-seok, Kim Su-an, Choi Woo-shik, Ahn So-hee, and Kim Eui-sung. The film takes place primarily on a KTX from Seoul to Busan as a zombie apocalypse suddenly…",
+  "desc": "Train to Busan (Korean: 부산행) is a 2016 South Korean action horror film directed by Yeon Sang-ho and written by Park Joo-suk. It stars Gong Yoo, Jung Yu-mi, Ma Dong-seok, Kim Su-an, Choi Woo-shik, Ahn So-hee, and Kim Eui-sung. The film takes place primarily on a KTX from Seoul to Busan as a zombie apocalypse suddenly...",
   "poster": "assets/posters/m-train-to-busan.webp",
   "backdrop": null,
   "imdb": "tt5700672",
@@ -447,7 +447,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "The Notebook is a 2004 American romantic drama film directed by Nick Cassavetes, from a screenplay by Jeremy Leven and Jan Sardi, and based on the 1996 novel by Nicholas Sparks. The film stars Ryan Gosling and Rachel McAdams as a young couple who fall in love in the 1940s. Their story is read from a notebook in the…",
+  "desc": "The Notebook is a 2004 American romantic drama film directed by Nick Cassavetes, from a screenplay by Jeremy Leven and Jan Sardi, and based on the 1996 novel by Nicholas Sparks. The film stars Ryan Gosling and Rachel McAdams as a young couple who fall in love in the 1940s. Their story is read from a notebook in the...",
   "poster": "assets/posters/m-the-notebook.webp",
   "backdrop": null,
   "imdb": "tt0332280",
@@ -463,7 +463,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "La La Land is a 2016 American musical romantic comedy drama film written and directed by Damien Chazelle. It stars Ryan Gosling and Emma Stone as a struggling jazz pianist and an aspiring actress who meet and fall in love while pursuing their dreams in Los Angeles. The supporting cast includes John Legend, Rosemarie…",
+  "desc": "La La Land is a 2016 American musical romantic comedy drama film written and directed by Damien Chazelle. It stars Ryan Gosling and Emma Stone as a struggling jazz pianist and an aspiring actress who meet and fall in love while pursuing their dreams in Los Angeles. The supporting cast includes John Legend, Rosemarie...",
   "poster": "assets/posters/m-la-la-land.webp",
   "backdrop": null,
   "imdb": "tt3783958",
@@ -479,7 +479,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "Pride & Prejudice is a 2005 period romance film directed by Joe Wright, in his feature directorial debut, based on the 1813 novel by Jane Austen. The film features five sisters from an English family of landed gentry as they deal with issues of marriage, morality, and misconceptions. Keira Knightley stars as Elizabeth…",
+  "desc": "Pride & Prejudice is a 2005 period romance film directed by Joe Wright, in his feature directorial debut, based on the 1813 novel by Jane Austen. The film features five sisters from an English family of landed gentry as they deal with issues of marriage, morality, and misconceptions. Keira Knightley stars as Elizabeth...",
   "poster": "assets/posters/m-pride-prejudice.webp",
   "backdrop": null,
   "imdb": "tt0414387",
@@ -510,7 +510,7 @@ window.CATALOG = [
    "scifi"
   ],
   "rating": null,
-  "desc": "Eternal Sunshine of the Spotless Mind is a 2004 American science fiction romantic drama film directed by Michel Gondry and written by Charlie Kaufman from a story by Gondry, Kaufman, and Pierre Bismuth. It stars Jim Carrey and Kate Winslet as a couple who undergo memory erasure after they break up. Kirsten Dunst, Mark…",
+  "desc": "Eternal Sunshine of the Spotless Mind is a 2004 American science fiction romantic drama film directed by Michel Gondry and written by Charlie Kaufman from a story by Gondry, Kaufman, and Pierre Bismuth. It stars Jim Carrey and Kate Winslet as a couple who undergo memory erasure after they break up. Kirsten Dunst, Mark...",
   "poster": "assets/posters/m-eternal-sunshine-of-the-spotless-mind.webp",
   "backdrop": null,
   "imdb": "tt0338013",
@@ -527,7 +527,7 @@ window.CATALOG = [
    "family"
   ],
   "rating": null,
-  "desc": "Spirited Away is a 2001 Japanese animated fantasy film written and directed by Hayao Miyazaki. It was produced by Toshio Suzuki, animated by Studio Ghibli, and distributed by Toho. The film stars Rumi Hiiragi, alongside Miyu Irino, Mari Natsuki, Takashi Naito, Yasuko Sawaguchi, Tsunehiko Kamijō, Takehiko Ono, and…",
+  "desc": "Spirited Away is a 2001 Japanese animated fantasy film written and directed by Hayao Miyazaki. It was produced by Toshio Suzuki, animated by Studio Ghibli, and distributed by Toho. The film stars Rumi Hiiragi, alongside Miyu Irino, Mari Natsuki, Takashi Naito, Yasuko Sawaguchi, Tsunehiko Kamijō, Takehiko Ono, and...",
   "poster": "assets/posters/m-spirited-away.webp",
   "backdrop": null,
   "imdb": "tt0245429",
@@ -544,7 +544,7 @@ window.CATALOG = [
    "fantasy"
   ],
   "rating": null,
-  "desc": "Your Name is a 2016 Japanese animated romantic fantasy film written and directed by Makoto Shinkai, produced by CoMix Wave Films, and distributed by Toho. The first installment of what critics deem Shinkai's \"disaster trilogy\", themed by the frequency of natural disasters in Japan, the film follows high school…",
+  "desc": "Your Name is a 2016 Japanese animated romantic fantasy film written and directed by Makoto Shinkai, produced by CoMix Wave Films, and distributed by Toho. The first installment of what critics deem Shinkai's \"disaster trilogy\", themed by the frequency of natural disasters in Japan, the film follows high school...",
   "poster": "assets/posters/m-your-name.webp",
   "backdrop": null,
   "imdb": "tt5311514",
@@ -561,7 +561,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "Grave of the Fireflies is a 1988 Japanese animated war film written and directed by Isao Takahata. It stars the voices of Tsutomu Tatsumi, Ayano Shiraishi, Yoshiko Shinohara, and Akemi Yamaguchi. Based on Akiyuki Nosaka's 1967 semi-autobiographical short story of the same name, the film is set in Kobe shortly after…",
+  "desc": "Grave of the Fireflies is a 1988 Japanese animated war film written and directed by Isao Takahata. It stars the voices of Tsutomu Tatsumi, Ayano Shiraishi, Yoshiko Shinohara, and Akemi Yamaguchi. Based on Akiyuki Nosaka's 1967 semi-autobiographical short story of the same name, the film is set in Kobe shortly after...",
   "poster": "assets/posters/m-grave-of-the-fireflies.webp",
   "backdrop": null,
   "imdb": "tt0095327",
@@ -578,7 +578,7 @@ window.CATALOG = [
    "romance"
   ],
   "rating": null,
-  "desc": "A Silent Voice is a 2016 Japanese animated psychological drama film directed by Naoko Yamada, and written by Reiko Yoshida, based on the manga series A Silent Voice by Yoshitoki Ōima. The film was produced by Kyoto Animation, featuring character designs by Futoshi Nishiya and music by Kensuke Ushio. Plans for an…",
+  "desc": "A Silent Voice is a 2016 Japanese animated psychological drama film directed by Naoko Yamada, and written by Reiko Yoshida, based on the manga series A Silent Voice by Yoshitoki Ōima. The film was produced by Kyoto Animation, featuring character designs by Futoshi Nishiya and music by Kensuke Ushio. Plans for an...",
   "poster": "assets/posters/m-a-silent-voice.webp",
   "backdrop": null,
   "imdb": "tt5323662",
@@ -595,7 +595,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": null,
-  "desc": "Princess Mononoke is a 1997 Japanese animated epic historical fantasy film written and directed by Hayao Miyazaki. Set in the Muromachi period of Japanese history, the film follows Ashitaka, a young Emishi prince who journeys west to cure his cursed arm and becomes embroiled in the conflict between the forest of the…",
+  "desc": "Princess Mononoke is a 1997 Japanese animated epic historical fantasy film written and directed by Hayao Miyazaki. Set in the Muromachi period of Japanese history, the film follows Ashitaka, a young Emishi prince who journeys west to cure his cursed arm and becomes embroiled in the conflict between the forest of the...",
   "poster": "assets/posters/m-princess-mononoke.webp",
   "backdrop": null,
   "imdb": "tt0119698",
@@ -612,7 +612,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": null,
-  "desc": "Akira is a 1988 Japanese animated cyberpunk action thriller film directed by Katsuhiro Otomo, produced by Ryōhei Suzuki and Shunzō Katō, and written by Otomo and Izo Hashimoto, based on Otomo's 1982 manga Akira. Set in a dystopian 2019, it follows Shōtarō Kaneda, the leader of a biker gang whose childhood friend…",
+  "desc": "Akira is a 1988 Japanese animated cyberpunk action thriller film directed by Katsuhiro Otomo, produced by Ryōhei Suzuki and Shunzō Katō, and written by Otomo and Izo Hashimoto, based on Otomo's 1982 manga Akira. Set in a dystopian 2019, it follows Shōtarō Kaneda, the leader of a biker gang whose childhood friend...",
   "poster": "assets/posters/m-akira.webp",
   "backdrop": null,
   "imdb": "tt0094625",
@@ -629,7 +629,7 @@ window.CATALOG = [
    "fantasy"
   ],
   "rating": null,
-  "desc": "Weathering with You is a 2019 Japanese animated romantic fantasy film written and directed by Makoto Shinkai, produced by CoMix Wave Films and distributed by Toho. A second installment of Shinkai's Disaster trilogy, following Your Name (2016) and followed by Suzume (2022), the film follows a 16-year-old high school…",
+  "desc": "Weathering with You is a 2019 Japanese animated romantic fantasy film written and directed by Makoto Shinkai, produced by CoMix Wave Films and distributed by Toho. A second installment of Shinkai's Disaster trilogy, following Your Name (2016) and followed by Suzume (2022), the film follows a 16-year-old high school...",
   "poster": "assets/posters/m-weathering-with-you.webp",
   "backdrop": null,
   "imdb": "tt9426210",
@@ -645,7 +645,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "Schindler's List is a 1993 American historical drama film directed and co-produced by Steven Spielberg and written by Steven Zaillian. It is based on the historical novel Schindler's Ark (1982) by Thomas Keneally. The film follows Oskar Schindler, a German industrialist who saved more than a thousand mostly…",
+  "desc": "Schindler's List is a 1993 American historical drama film directed and co-produced by Steven Spielberg and written by Steven Zaillian. It is based on the historical novel Schindler's Ark (1982) by Thomas Keneally. The film follows Oskar Schindler, a German industrialist who saved more than a thousand mostly...",
   "poster": "assets/posters/m-schindler-s-list.webp",
   "backdrop": null,
   "imdb": "tt0108052",
@@ -662,7 +662,7 @@ window.CATALOG = [
    "fantasy"
   ],
   "rating": null,
-  "desc": "The Green Mile is a 1999 American epic fantasy drama film written and directed by Frank Darabont and based on the 1996 novel by Stephen King. It stars Tom Hanks as a death row correctional officer during the Great Depression who witnesses supernatural events following the arrival of an enigmatic convict at his…",
+  "desc": "The Green Mile is a 1999 American epic fantasy drama film written and directed by Frank Darabont and based on the 1996 novel by Stephen King. It stars Tom Hanks as a death row correctional officer during the Great Depression who witnesses supernatural events following the arrival of an enigmatic convict at his...",
   "poster": "assets/posters/m-the-green-mile.webp",
   "backdrop": null,
   "imdb": "tt0120689",
@@ -679,7 +679,7 @@ window.CATALOG = [
    "family"
   ],
   "rating": null,
-  "desc": "Hachi: A Dog's Tale is a 2009 drama film and a remake of Seijirō Kōyama's 1987 Japanese film Hachikō Monogatari. The original film told the true story of the Akita dog named Hachikō who lived in Japan 1923–1935. Hachi: A Dog's Tale is an updated American adaptation based on the Japanese film.",
+  "desc": "Hachi: A Dog's Tale is a 2009 drama film and a remake of Seijirō Kōyama's 1987 Japanese film Hachikō Monogatari. The original film told the true story of the Akita dog named Hachikō who lived in Japan 1923-1935. Hachi: A Dog's Tale is an updated American adaptation based on the Japanese film.",
   "poster": "assets/posters/m-hachi-a-dog-s-tale.webp",
   "backdrop": null,
   "imdb": "tt1028532",
@@ -695,7 +695,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": null,
-  "desc": "William Shakespeare's Romeo & Juliet is a 1996 romantic crime film directed, produced, and co-written by Baz Luhrmann. It is a modernized adaptation of William Shakespeare's tragedy of the same name, albeit still using Shakespearean English. The film stars Leonardo DiCaprio and Claire Danes in the title roles of two…",
+  "desc": "William Shakespeare's Romeo & Juliet is a 1996 romantic crime film directed, produced, and co-written by Baz Luhrmann. It is a modernized adaptation of William Shakespeare's tragedy of the same name, albeit still using Shakespearean English. The film stars Leonardo DiCaprio and Claire Danes in the title roles of two...",
   "poster": "assets/posters/m-romeo-juliet.webp",
   "backdrop": null,
   "imdb": "tt0117509",
@@ -711,7 +711,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "Requiem for a Dream is a 2000 American psychological drama film directed by Darren Aronofsky and written by Aronofsky and Hubert Selby Jr., based on Selby's 1978 novel. It stars Ellen Burstyn, Jared Leto, Jennifer Connelly, Christopher McDonald and Marlon Wayans. The film depicts four characters affected by drug…",
+  "desc": "Requiem for a Dream is a 2000 American psychological drama film directed by Darren Aronofsky and written by Aronofsky and Hubert Selby Jr., based on Selby's 1978 novel. It stars Ellen Burstyn, Jared Leto, Jennifer Connelly, Christopher McDonald and Marlon Wayans. The film depicts four characters affected by drug...",
   "poster": "assets/posters/m-requiem-for-a-dream.webp",
   "backdrop": null,
   "imdb": "tt0180093",
@@ -728,7 +728,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": null,
-  "desc": "Joker is a 2019 American psychological thriller film directed by Todd Phillips from a screenplay he co-wrote with Scott Silver. Based on DC Comics characters, it stars Joaquin Phoenix and provides an alternative origin story for the Joker. The film follows Arthur Fleck, a mentally ill party clown and aspiring stand-up…",
+  "desc": "Joker is a 2019 American psychological thriller film directed by Todd Phillips from a screenplay he co-wrote with Scott Silver. Based on DC Comics characters, it stars Joaquin Phoenix and provides an alternative origin story for the Joker. The film follows Arthur Fleck, a mentally ill party clown and aspiring stand-up...",
   "poster": "assets/posters/m-joker.webp",
   "backdrop": null,
   "imdb": "tt7286456",
@@ -744,7 +744,7 @@ window.CATALOG = [
    "scifi"
   ],
   "rating": null,
-  "desc": "Mad Max: Fury Road is a 2015 Australian post-apocalyptic action film co-written, co-produced and directed by George Miller, who collaborated with Brendan McCarthy and Nico Lathouris on the screenplay. The fourth instalment in the Mad Max franchise, it was produced by Village Roadshow Pictures and Kennedy Miller…",
+  "desc": "Mad Max: Fury Road is a 2015 Australian post-apocalyptic action film co-written, co-produced and directed by George Miller, who collaborated with Brendan McCarthy and Nico Lathouris on the screenplay. The fourth instalment in the Mad Max franchise, it was produced by Village Roadshow Pictures and Kennedy Miller...",
   "poster": "assets/posters/m-mad-max-fury-road.webp",
   "backdrop": null,
   "imdb": "tt1392190",
@@ -760,7 +760,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "John Wick is a 2014 American action thriller film directed by Chad Stahelski and written by Derek Kolstad. Keanu Reeves stars as John Wick, a legendary hitman who comes out of retirement to seek revenge against the men who killed his dog, a final gift from his recently deceased wife. The film also stars Michael…",
+  "desc": "John Wick is a 2014 American action thriller film directed by Chad Stahelski and written by Derek Kolstad. Keanu Reeves stars as John Wick, a legendary hitman who comes out of retirement to seek revenge against the men who killed his dog, a final gift from his recently deceased wife. The film also stars Michael...",
   "poster": "assets/posters/m-john-wick.webp",
   "backdrop": null,
   "imdb": "tt2911666",
@@ -776,7 +776,7 @@ window.CATALOG = [
    "scifi"
   ],
   "rating": null,
-  "desc": "Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the direct sequel to Avengers: Infinity War (2018) and the 22nd film in the Marvel Cinematic Universe (MCU). Directed by…",
+  "desc": "Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the direct sequel to Avengers: Infinity War (2018) and the 22nd film in the Marvel Cinematic Universe (MCU). Directed by...",
   "poster": "assets/posters/m-avengers-endgame.webp",
   "backdrop": null,
   "imdb": "tt4154796",
@@ -792,7 +792,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": null,
-  "desc": "The Matrix is a 1999 science fiction–action film written and directed by the Wachowskis. The first installment in the Matrix film series, it stars Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano. The film follows a disillusioned computer hacker Neo (Reeves) who discovers that the…",
+  "desc": "The Matrix is a 1999 science fiction-action film written and directed by the Wachowskis. The first installment in the Matrix film series, it stars Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving, and Joe Pantoliano. The film follows a disillusioned computer hacker Neo (Reeves) who discovers that the...",
   "poster": "assets/posters/m-the-matrix.webp",
   "backdrop": null,
   "imdb": "tt0133093",
@@ -808,7 +808,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": null,
-  "desc": "Dune is a 2021 American epic space opera film co-produced and directed by Denis Villeneuve, who co-wrote the screenplay with Jon Spaihts and Eric Roth. It is the first of a two-part adaptation of the 1965 novel by Frank Herbert and the first installment in Villeneuve's Dune film trilogy. The cast includes Timothée…",
+  "desc": "Dune is a 2021 American epic space opera film co-produced and directed by Denis Villeneuve, who co-wrote the screenplay with Jon Spaihts and Eric Roth. It is the first of a two-part adaptation of the 1965 novel by Frank Herbert and the first installment in Villeneuve's Dune film trilogy. The cast includes Timothée...",
   "poster": "assets/posters/m-dune.webp",
   "backdrop": null,
   "imdb": "tt1160419",
@@ -825,7 +825,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": null,
-  "desc": "Gladiator is a 2000 epic action adventure drama film directed by Ridley Scott and written by David Franzoni, John Logan, and William Nicholson from a story by Franzoni. It stars Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed, Derek Jacobi, Djimon Hounsou, and Richard Harris. Crowe portrays Maximus Decimus…",
+  "desc": "Gladiator is a 2000 epic action adventure drama film directed by Ridley Scott and written by David Franzoni, John Logan, and William Nicholson from a story by Franzoni. It stars Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed, Derek Jacobi, Djimon Hounsou, and Richard Harris. Crowe portrays Maximus Decimus...",
   "poster": "assets/posters/m-gladiator.webp",
   "backdrop": null,
   "imdb": "tt0172495",
@@ -841,7 +841,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "Parasite is a 2019 South Korean black comedy thriller film directed by Bong Joon Ho, who co-wrote the screenplay with Han Jin-won. It stars Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-shik, Park So-dam, Jang Hye-jin, Park Myung-hoon, and Lee Jung-eun. The film follows a poor family who infiltrate the home and…",
+  "desc": "Parasite is a 2019 South Korean black comedy thriller film directed by Bong Joon Ho, who co-wrote the screenplay with Han Jin-won. It stars Song Kang-ho, Lee Sun-kyun, Cho Yeo-jeong, Choi Woo-shik, Park So-dam, Jang Hye-jin, Park Myung-hoon, and Lee Jung-eun. The film follows a poor family who infiltrate the home and...",
   "poster": "assets/posters/m-parasite.webp",
   "backdrop": null,
   "imdb": "tt6751668",
@@ -857,7 +857,7 @@ window.CATALOG = [
    "crime"
   ],
   "rating": null,
-  "desc": "The Shawshank Redemption is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne, who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her…",
+  "desc": "The Shawshank Redemption is a 1994 American drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne, who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her...",
   "poster": "assets/posters/m-the-shawshank-redemption.webp",
   "backdrop": null,
   "imdb": "tt0111161",
@@ -873,7 +873,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "Pulp Fiction is a 1994 American crime film written and directed by Quentin Tarantino from a story he conceived with Roger Avary. It tells four intertwining tales of crime and violence in Los Angeles. The film stars John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman. The title refers…",
+  "desc": "Pulp Fiction is a 1994 American crime film written and directed by Quentin Tarantino from a story he conceived with Roger Avary. It tells four intertwining tales of crime and violence in Los Angeles. The film stars John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman. The title refers...",
   "poster": "assets/posters/m-pulp-fiction.webp",
   "backdrop": null,
   "imdb": "tt0110912",
@@ -889,7 +889,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "The Godfather is a 1972 American epic gangster film directed by Francis Ford Coppola, who co-wrote the screenplay with Mario Puzo based on Puzo's best-selling 1969 novel. The film features an ensemble cast that includes Marlon Brando, Al Pacino, James Caan, Richard Castellano, Robert Duvall, Sterling Hayden, John…",
+  "desc": "The Godfather is a 1972 American epic gangster film directed by Francis Ford Coppola, who co-wrote the screenplay with Mario Puzo based on Puzo's best-selling 1969 novel. The film features an ensemble cast that includes Marlon Brando, Al Pacino, James Caan, Richard Castellano, Robert Duvall, Sterling Hayden, John...",
   "poster": "assets/posters/m-the-godfather.webp",
   "backdrop": null,
   "imdb": "tt0068646",
@@ -905,7 +905,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": null,
-  "desc": "Seven is a 1995 American crime thriller film directed by David Fincher and written by Andrew Kevin Walker. It stars Brad Pitt and Morgan Freeman, with Gwyneth Paltrow and John C. McGinley in supporting roles. Set in an unnamed, crime-ridden city, the narrative follows disenchanted, nearly retired Detective Lieutenant…",
+  "desc": "Seven is a 1995 American crime thriller film directed by David Fincher and written by Andrew Kevin Walker. It stars Brad Pitt and Morgan Freeman, with Gwyneth Paltrow and John C. McGinley in supporting roles. Set in an unnamed, crime-ridden city, the narrative follows disenchanted, nearly retired Detective Lieutenant...",
   "poster": "assets/posters/m-se7en.webp",
   "backdrop": null,
   "imdb": "tt0114369",
@@ -920,7 +920,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": null,
-  "desc": "Oppenheimer is a 2023 epic biographical thriller film written, co-produced, and directed by Christopher Nolan. It follows the life of J. Robert Oppenheimer, the American theoretical physicist who led the development of the first nuclear weapons during World War II. Based on the 2005 biography American Prometheus by…",
+  "desc": "Oppenheimer is a 2023 epic biographical thriller film written, co-produced, and directed by Christopher Nolan. It follows the life of J. Robert Oppenheimer, the American theoretical physicist who led the development of the first nuclear weapons during World War II. Based on the 2005 biography American Prometheus by...",
   "poster": "assets/posters/m-oppenheimer.webp",
   "backdrop": null,
   "imdb": "tt15398776",
@@ -935,7 +935,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": null,
-  "desc": "Superbad is a 2007 American buddy comedy film directed by Greg Mottola, written by Seth Rogen and Evan Goldberg, and produced by Judd Apatow. It stars Jonah Hill and Michael Cera as Seth and Evan, two teenagers about to graduate from high school. Before graduating, the boys want to party and lose their virginity, but…",
+  "desc": "Superbad is a 2007 American buddy comedy film directed by Greg Mottola, written by Seth Rogen and Evan Goldberg, and produced by Judd Apatow. It stars Jonah Hill and Michael Cera as Seth and Evan, two teenagers about to graduate from high school. Before graduating, the boys want to party and lose their virginity, but...",
   "poster": "assets/posters/m-superbad.webp",
   "backdrop": null,
   "imdb": "tt0829482",
@@ -950,7 +950,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": null,
-  "desc": "The Grand Budapest Hotel is a 2014 comedy-drama film written and directed by Wes Anderson. The film's seventeen-actor ensemble cast is led by Ralph Fiennes as Monsieur Gustave H., famed concierge of a twentieth-century mountainside resort in the fictional country of Zubrowka. After being framed for the murder of a…",
+  "desc": "The Grand Budapest Hotel is a 2014 comedy-drama film written and directed by Wes Anderson. The film's seventeen-actor ensemble cast is led by Ralph Fiennes as Monsieur Gustave H., famed concierge of a twentieth-century mountainside resort in the fictional country of Zubrowka. After being framed for the murder of a...",
   "poster": "assets/posters/m-the-grand-budapest-hotel.webp",
   "backdrop": null,
   "imdb": "tt2278388",
@@ -965,7 +965,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": null,
-  "desc": "The Hangover is a 2009 American comedy film directed by Todd Phillips, and written by Jon Lucas and Scott Moore. It is the first installment in The Hangover trilogy. The film stars Bradley Cooper, Ed Helms, Zach Galifianakis, Heather Graham, Justin Bartha, and Jeffrey Tambor. It tells the story of Phil Wenneck…",
+  "desc": "The Hangover is a 2009 American comedy film directed by Todd Phillips, and written by Jon Lucas and Scott Moore. It is the first installment in The Hangover trilogy. The film stars Bradley Cooper, Ed Helms, Zach Galifianakis, Heather Graham, Justin Bartha, and Jeffrey Tambor. It tells the story of Phil Wenneck...",
   "poster": "assets/posters/m-the-hangover.webp",
   "backdrop": null,
   "imdb": "tt1119646",
@@ -981,7 +981,7 @@ window.CATALOG = [
    "fantasy"
   ],
   "rating": null,
-  "desc": "Barbie is a 2023 satirical fantasy comedy film directed by Greta Gerwig from a screenplay she wrote with her husband, Noah Baumbach. Based on the fashion dolls by Mattel, it is the first live-action Barbie film after numerous animated films and specials. Starring Margot Robbie as the title character and Ryan Gosling…",
+  "desc": "Barbie is a 2023 satirical fantasy comedy film directed by Greta Gerwig from a screenplay she wrote with her husband, Noah Baumbach. Based on the fashion dolls by Mattel, it is the first live-action Barbie film after numerous animated films and specials. Starring Margot Robbie as the title character and Ryan Gosling...",
   "poster": "assets/posters/m-barbie.webp",
   "backdrop": null,
   "imdb": "tt1517268",
@@ -997,7 +997,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": null,
-  "desc": "Toy Story is a 1995 American animated adventure comedy film directed by John Lasseter, and written by Joss Whedon, Andrew Stanton, Joel Cohen, and Alec Sokolow. The first entirely computer-animated feature film, as well as the first feature film produced by Pixar Animation Studios for Walt Disney Pictures, it stars…",
+  "desc": "Toy Story is a 1995 American animated adventure comedy film directed by John Lasseter, and written by Joss Whedon, Andrew Stanton, Joel Cohen, and Alec Sokolow. The first entirely computer-animated feature film, as well as the first feature film produced by Pixar Animation Studios for Walt Disney Pictures, it stars...",
   "poster": "assets/posters/m-toy-story.webp",
   "backdrop": null,
   "imdb": "tt0114709",
@@ -1013,7 +1013,7 @@ window.CATALOG = [
    "fantasy"
   ],
   "rating": null,
-  "desc": "Coco was initially regarded as taking inspiration from the 2014 film The Book of Life because both films touch upon Dia De Los muertos and the fact that the protagonist of The Book Of Life Manolo and Coco's Miguel both play guitar and love music.…",
+  "desc": "Coco was initially regarded as taking inspiration from the 2014 film The Book of Life because both films touch upon Dia De Los muertos and the fact that the protagonist of The Book Of Life Manolo and Coco's Miguel both play guitar and love music....",
   "poster": "assets/posters/m-coco.webp",
   "backdrop": null,
   "imdb": "tt2380307",
@@ -1029,7 +1029,7 @@ window.CATALOG = [
    "family"
   ],
   "rating": null,
-  "desc": "Spider-Man: Into the Spider-Verse is a 2018 American animated superhero film based on the Marvel Comics character Spider-Man. Directed by Bob Persichetti, Peter Ramsey and Rodney Rothman from a screenplay by Phil Lord and Rothman, it is the first animated film in the Spider-Man franchise. Shameik Moore stars as the…",
+  "desc": "Spider-Man: Into the Spider-Verse is a 2018 American animated superhero film based on the Marvel Comics character Spider-Man. Directed by Bob Persichetti, Peter Ramsey and Rodney Rothman from a screenplay by Phil Lord and Rothman, it is the first animated film in the Spider-Man franchise. Shameik Moore stars as the...",
   "poster": "assets/posters/m-spider-man-into-the-spider-verse.webp",
   "backdrop": null,
   "imdb": "tt4633694",
@@ -1045,7 +1045,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": null,
-  "desc": "The Lord of the Rings: The Fellowship of the Ring is a 2001 epic fantasy film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson. It is based on J. R. R. Tolkien's 1954 The Fellowship of the Ring, the first volume of the novel The Lord of the Rings. The film is the first instalment…",
+  "desc": "The Lord of the Rings: The Fellowship of the Ring is a 2001 epic fantasy film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson. It is based on J. R. R. Tolkien's 1954 The Fellowship of the Ring, the first volume of the novel The Lord of the Rings. The film is the first instalment...",
   "poster": "assets/posters/m-the-lord-of-the-rings-the-fellowship-of-the-ring.webp",
   "backdrop": null,
   "imdb": "tt0120737",
@@ -1061,7 +1061,7 @@ window.CATALOG = [
    "family"
   ],
   "rating": null,
-  "desc": "Harry Potter and the Philosopher's Stone is a 2001 fantasy film directed by Chris Columbus and written by Steve Kloves, based on the 1997 novel by J. K. Rowling. It is the first instalment in the Harry Potter film series, and stars Daniel Radcliffe as Harry Potter, with Rupert Grint as Ron Weasley, and Emma Watson as…",
+  "desc": "Harry Potter and the Philosopher's Stone is a 2001 fantasy film directed by Chris Columbus and written by Steve Kloves, based on the 1997 novel by J. K. Rowling. It is the first instalment in the Harry Potter film series, and stars Daniel Radcliffe as Harry Potter, with Rupert Grint as Ron Weasley, and Emma Watson as...",
   "poster": "assets/posters/m-harry-potter-and-the-philosopher-s-stone.webp",
   "backdrop": null,
   "imdb": "tt0241527",
@@ -1096,7 +1096,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": 9.2,
-  "desc": "Breaking Bad follows protagonist Walter White, a chemistry teacher who lives in New Mexico with his wife and teenage son who has cerebral palsy. White is diagnosed with Stage III cancer and given a prognosis of two years left to live. With a new sense of fearlessness based on his medical prognosis, and a desire to…",
+  "desc": "Breaking Bad follows protagonist Walter White, a chemistry teacher who lives in New Mexico with his wife and teenage son who has cerebral palsy. White is diagnosed with Stage III cancer and given a prognosis of two years left to live. With a new sense of fearlessness based on his medical prognosis, and a desire to...",
   "poster": "assets/posters/s-breaking-bad.webp",
   "backdrop": "assets/backdrops/s-breaking-bad.webp",
   "tvmaze": 169,
@@ -1115,7 +1115,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 8.9,
-  "desc": "Based on the bestselling book series A Song of Ice and Fire by George R.R. Martin, this sprawling new HBO drama is set in a world where summers span decades and winters can last a lifetime. From the scheming south and the savage eastern lands, to the frozen north and ancient Wall that protects the realm from the…",
+  "desc": "Based on the bestselling book series A Song of Ice and Fire by George R.R. Martin, this sprawling new HBO drama is set in a world where summers span decades and winters can last a lifetime. From the scheming south and the savage eastern lands, to the frozen north and ancient Wall that protects the realm from the...",
   "poster": "assets/posters/s-game-of-thrones.webp",
   "backdrop": "assets/backdrops/s-game-of-thrones.webp",
   "tvmaze": 82,
@@ -1132,7 +1132,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": 7.8,
-  "desc": "Based on the best-selling fantasy series, The Witcher is an epic tale of fate and family. Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts. But when destiny hurtles him toward a powerful sorceress, and a young princess with a dangerous…",
+  "desc": "Based on the best-selling fantasy series, The Witcher is an epic tale of fate and family. Geralt of Rivia, a solitary monster hunter, struggles to find his place in a world where people often prove more wicked than beasts. But when destiny hurtles him toward a powerful sorceress, and a young princess with a dangerous...",
   "poster": "assets/posters/s-the-witcher.webp",
   "backdrop": "assets/backdrops/s-the-witcher.webp",
   "tvmaze": 28276,
@@ -1150,7 +1150,7 @@ window.CATALOG = [
    "horror"
   ],
   "rating": 7.9,
-  "desc": "Smart, sarcastic and a little dead inside, Wednesday Addams investigates a murder spree while making new friends — and foes — at Nevermore Academy.",
+  "desc": "Smart, sarcastic and a little dead inside, Wednesday Addams investigates a murder spree while making new friends - and foes - at Nevermore Academy.",
   "poster": "assets/posters/s-wednesday.webp",
   "backdrop": "assets/backdrops/s-wednesday.webp",
   "tvmaze": 53647,
@@ -1186,7 +1186,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 7.9,
-  "desc": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits — with deadly high stakes.",
+  "desc": "Hundreds of cash-strapped players accept a strange invitation to compete in children's games. Inside, a tempting prize awaits - with deadly high stakes.",
   "poster": "assets/posters/s-squid-game.webp",
   "backdrop": "assets/backdrops/s-squid-game.webp",
   "tvmaze": 43687,
@@ -1236,7 +1236,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": 7.3,
-  "desc": "Based on Julia Quinn's best-selling series of novels, Bridgerton is set in the sexy, lavish and competitive world of Regency London high society. From the glittering ballrooms of Mayfair to the aristocratic palaces of Park Lane and beyond, the series unveils a seductive, sumptuous world replete with intricate rules…",
+  "desc": "Based on Julia Quinn's best-selling series of novels, Bridgerton is set in the sexy, lavish and competitive world of Regency London high society. From the glittering ballrooms of Mayfair to the aristocratic palaces of Park Lane and beyond, the series unveils a seductive, sumptuous world replete with intricate rules...",
   "poster": "assets/posters/s-bridgerton.webp",
   "backdrop": "assets/backdrops/s-bridgerton.webp",
   "tvmaze": 42966,
@@ -1269,7 +1269,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": 8.5,
-  "desc": "Steve Carell stars in The Office, a fresh and funny mockumentary-style glimpse into the daily interactions of the eccentric workers at the Dunder Mifflin paper supply company. Based on the smash-hit British series of the same name and adapted for American Television by Greg Daniels, this fast-paced comedy parodies…",
+  "desc": "Steve Carell stars in The Office, a fresh and funny mockumentary-style glimpse into the daily interactions of the eccentric workers at the Dunder Mifflin paper supply company. Based on the smash-hit British series of the same name and adapted for American Television by Greg Daniels, this fast-paced comedy parodies...",
   "poster": "assets/posters/s-the-office.webp",
   "backdrop": "assets/backdrops/s-the-office.webp",
   "tvmaze": 526,
@@ -1286,7 +1286,7 @@ window.CATALOG = [
    "romance"
   ],
   "rating": 8.5,
-  "desc": "Six young (20-something) people from New York City (Manhattan), on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.This average group of buddies goes through massive mayhem, family trouble…",
+  "desc": "Six young (20-something) people from New York City (Manhattan), on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.This average group of buddies goes through massive mayhem, family trouble...",
   "poster": "assets/posters/s-friends.webp",
   "backdrop": "assets/backdrops/s-friends.webp",
   "tvmaze": 431,
@@ -1303,7 +1303,7 @@ window.CATALOG = [
    "crime"
   ],
   "rating": 8.1,
-  "desc": "Brooklyn Nine-Nine is an ensemble comedy about a talented-but-carefree detective, a by-the-book police captain and their precinct colleagues. While based in the workplace, Brooklyn Nine-Nine is not really about the job – it's about the men and women behind the badge.",
+  "desc": "Brooklyn Nine-Nine is an ensemble comedy about a talented-but-carefree detective, a by-the-book police captain and their precinct colleagues. While based in the workplace, Brooklyn Nine-Nine is not really about the job - it's about the men and women behind the badge.",
   "poster": "assets/posters/s-brooklyn-nine-nine.webp",
   "backdrop": "assets/backdrops/s-brooklyn-nine-nine.webp",
   "tvmaze": 49,
@@ -1339,7 +1339,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": 7.9,
-  "desc": "The Walking Dead tells the story of the months and years that follow after a zombie apocalypse. It follows a group of survivors, led by former police officer Rick Grimes, who travel in search of a safe and secure home. As the world overrun by the dead takes its toll on the survivors, their interpersonal conflicts…",
+  "desc": "The Walking Dead tells the story of the months and years that follow after a zombie apocalypse. It follows a group of survivors, led by former police officer Rick Grimes, who travel in search of a safe and secure home. As the world overrun by the dead takes its toll on the survivors, their interpersonal conflicts...",
   "poster": "assets/posters/s-the-walking-dead.webp",
   "backdrop": "assets/backdrops/s-the-walking-dead.webp",
   "tvmaze": 73,
@@ -1356,7 +1356,7 @@ window.CATALOG = [
    "thriller"
   ],
   "rating": 8.4,
-  "desc": "Over the last ten years, technology has transformed almost every aspect of our lives before we've had time to stop and question it. In every home; on every desk; in every palm - a plasma screen; a monitor; a smartphone--a black mirror of our 21st Century existence. Black Mirror is a contemporary British re-working of…",
+  "desc": "Over the last ten years, technology has transformed almost every aspect of our lives before we've had time to stop and question it. In every home; on every desk; in every palm - a plasma screen; a monitor; a smartphone--a black mirror of our 21st Century existence. Black Mirror is a contemporary British re-working of...",
   "poster": "assets/posters/s-black-mirror.webp",
   "backdrop": "assets/backdrops/s-black-mirror.webp",
   "tvmaze": 305,
@@ -1409,7 +1409,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 8,
-  "desc": "Normal People tracks the tender but complicated relationship of Marianne and Connell from the end of their school days in small-town west of Ireland to their undergraduate years at Trinity College. At school, he's well-liked and popular, while she's lonely, proud and intimidating. But when Connell comes to pick up his…",
+  "desc": "Normal People tracks the tender but complicated relationship of Marianne and Connell from the end of their school days in small-town west of Ireland to their undergraduate years at Trinity College. At school, he's well-liked and popular, while she's lonely, proud and intimidating. But when Connell comes to pick up his...",
   "poster": "assets/posters/s-normal-people.webp",
   "backdrop": "assets/backdrops/s-normal-people.webp",
   "tvmaze": 42361,
@@ -1462,7 +1462,7 @@ window.CATALOG = [
    "drama"
   ],
   "rating": 8.9,
-  "desc": "Chernobyl dramatizes the true story of one of the worst man-made catastrophes in history and tells of the brave men and women who sacrificed to save Europe from unimaginable disaster. The miniseries focuses on the heartbreaking scope of the nuclear plant disaster that occurred in Ukraine in April 1986, revealing how…",
+  "desc": "Chernobyl dramatizes the true story of one of the worst man-made catastrophes in history and tells of the brave men and women who sacrificed to save Europe from unimaginable disaster. The miniseries focuses on the heartbreaking scope of the nuclear plant disaster that occurred in Ukraine in April 1986, revealing how...",
   "poster": "assets/posters/s-chernobyl.webp",
   "backdrop": "assets/backdrops/s-chernobyl.webp",
   "tvmaze": 30770,
@@ -1480,7 +1480,7 @@ window.CATALOG = [
    "scifi"
   ],
   "rating": 8.5,
-  "desc": "Set in utopian Piltover and the oppressed underground of Zaun, the story follows the origins of two iconic League champions — and the power that will tear them apart.",
+  "desc": "Set in utopian Piltover and the oppressed underground of Zaun, the story follows the origins of two iconic League champions - and the power that will tear them apart.",
   "poster": "assets/posters/s-arcane.webp",
   "backdrop": "assets/backdrops/s-arcane.webp",
   "tvmaze": 55138,
@@ -1515,7 +1515,7 @@ window.CATALOG = [
    "fantasy"
   ],
   "rating": 7.8,
-  "desc": "Naruto closely follows the life of a boy who is feared and detested by the villagers of the hidden leaf village of Konoha. The distrust of the boy has little to do with the boy himself, but it's what's inside him that causes anxiety. Long before Naruto came to be, a Kyuubi (demon fox) with great fury and power waged…",
+  "desc": "Naruto closely follows the life of a boy who is feared and detested by the villagers of the hidden leaf village of Konoha. The distrust of the boy has little to do with the boy himself, but it's what's inside him that causes anxiety. Long before Naruto came to be, a Kyuubi (demon fox) with great fury and power waged...",
   "poster": "assets/posters/s-naruto.webp",
   "backdrop": "assets/backdrops/s-naruto.webp",
   "tvmaze": 495,
@@ -1534,7 +1534,7 @@ window.CATALOG = [
    "fantasy"
   ],
   "rating": 8.7,
-  "desc": "One Piece animation is based on the successful comic by Eiichiro Oda. The comic has sold more than 260 million copies. The success doesn't stop; the One Piece animation series is in its top 5 TV ratings for kids programs in Japan for past few years and the series' most recent feature film title \"One Piece Film Z\"…",
+  "desc": "One Piece animation is based on the successful comic by Eiichiro Oda. The comic has sold more than 260 million copies. The success doesn't stop; the One Piece animation series is in its top 5 TV ratings for kids programs in Japan for past few years and the series' most recent feature film title \"One Piece Film Z\"...",
   "poster": "assets/posters/s-one-piece.webp",
   "backdrop": "assets/backdrops/s-one-piece.webp",
   "tvmaze": 1505,
@@ -1553,7 +1553,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 8.9,
-  "desc": "Known in Japan as Shingeki no Kyojin, many years ago, the last remnants of humanity were forced to retreat behind the towering walls of a fortified city to escape the massive, man-eating Titans that roamed the land outside their fortress. Only the heroic members of the Scouting Legion dared to stray beyond the safety…",
+  "desc": "Known in Japan as Shingeki no Kyojin, many years ago, the last remnants of humanity were forced to retreat behind the towering walls of a fortified city to escape the massive, man-eating Titans that roamed the land outside their fortress. Only the heroic members of the Scouting Legion dared to stray beyond the safety...",
   "poster": "assets/posters/s-attack-on-titan.webp",
   "backdrop": "assets/backdrops/s-attack-on-titan.webp",
   "tvmaze": 919,
@@ -1589,7 +1589,7 @@ window.CATALOG = [
    "fantasy"
   ],
   "rating": 7.9,
-  "desc": "Since ancient times, rumors have abounded of man-eating demons lurking in the woods. Because of this, the local townsfolk never venture outside at night. Legend has it that a demon slayer also roams the night, hunting down these bloodthirsty demons. For young Tanjiro, these rumors will soon to become his harsh…",
+  "desc": "Since ancient times, rumors have abounded of man-eating demons lurking in the woods. Because of this, the local townsfolk never venture outside at night. Legend has it that a demon slayer also roams the night, hunting down these bloodthirsty demons. For young Tanjiro, these rumors will soon to become his harsh...",
   "poster": "assets/posters/s-demon-slayer.webp",
   "backdrop": "assets/backdrops/s-demon-slayer.webp",
   "tvmaze": 41469,
@@ -1607,7 +1607,7 @@ window.CATALOG = [
    "horror"
   ],
   "rating": 7.6,
-  "desc": "Although Yuji Itadori looks like your average teenager, his immense physical strength is something to behold! Every sports club wants him to join, but Itadori would rather hang out with the school outcasts in the Occult Research Club. One day, the club manages to get their hands on a sealed cursed object. Little do…",
+  "desc": "Although Yuji Itadori looks like your average teenager, his immense physical strength is something to behold! Every sports club wants him to join, but Itadori would rather hang out with the school outcasts in the Occult Research Club. One day, the club manages to get their hands on a sealed cursed object. Little do...",
   "poster": "assets/posters/s-jujutsu-kaisen.webp",
   "backdrop": "assets/backdrops/s-jujutsu-kaisen.webp",
   "tvmaze": 48450,
@@ -1626,7 +1626,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 7.8,
-  "desc": "Fullmetal Alchemist: Brotherhood is set in a fictional world where alchemy – the transmutation of raw materials into objects – is science, and the way of life. The series follows the Elric brothers, Edward and Alphonse, on their perilous journey in search of the legendary \"Philosopher's Stone\". They set forth hoping…",
+  "desc": "Fullmetal Alchemist: Brotherhood is set in a fictional world where alchemy - the transmutation of raw materials into objects - is science, and the way of life. The series follows the Elric brothers, Edward and Alphonse, on their perilous journey in search of the legendary \"Philosopher's Stone\". They set forth hoping...",
   "poster": "assets/posters/s-fullmetal-alchemist-brotherhood.webp",
   "backdrop": "assets/backdrops/s-fullmetal-alchemist-brotherhood.webp",
   "tvmaze": 2071,
@@ -1644,7 +1644,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 7.5,
-  "desc": "Piano prodigy Arima Kosei dominated the competition and all child musicians knew his name. But after his mother, who was also his instructor, passed away, he had a mental breakdown while performing at a recital that resulted in him no longer being able to hear the sound of his piano even though his hearing was…",
+  "desc": "Piano prodigy Arima Kosei dominated the competition and all child musicians knew his name. But after his mother, who was also his instructor, passed away, he had a mental breakdown while performing at a recital that resulted in him no longer being able to hear the sound of his piano even though his hearing was...",
   "poster": "assets/posters/s-your-lie-in-april.webp",
   "backdrop": "assets/backdrops/s-your-lie-in-april.webp",
   "tvmaze": 6605,
@@ -1662,7 +1662,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 6.9,
-  "desc": "Okazaki Tomova is a third-year student at a high school somewhere in Japan, and does not take his studies seriously. Always late for class, he is seen as a delinquent by the rest of his classmates who are busy preparing for their college entrance examinations. Needless to say, he does not have too many close…",
+  "desc": "Okazaki Tomova is a third-year student at a high school somewhere in Japan, and does not take his studies seriously. Always late for class, he is seen as a delinquent by the rest of his classmates who are busy preparing for their college entrance examinations. Needless to say, he does not have too many close...",
   "poster": "assets/posters/s-clannad.webp",
   "backdrop": null,
   "tvmaze": 6562,
@@ -1680,7 +1680,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": 8.3,
-  "desc": "In the year 2071, the crew of the spaceship Bebop travel the solar system trying to apprehend bounties. In the slang of the era, \"Cowboys\" are bounty hunters. Most episodes revolve around a specific bounty, but the show often shares its focus with the pasts of one of each of the four main characters and of more…",
+  "desc": "In the year 2071, the crew of the spaceship Bebop travel the solar system trying to apprehend bounties. In the slang of the era, \"Cowboys\" are bounty hunters. Most episodes revolve around a specific bounty, but the show often shares its focus with the pasts of one of each of the four main characters and of more...",
   "poster": "assets/posters/s-cowboy-bebop.webp",
   "backdrop": "assets/backdrops/s-cowboy-bebop.webp",
   "tvmaze": 1121,
@@ -1698,7 +1698,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": 7.5,
-  "desc": "People are not born equal, a realization that 4-year-old Midoriya Izuku faced when bullied by his classmates who had unique special powers. Izuku was one of the rare cases where he was born with absolutely no unique powers. This did not stop Izuku from pursuing his dream, a dream of becoming a great hero like the…",
+  "desc": "People are not born equal, a realization that 4-year-old Midoriya Izuku faced when bullied by his classmates who had unique special powers. Izuku was one of the rare cases where he was born with absolutely no unique powers. This did not stop Izuku from pursuing his dream, a dream of becoming a great hero like the...",
   "poster": "assets/posters/s-my-hero-academia.webp",
   "backdrop": "assets/backdrops/s-my-hero-academia.webp",
   "tvmaze": 13615,
@@ -1717,7 +1717,7 @@ window.CATALOG = [
    "family"
   ],
   "rating": 7.4,
-  "desc": "Master spy Twilight is the best at what he does when it comes to going undercover on dangerous missions in the name of a better world. But when he receives the ultimate impossible assignment—get married and have a kid—he may finally be in over his head! Not one to depend on others, Twilight has his work cut out for…",
+  "desc": "Master spy Twilight is the best at what he does when it comes to going undercover on dangerous missions in the name of a better world. But when he receives the ultimate impossible assignment-get married and have a kid-he may finally be in over his head! Not one to depend on others, Twilight has his work cut out for...",
   "poster": "assets/posters/s-spy-family.webp",
   "backdrop": "assets/backdrops/s-spy-family.webp",
   "tvmaze": 59698,
@@ -1735,7 +1735,7 @@ window.CATALOG = [
    "action"
   ],
   "rating": 7.8,
-  "desc": "Denji has a simple dream—to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash.…",
+  "desc": "Denji has a simple dream-to live a happy and peaceful life, spending time with a girl he likes. This is a far cry from reality, however, as Denji is forced by the yakuza into killing devils in order to pay off his crushing debts. Using his pet devil Pochita as a weapon, he is ready to do anything for a bit of cash....",
   "poster": "assets/posters/s-chainsaw-man.webp",
   "backdrop": "assets/backdrops/s-chainsaw-man.webp",
   "tvmaze": 63451,
@@ -1753,7 +1753,7 @@ window.CATALOG = [
    "tragedy"
   ],
   "rating": 7.4,
-  "desc": "The story follows Ken Kaneki, a college student who meets a woman named Rize Kamishiro at Anteiku, a coffee shop. They share an interest in literature and plan a date. While walking Rize home, Ken is attacked by her. Rize reveals that she is a ghoul, a human-like creature that hunts and devours human flesh. As she is…",
+  "desc": "The story follows Ken Kaneki, a college student who meets a woman named Rize Kamishiro at Anteiku, a coffee shop. They share an interest in literature and plan a date. While walking Rize home, Ken is attacked by her. Rize reveals that she is a ghoul, a human-like creature that hunts and devours human flesh. As she is...",
   "poster": "assets/posters/s-tokyo-ghoul.webp",
   "backdrop": null,
   "tvmaze": 1440,
@@ -1789,7 +1789,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": 7.8,
-  "desc": "Despite Ryuji Takasu's gentle personality, his eyes make him look like an intimidating delinquent so he is utterly hopeless about his chances of getting a girlfriend anytime soon, and does not have many close friends either. After being greeted by his hungover mother in the morning, Ryuji goes to school and is happy…",
+  "desc": "Despite Ryuji Takasu's gentle personality, his eyes make him look like an intimidating delinquent so he is utterly hopeless about his chances of getting a girlfriend anytime soon, and does not have many close friends either. After being greeted by his hungover mother in the morning, Ryuji goes to school and is happy...",
   "poster": "assets/posters/s-toradora.webp",
   "backdrop": "assets/backdrops/s-toradora.webp",
   "tvmaze": 7557,
@@ -1807,7 +1807,7 @@ window.CATALOG = [
    "comedy"
   ],
   "rating": 7,
-  "desc": "At first glance, the ultra-popular Hori-san seems like a frivolous high school girl, but in reality, she's plain, pragmatic, and family-oriented. On the other hand, the bespectacled Miyamura-kun comes across as an average, gloomy high school fanboy, but he's actually an attractive young man who has a bad-boy streak…",
+  "desc": "At first glance, the ultra-popular Hori-san seems like a frivolous high school girl, but in reality, she's plain, pragmatic, and family-oriented. On the other hand, the bespectacled Miyamura-kun comes across as an average, gloomy high school fanboy, but he's actually an attractive young man who has a bad-boy streak...",
   "poster": "assets/posters/s-horimiya.webp",
   "backdrop": null,
   "tvmaze": 52001,

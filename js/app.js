@@ -1,15 +1,11 @@
-/* ==========================================================================
-   Nikflix – shared app logic (header, menus, bottom nav, footer,
-   cards, rows, search, My List, profile storage, toasts)
-   ========================================================================== */
 (function () {
   "use strict";
 
   const SITE = {
     name: "Nikflix",
-    phone: "+1 (555) 010-4477",
-    phoneHref: "tel:+15550104477",
-    email: "support@nikflix.example",
+    phone: "+91 98765 43210",
+    phoneHref: "tel:+919876543210",
+    email: "nikhilmeshram2006@gmail.com",
   };
 
   const CATEGORIES = [
@@ -29,7 +25,6 @@
   const CAT_MAP = Object.fromEntries(CATEGORIES.map((c) => [c.key, c]));
   const AVATAR_COLORS = ["#e50914", "#1f80e0", "#2fb36d", "#f5a623", "#8e44ad", "#e91e63", "#00a8a8", "#5c5c5c"];
 
-  /* ---------- Icons (inline SVG) ---------- */
   const I = (p, extra = "") => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" ${extra}>${p}</svg>`;
   const ICONS = {
     home: I('<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h5v-6h4v6h5V9.5"/>'),
@@ -58,7 +53,6 @@
   };
   const LOGO_SVG = '<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect width="32" height="32" rx="7" fill="#e50914"/><path d="M10 7h4.2l3.6 10.4V7H22v18h-4.1L14.2 14.6V25H10z" fill="#fff"/></svg>';
 
-  /* ---------- Helpers ---------- */
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -84,17 +78,25 @@
     return `watch.html?id=${encodeURIComponent(item.id)}${suffix}`;
   };
 
-  /* ---------- Storage (with graceful failure) ---------- */
   let storageWarned = false;
   const store = {
     get(key, fallback) {
-      try { const v = localStorage.getItem("sf:" + key); return v === null ? fallback : JSON.parse(v); }
-      catch { return fallback; }
+      try {
+        const v = localStorage.getItem("nk:" + key) ?? localStorage.getItem("sf:" + key);
+        return v === null ? fallback : JSON.parse(v);
+      } catch {
+        return fallback;
+      }
     },
     set(key, value) {
-      try { localStorage.setItem("sf:" + key, JSON.stringify(value)); return true; }
-      catch {
-        if (!storageWarned) { toast("Couldn't save — your browser is blocking local storage.", "error"); storageWarned = true; }
+      try {
+        localStorage.setItem("nk:" + key, JSON.stringify(value));
+        return true;
+      } catch {
+        if (!storageWarned) {
+          toast("Could not save - local storage is disabled in your browser.", "error");
+          storageWarned = true;
+        }
         return false;
       }
     },
@@ -105,12 +107,12 @@
     has: (id) => MyList.ids().includes(id),
     toggle(id) {
       const item = byId(id);
-      if (!item) { toast("Sorry, that title couldn't be found.", "error"); return false; }
+      if (!item) { toast("That title could not be found.", "error"); return false; }
       let ids = MyList.ids();
       const adding = !ids.includes(id);
       ids = adding ? [id, ...ids] : ids.filter((x) => x !== id);
       if (!store.set("mylist", ids)) return !adding;
-      toast(adding ? `Added “${item.title}” to My List` : `Removed “${item.title}” from My List`, "success");
+      toast(adding ? `Added "${item.title}" to My List` : `Removed "${item.title}" from My List`, "success");
       document.dispatchEvent(new CustomEvent("mylist:change"));
       return adding;
     },
@@ -123,16 +125,15 @@
     clear() { return store.set("history", []); },
   };
 
-  const DEFAULT_PROFILE = { name: "Guest", color: AVATAR_COLORS[0], autoplay: true, previews: true, maturity: "all" };
+  const DEFAULT_PROFILE = { name: "Nikhil", color: AVATAR_COLORS[0], autoplay: true, previews: true, maturity: "all" };
   const Profile = {
     get: () => Object.assign({}, DEFAULT_PROFILE, store.get("profile", {})),
     save: (p) => store.set("profile", p),
     reset: () => store.set("profile", DEFAULT_PROFILE),
     defaults: DEFAULT_PROFILE,
   };
-  const initial = (name) => (String(name).trim()[0] || "G").toUpperCase();
+  const initial = (name) => (String(name).trim()[0] || "N").toUpperCase();
 
-  /* ---------- Toasts ---------- */
   function toast(message, type = "info", ms = 3200) {
     let stack = $(".toast-stack");
     if (!stack) {
@@ -150,7 +151,6 @@
     setTimeout(() => { el.classList.add("hide"); setTimeout(() => el.remove(), 260); }, ms);
   }
 
-  /* ---------- Cards & rows ---------- */
   function cardHTML(item, opts = {}) {
     const typeLabel = item.type === "movie" ? "Movie" : "Series";
     const lazy = opts.eager ? 'fetchpriority="high"' : 'loading="lazy"';
@@ -210,7 +210,6 @@
     return `<div class="notice ${type}" role="${type === "error" ? "alert" : "status"}">${type === "error" ? ICONS.alert : ICONS.ok}<div>${text}</div></div>`;
   }
 
-  // Replace any image that fails to load with a text fallback (no broken image icons).
   document.addEventListener("error", (e) => {
     const img = e.target;
     if (img.tagName !== "IMG" || img.dataset.fallbackDone) return;
@@ -226,7 +225,6 @@
     }
   }, true);
 
-  /* ---------- Search ---------- */
   function search(query, type = "all") {
     const q = norm(query);
     let list = type === "all" ? CATALOG : CATALOG.filter((x) => x.type === type);
@@ -251,7 +249,6 @@
       .map((r) => r.item);
   }
 
-  /* ---------- Site chrome ---------- */
   function navLinks() {
     return [
       { href: "index.html", label: "Home", key: "home", icon: ICONS.home },
@@ -363,8 +360,8 @@
             </div>
           </div>
           <div class="footer-bottom">
-            <span>© <span data-year>${year}</span> ${SITE.name}. A fan-made demo — not affiliated with Netflix.</span>
-            <span>Series data: <a href="https://www.tvmaze.com/" target="_blank" rel="noopener noreferrer">TVmaze</a> · Movie info: <a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
+            <span>© <span data-year>${year}</span> ${SITE.name} · Built by Nikhil Meshram</span>
+            <span>Data: <a href="https://www.tvmaze.com/" target="_blank" rel="noopener noreferrer">TVmaze</a> &amp; <a href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">Wikipedia</a></span>
           </div>
         </div>
       </footer>`;
@@ -374,7 +371,6 @@
     (main || document.body.lastElementChild).insertAdjacentHTML("afterend", footer + bottom);
     $$("[data-year]").forEach((el) => (el.textContent = year));
 
-    // Mobile menu behaviour
     const toggle = $(".menu-toggle");
     const menu = $("#mobile-menu");
     const backdrop = $(".menu-backdrop");
@@ -393,14 +389,13 @@
     $$("a", menu).forEach((a) => a.addEventListener("click", () => setOpen(false)));
     window.addEventListener("resize", debounce(() => { if (window.innerWidth >= 1024) setOpen(false); }, 150));
 
-    // Don't submit empty searches – show an error instead.
     $$('form[role="search"]').forEach((f) => f.addEventListener("submit", (e) => {
       const input = $('input[name="q"]', f);
       if (!input.value.trim()) { e.preventDefault(); toast("Type a movie, series or genre to search.", "error"); input.focus(); }
     }));
     $$('form[role="search"] input').forEach((i) => i.removeAttribute("required"));
 
-    if (!CATALOG.length) toast("Couldn't load the catalog. Please refresh the page.", "error", 6000);
+    if (!CATALOG.length) toast("Could not load catalog. Please refresh the page.", "error", 6000);
   }
 
   window.SF = {
@@ -413,4 +408,3 @@
 
   renderChrome();
 })();
-

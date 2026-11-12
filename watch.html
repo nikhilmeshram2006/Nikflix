@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Watch Now – Nikflix</title>
+  <title>Watch Now - Nikflix</title>
   <meta name="description" content="Watch full-length movies, TV series and anime episodes directly inside the Nikflix theater video player with popup shield and multi-server streaming.">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -74,7 +74,7 @@
     }
 
     function showError(msg) {
-      document.title = "Unable to Play – Nikflix";
+      document.title = "Unable to Play - Nikflix";
       root.innerHTML = `<div class="container page">
         <h1 class="page-title">Unable to load title</h1>
         ${noticeHTML("error", esc(msg))}
@@ -84,7 +84,7 @@
         </div></div>`;
     }
 
-    /* ---------- 1. Resolve item ---------- */
+    // Resolve item
     let item = null;
     let season = Math.max(1, parseInt(p.get("s") || "1", 10) || 1);
     let episode = Math.max(1, parseInt(p.get("e") || "1", 10) || 1);
@@ -139,7 +139,7 @@
 
     if (!item.external) History.add(item.id);
 
-    /* ---------- 2. Player State ---------- */
+    // Player State
     const fallbackIdx = Math.abs((item.title || "").length + (item.year || 0)) % FALLBACK_STREAMS.length;
     let currentStreamUrl = item.stream || FALLBACK_STREAMS[fallbackIdx];
     // Start in "direct" (HTML5 Player) if item has a direct MP4 stream, otherwise "yt" (YouTube HD inside our custom player)
@@ -161,7 +161,7 @@
       else q.set("id", item.id);
       if (item.type === "series") { q.set("s", season); q.set("e", episode); }
       history.replaceState(null, "", "watch.html?" + q.toString());
-      document.title = `Watch ${item.title}${item.type === "series" ? ` S${season}:E${episode}` : ""} – Nikflix`;
+      document.title = `Watch ${item.title}${item.type === "series" ? ` S${season}:E${episode}` : ""} - Nikflix`;
     }
     syncWatchUrl();
     metaDesc.setAttribute("content", `Watch ${item.title} on Nikflix. ${(item.desc || "").slice(0, 120)}`);
@@ -223,7 +223,7 @@
       return "";
     }
 
-    /* ---------- 3. Render Split-Stage Theater UI ---------- */
+    // Render Split-Stage Theater UI
     const backHref = item.external && item.ia ? "search.html" : titleUrl(item);
     const maturityTag = item.genres?.some((g) => ["horror", "crime", "thriller", "tragedy"].includes(g)) ? "18+" : "13+";
 
@@ -430,7 +430,7 @@
         : `${item.year || "Movie"} • Full Stream`;
     }
 
-    /* ---------- 4. Mount Video / YouTube API / Sandboxed Server Surface ---------- */
+    // Mount Video / YouTube API / Sandboxed Server Surface
     let activeVideoEl = null;
     let ytPlayer = null;
     let ytTimer = null;
@@ -577,7 +577,7 @@
               playBtn.innerHTML = playing ? P_ICONS.pause : P_ICONS.play;
             },
             onError: () => {
-              toast("Switching to Direct HTML5 Player…", "info");
+              toast("Switching to Direct HTML5 Player...", "info");
               activeMode = "direct";
               renderCanvas();
             },
@@ -612,7 +612,7 @@
           allowfullscreen></iframe>`;
     }
 
-    /* ---------- 5. Wire Bottom Bar & Drawer Controls ---------- */
+    // Wire Bottom Bar & Drawer Controls
     $("#v-play").addEventListener("click", () => {
       if (activeVideoEl) {
         if (activeVideoEl.paused) activeVideoEl.play();
@@ -781,7 +781,7 @@
       else if (e.key.toLowerCase() === "m") { e.preventDefault(); $("#v-mute").click(); }
     });
 
-    /* ---------- 6. Auto-Discover Direct MP4 Streams on Internet Archive ---------- */
+    // Auto-Discover Direct MP4 Streams on Internet Archive
     async function discoverArchiveMp4s() {
       try {
         const q = `title:(${item.title.replace(/["():]/g, " ")}) AND mediatype:movies`;
@@ -827,7 +827,7 @@
       } catch {}
     }
 
-    /* ---------- 7. Load Episodes / Streams into Right Drawer ---------- */
+    // Load Episodes / Streams into Right Drawer
     function renderEpisodeList() {
       const curEps = episodes.filter((ep) => ep.season === season);
       const grid = $("#episodes-grid");
@@ -873,7 +873,7 @@
         const next = idx >= 0 && idx + 1 < episodes.length ? episodes[idx + 1] : episodes[0];
         if (next) {
           selectEpisode(next.season, next.number);
-          toast(`Playing S${next.season}:E${next.number} – ${next.name}`, "info");
+          toast(`Playing S${next.season}:E${next.number} - ${next.name}`, "info");
         }
       } else {
         const pool = CATALOG.filter((x) => x.id !== item.id && x.stream);
