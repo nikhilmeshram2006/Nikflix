@@ -86,6 +86,6 @@ Then open `http://localhost:8080` in your browser (or double-click `start-nikfli
 
 ---
 
-## Author
+## developer 
 
 **Nikhil Meshram** ([@nikhilmeshram2006](https://github.com/nikhilmeshram2006))
