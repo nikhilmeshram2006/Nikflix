@@ -9,11 +9,10 @@
 <a href="https://nikhilmeshram2006.github.io/Nikflix/">
   <img src="assets/preview/btn-live.svg" alt="Watch Live on Nikflix" height="50">
 </a>
-&nbsp;&nbsp;
+
 <a href="https://nikhilmeshram2006.github.io/Nikflix/watch.html?id=s-305&s=1&e=1">
   <img src="assets/preview/btn-player.svg" alt="Open Video Player" height="44">
 </a>
-&nbsp;&nbsp;
 <a href="https://nikhilmeshram2006.github.io/Nikflix/categories.html">
   <img src="assets/preview/btn-categories.svg" alt="Browse Categories" height="44">
 </a>
