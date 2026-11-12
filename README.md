@@ -21,10 +21,6 @@
 </p>
 
 <p align="center">
-  <a href="https://nikhilmeshram2006.github.io/Nikflix/"><strong>https://nikhilmeshram2006.github.io/Nikflix/</strong></a>
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/badge/Status-Live-2fb36d?style=flat-square" alt="Status Live">
   <img src="https://img.shields.io/badge/Catalog-106%2B_Titles-e50914?style=flat-square" alt="106+ Titles">
   <img src="https://img.shields.io/badge/Player-HTML5_Theater_%2B_MultiServer-1f1f1f?style=flat-square" alt="HTML5 Theater Player">
