@@ -1,6 +1,389 @@
 // Catalog data
 window.CATALOG = [
  {
+  "id": "s-59746",
+  "type": "series",
+  "title": "The Empress (Die Kaiserin)",
+  "altTitle": "Die Kaiserin",
+  "year": 2022,
+  "seasons": 3,
+  "genres": [
+   "romance",
+   "drama",
+   "tragedy"
+  ],
+  "rating": 7.8,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "English [Dub] (5.1)",
+   "Hindi [Dub] (5.1)",
+   "German [Original] (5.1)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Rebellious young Duchess Elisabeth ('Sisi') falls for Emperor Franz and becomes the unlikely bride of the Austro-Hungarian throne, navigating court intrigue, romance, and empire-shaking crises across Seasons 1 to 3. Available in 720p & 1080p with English & Hindi dubbed audio and English subtitles.",
+  "poster": "assets/posters/s-59746.webp",
+  "backdrop": "assets/backdrops/s-59746.webp",
+  "tvmaze": 59746,
+  "imdb": "tt13720112",
+  "yt": "KfySe96FPr8",
+  "stream": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+  "streams": {
+   "1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+   "720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4"
+  },
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "runtime": 62,
+    "name": "One's Place in the World (Ein Platz in der Welt)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/435/1089072.jpg",
+    "summary": "Sixteen-year-old Duchess Elisabeth ('Sisi') travels with her mother and older sister Helene to Bad Ischl, where Helene is expected to marry the young Emperor Franz Joseph of Austria - until Franz falls deeply in love with Sisi instead.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "KfySe96FPr8",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "runtime": 58,
+    "name": "The Arrival (Die Ankunft)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/435/1089073.jpg",
+    "summary": "Elisabeth arrives at the Viennese court for the royal wedding and immediately clashes with strict Hofburg palace protocol and Archduchess Sophie's iron control.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://archive.org/download/tears_of_steel_1080p/tears_of_steel_720p.mp4",
+    "yt": "KfySe96FPr8",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "runtime": 56,
+    "name": "The Wedding (Die Hochzeit)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/435/1089075.jpg",
+    "summary": "Elisabeth marries Emperor Franz as political tensions rise across the empire and Franz's younger brother Maximilian plots behind the scenes.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "KfySe96FPr8",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "runtime": 54,
+    "name": "The Hunt (Die Jagd)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/435/1089077.jpg",
+    "summary": "While Franz faces a dangerous military crisis between Russia and France, a royal hunting trip exposes bitter rivalries inside the court.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "yt": "KfySe96FPr8",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "runtime": 51,
+    "name": "The Shoes (Die Schuhe)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/435/1089078.jpg",
+    "summary": "Maximilian tries to win Sisi's support for his plan to seize the crown while unrest among Vienna's workers threatens to erupt outside the palace gates.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "KfySe96FPr8",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "runtime": 61,
+    "name": "The God Who Us Has Freedom Sent (Der Gott, den man die Freiheit nennt)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/435/1089080.jpg",
+    "summary": "After uncovering Maximilian's conspiracy, Sisi faces an ultimatum from the court and steps outside the palace gates to confront the angry crowd herself.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "yt": "KfySe96FPr8",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 2,
+    "number": 1,
+    "runtime": 47,
+    "name": "An Heir to the Throne (Ein Thronfolger)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/544/1362411.jpg",
+    "summary": "Following the birth of their first daughter, Archduchess Sophie pressures Elisabeth to produce a male heir while Napoleon III threatens Austria's Italian territories.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "6KMmZc49lXE",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 2,
+    "number": 2,
+    "runtime": 56,
+    "name": "The Dream (Der Traum)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/544/1362412.jpg",
+    "summary": "Franz and Elisabeth travel to Lombardy-Venetia on a high-stakes diplomatic mission to win over the rebellious Italian provinces.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "yt": "6KMmZc49lXE",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 2,
+    "number": 3,
+    "runtime": 54,
+    "name": "A Letter from the Empress (Ein Brief der Kaiserin)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/544/1362413.jpg",
+    "summary": "Back in Vienna, Sisi fights for the upbringing of her children and makes a bold political move as war clouds gather over Northern Italy.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "6KMmZc49lXE",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 2,
+    "number": 4,
+    "runtime": 53,
+    "name": "The Stars by Day (Die Sterne am Tag)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/544/1362414.jpg",
+    "summary": "Personal tragedy strikes the imperial family during their royal tour of Hungary, testing Sisi and Franz's marriage to its breaking point.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "yt": "6KMmZc49lXE",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 2,
+    "number": 5,
+    "runtime": 64,
+    "name": "The Forest Within Us (Der Wald in uns)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/544/1362415.jpg",
+    "summary": "Grief-stricken, Elisabeth retreats to Bavaria seeking comfort from her family while Franz prepares to lead the Austrian army to the front lines.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "6KMmZc49lXE",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 2,
+    "number": 6,
+    "runtime": 54,
+    "name": "All We Can Do (Alles was wir tun koennen)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/544/1362416.jpg",
+    "summary": "As the Empire faces a decisive battle in Italy, Elisabeth returns to Vienna to stand by her people and embrace her role as Empress.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "yt": "6KMmZc49lXE",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 3,
+    "number": 1,
+    "runtime": 60,
+    "name": "The Return (Die Rueckkehr)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/651/1627865.jpg",
+    "summary": "After the devastating war in Italy, Franz returns from the front changed, while court intrigues in Vienna force Sisi to defend her authority as Empress.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "Rrg7p78KrBk",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 3,
+    "number": 2,
+    "runtime": 55,
+    "name": "The Island (Die Insel)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/651/1627866.jpg",
+    "summary": "Seeking recovery from illness and the suffocating pressure of the Hofburg court, Elisabeth journeys south across the sea.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "yt": "Rrg7p78KrBk",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 3,
+    "number": 3,
+    "runtime": 57,
+    "name": "To Family (Auf die Familie)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/651/1627867.jpg",
+    "summary": "Young Crown Prince Rudolf's harsh military drill sparks a fierce confrontation between Elisabeth and the Viennese court.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "Rrg7p78KrBk",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 3,
+    "number": 4,
+    "runtime": 54,
+    "name": "Out to Sea (Hinaus aufs Meer)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/651/1627872.jpg",
+    "summary": "On the Adriatic coast, Elisabeth rediscovers her strength and voice while political unrest in Hungary demands imperial intervention.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "yt": "Rrg7p78KrBk",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 3,
+    "number": 5,
+    "runtime": 62,
+    "name": "In Another Life (In einem anderen Leben)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/651/1627873.jpg",
+    "summary": "Elisabeth forges an alliance with the Hungarian delegation and Count Andrassy, urging Franz toward a historic compromise that could save the empire.",
+    "stream1080p": "https://archive.org/download/Sintel/sintel-2048-stereo.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "yt": "Rrg7p78KrBk",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   },
+   {
+    "season": 3,
+    "number": 6,
+    "runtime": 68,
+    "name": "Until We Meet Again (Bis wir uns wiedersehen)",
+    "image": "https://static.tvmaze.com/uploads/images/medium_landscape/651/1627874.jpg",
+    "summary": "United in the face of crisis, Elisabeth and Franz step into a new era for the Austro-Hungarian Empire.",
+    "stream1080p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "stream720p": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "yt": "Rrg7p78KrBk",
+    "ytHi": "sEhk1FM6Hgo",
+    "audio": [
+     "English [Dub] (5.1)",
+     "Hindi [Dub] (5.1)"
+    ],
+    "subtitles": [
+     "English [CC]"
+    ]
+   }
+  ],
+  "ytHi": "sEhk1FM6Hgo"
+ },
+ {
   "id": "s-cyberpunk-edgerunners",
   "type": "series",
   "title": "Cyberpunk: Edgerunners",

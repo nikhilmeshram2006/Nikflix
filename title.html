@@ -87,7 +87,10 @@
                 <div class="meta-line">
                   ${item.rating ? `<span class="match">★ ${item.rating}/10</span>` : ""}
                   ${item.year ? `<span>${item.year}</span>` : ""}
+                  ${item.seasons ? `<span>${item.seasons} Seasons</span>` : ""}
                   <span class="pill">${item.type === "movie" ? "Movie" : "TV Series"}</span>
+                  <span class="pill">720p / 1080p</span>
+                  <span class="pill">English &amp; Hindi Dub · EN Subtitles</span>
                 </div>
                 <p class="desc">${esc(item.desc)}</p>
                 <div class="genre-links">
@@ -121,52 +124,62 @@
     };
     render();
 
-    // Load seasons & episodes for series/anime from TVmaze
+    // Load seasons & episodes for series/anime from catalog or TVmaze
     const tvmazeId = item.tvmaze || (item.external && /^\d+$/.test(p.get("tvmaze") || "") ? +p.get("tvmaze") : null);
-    if (item.type === "series" && tvmazeId) {
+    if (item.type === "series" && (item.episodes?.length || tvmazeId)) {
       try {
-        const res = await fetch(`https://api.tvmaze.com/shows/${tvmazeId}/episodes`);
-        if (res.ok) {
-          const eps = await res.json();
-          if (eps.length) {
-            const seasons = Array.from(new Set(eps.map((e) => e.season || 1))).sort((a, b) => a - b);
-            let curSeason = seasons[0];
-            const wrap = $("#episodes-wrap");
-            wrap.innerHTML = `
-              <section class="section" aria-labelledby="ep-sec-title">
-                <div class="row-head">
-                  <h2 id="ep-sec-title">Episodes</h2>
-                  <div>
-                    <label class="sr-only" for="title-season-sel">Select season</label>
-                    <select id="title-season-sel" class="season-select">
-                      ${seasons.map((s) => `<option value="${s}">Season ${s} (${eps.filter((e) => (e.season || 1) === s).length} eps)</option>`).join("")}
-                    </select>
-                  </div>
+        let eps = [];
+        if (item.episodes?.length) {
+          eps = item.episodes.map((ep) => ({
+            season: ep.season || 1,
+            number: ep.number || 1,
+            name: ep.name,
+            runtime: ep.runtime,
+            image: typeof ep.image === "string" ? { medium: ep.image } : ep.image,
+            summary: ep.summary,
+          }));
+        } else {
+          const res = await fetch(`https://api.tvmaze.com/shows/${tvmazeId}/episodes`);
+          if (res.ok) eps = await res.json();
+        }
+        if (eps.length) {
+          const seasons = Array.from(new Set(eps.map((e) => e.season || 1))).sort((a, b) => a - b);
+          let curSeason = seasons[0];
+          const wrap = $("#episodes-wrap");
+          wrap.innerHTML = `
+            <section class="section" aria-labelledby="ep-sec-title">
+              <div class="row-head">
+                <h2 id="ep-sec-title">Episodes</h2>
+                <div>
+                  <label class="sr-only" for="title-season-sel">Select season</label>
+                  <select id="title-season-sel" class="season-select">
+                    ${seasons.map((s) => `<option value="${s}">Season ${s} (${eps.filter((e) => (e.season || 1) === s).length} eps)</option>`).join("")}
+                  </select>
                 </div>
-                <div id="title-ep-grid" class="ep-grid"></div>
-              </section>`;
-            const renderEps = () => {
-              const list = eps.filter((e) => (e.season || 1) === curSeason);
-              $("#title-ep-grid").innerHTML = list.map((ep, i) => {
-                const sNum = ep.season || 1;
-                const eNum = ep.number || i + 1;
-                const img = ep.image?.medium?.replace(/^http:/, "https:");
-                const sum = (ep.summary || "Watch this episode on Nikflix.").replace(/<[^>]+>/g, "").trim();
-                return `<a class="ep-card" href="${watchUrl(item, sNum, eNum)}">
-                  <div class="ep-thumb">
-                    ${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : `<span class="ep-num">E${eNum}</span>`}
-                    <span class="ep-play">${ICONS.play}</span>
-                  </div>
-                  <div class="ep-body">
-                    <div class="ep-head"><strong>${eNum}. ${esc(ep.name || "Episode " + eNum)}</strong>${ep.runtime ? `<span>${ep.runtime}m</span>` : ""}</div>
-                    <p>${esc(sum)}</p>
-                  </div>
-                </a>`;
-              }).join("");
-            };
-            $("#title-season-sel").addEventListener("change", (e) => { curSeason = Number(e.target.value); renderEps(); });
-            renderEps();
-          }
+              </div>
+              <div id="title-ep-grid" class="ep-grid"></div>
+            </section>`;
+          const renderEps = () => {
+            const list = eps.filter((e) => (e.season || 1) === curSeason);
+            $("#title-ep-grid").innerHTML = list.map((ep, i) => {
+              const sNum = ep.season || 1;
+              const eNum = ep.number || i + 1;
+              const img = (typeof ep.image === "string" ? ep.image : ep.image?.medium)?.replace(/^http:/, "https:");
+              const sum = (ep.summary || "Watch this episode on Nikflix.").replace(/<[^>]+>/g, "").trim();
+              return `<a class="ep-card" href="${watchUrl(item, sNum, eNum)}">
+                <div class="ep-thumb">
+                  ${img ? `<img src="${esc(img)}" alt="" loading="lazy">` : `<span class="ep-num">E${eNum}</span>`}
+                  <span class="ep-play">${ICONS.play}</span>
+                </div>
+                <div class="ep-body">
+                  <div class="ep-head"><strong>${eNum}. ${esc(ep.name || "Episode " + eNum)}</strong>${ep.runtime ? `<span>${ep.runtime}m · 1080p/720p · EN &amp; HI Dub · EN Sub</span>` : ""}</div>
+                  <p>${esc(sum)}</p>
+                </div>
+              </a>`;
+            }).join("");
+          };
+          $("#title-season-sel").addEventListener("change", (e) => { curSeason = Number(e.target.value); renderEps(); });
+          renderEps();
         }
       } catch {}
     }

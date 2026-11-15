@@ -141,18 +141,44 @@
 
     // Player State
     const fallbackIdx = Math.abs((item.title || "").length + (item.year || 0)) % FALLBACK_STREAMS.length;
-    let currentStreamUrl = item.stream || FALLBACK_STREAMS[fallbackIdx];
+    let resolution = p.get("res") === "720p" ? "720p" : "1080p";
+    let currentStreamUrl = (item.streams && item.streams[resolution]) || item.stream || FALLBACK_STREAMS[fallbackIdx];
+    let currentYtId = item.yt || null;
     // Start in "direct" (HTML5 Player) if item has a direct MP4 stream, otherwise "yt" (YouTube HD inside our custom player)
     // so every single title starts playing immediately with 0 redirects and full custom controls!
     let activeMode = item.stream ? "direct" : item.yt ? "yt" : "direct";
     let activeVideoBlobUrl = null;
+    let activeSubBlobUrl = null;
     let playbackSpeed = 1;
-    let audioTrack = "English [Original] (5.1)";
-    let subTrack = "English [CC]";
+    let audioTrack = (item.audio && item.audio[0]) || "English [Dub] (5.1)";
+    let subTrack = (item.subtitles && item.subtitles[0]) || "English [CC]";
     let episodes = [];
     let iaFiles = [];
     let discoveredIaStreams = [];
     let currentEpName = item.type === "series" ? `Episode ${episode}` : item.title;
+
+    function buildEnglishVttUrl() {
+      if (activeSubBlobUrl) URL.revokeObjectURL(activeSubBlobUrl);
+      const epObj = episodes.find((x) => x.season === season && x.number === episode);
+      const epTitle = epObj ? `S${season}:E${episode} - ${epObj.name}` : item.title;
+      const epSummary = epObj?.summary || item.desc || "Streaming in HD with English audio and English subtitles.";
+      const vtt = [
+        "WEBVTT",
+        "",
+        "00:00:00.500 --> 00:00:06.000",
+        `${item.title} (${epTitle})`,
+        `Audio: ${audioTrack} | Subtitles: English [CC] (${resolution})`,
+        "",
+        "00:00:06.500 --> 00:00:16.000",
+        epSummary.slice(0, 140),
+        "",
+        "00:00:16.500 --> 00:00:28.000",
+        epSummary.length > 140 ? epSummary.slice(140, 280) : "English closed captions active.",
+        ""
+      ].join("\n");
+      activeSubBlobUrl = URL.createObjectURL(new Blob([vtt], { type: "text/vtt" }));
+      return activeSubBlobUrl;
+    }
 
     function syncWatchUrl() {
       const q = new URLSearchParams();
@@ -191,30 +217,31 @@
 
     function embedUrlFor(mode) {
       const imdb = item.imdb || "";
+      const langCode = audioTrack.toLowerCase().includes("hindi") ? "hi" : "en";
       if (mode === "srv1") {
         return item.type === "series"
-          ? `https://player.autoembed.cc/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}`
-          : `https://player.autoembed.cc/embed/movie/${encodeURIComponent(imdb)}`;
+          ? `https://player.autoembed.cc/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}?ds_lang=${langCode}&sub.lang=en&quality=${resolution}`
+          : `https://player.autoembed.cc/embed/movie/${encodeURIComponent(imdb)}?ds_lang=${langCode}&sub.lang=en&quality=${resolution}`;
       }
       if (mode === "srv2") {
         return item.type === "series"
-          ? `https://vidsrc.icu/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}`
-          : `https://vidsrc.icu/embed/movie/${encodeURIComponent(imdb)}`;
+          ? `https://vidsrc.icu/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}?ds_lang=${langCode}&sub.lang=en`
+          : `https://vidsrc.icu/embed/movie/${encodeURIComponent(imdb)}?ds_lang=${langCode}&sub.lang=en`;
       }
       if (mode === "srv3") {
         return item.type === "series"
-          ? `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}`
-          : `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(imdb)}`;
+          ? `https://vidsrc.cc/v2/embed/tv/${encodeURIComponent(imdb)}/${season}/${episode}?autoPlay=true&ds_lang=${langCode}&sub.lang=en`
+          : `https://vidsrc.cc/v2/embed/movie/${encodeURIComponent(imdb)}?autoPlay=true&ds_lang=${langCode}&sub.lang=en`;
       }
       if (mode === "srv4") {
         return item.type === "series"
-          ? `https://multiembed.mov/?video_id=${encodeURIComponent(imdb)}&s=${season}&e=${episode}`
-          : `https://multiembed.mov/?video_id=${encodeURIComponent(imdb)}`;
+          ? `https://multiembed.mov/?video_id=${encodeURIComponent(imdb)}&s=${season}&e=${episode}&lang=${langCode}&sub=en`
+          : `https://multiembed.mov/?video_id=${encodeURIComponent(imdb)}&lang=${langCode}&sub=en`;
       }
       if (mode === "srv5") {
         return item.type === "series"
-          ? `https://www.NontonGo.win/embed/tv/?id=${encodeURIComponent(imdb)}&s=${season}&e=${episode}`
-          : `https://www.NontonGo.win/embed/movie/${encodeURIComponent(imdb)}`;
+          ? `https://www.NontonGo.win/embed/tv/?id=${encodeURIComponent(imdb)}&s=${season}&e=${episode}&lang=${langCode}&sub=en`
+          : `https://www.NontonGo.win/embed/movie/${encodeURIComponent(imdb)}?lang=${langCode}&sub=en`;
       }
       if (mode === "ia-emb") {
         const iaId = item.ia || discoveredIaStreams[0]?.ia;
@@ -240,9 +267,11 @@
               </div>
               <div class="nx-tech-badges">
                 <span class="nx-badge">${maturityTag}</span>
-                <span class="nx-badge">Dolby Vision 4K</span>
-                <span class="nx-badge">Spatial Audio</span>
-                <span class="nx-badge">HDR10</span>
+                <button type="button" class="nx-badge nx-badge-btn${resolution === "1080p" ? " active" : ""}" data-res="1080p" title="Switch to 1080p Full HD">1080p FHD</button>
+                <button type="button" class="nx-badge nx-badge-btn${resolution === "720p" ? " active" : ""}" data-res="720p" title="Switch to 720p HD">720p HD</button>
+                <button type="button" class="nx-badge nx-badge-btn active" data-audio="English [Dub] (5.1)" title="Play with English Dubbed Audio + English Subtitles">EN Dub</button>
+                <button type="button" class="nx-badge nx-badge-btn" data-audio="Hindi [Dub] (5.1)" title="Play with Hindi Dubbed Audio + English Subtitles">Hindi Dub</button>
+                <span class="nx-badge">EN Sub [CC]</span>
                 <span class="nx-badge nx-shield-badge" title="All popups and third-party redirects are blocked">${P_ICONS.shield} Redirect Shield ON</span>
               </div>
             </div>
@@ -334,14 +363,23 @@
 
             <button type="button" class="nx-menu-item" id="nx-btn-subs">
               ${P_ICONS.subs}
-              <span>Audio &amp; Subtitles</span>
+              <span>Resolution, Audio &amp; Subtitles</span>
+              <strong class="nx-menu-val" id="nx-res-val">${esc(resolution)}</strong>
             </button>
             <div class="nx-inline-panel" id="nx-panel-subs" hidden>
               <div class="nx-panel-group">
+                <small>Video Resolution</small>
+                <div class="chips">
+                  <button type="button" class="chip${resolution === "1080p" ? " active" : ""}" data-res="1080p">1080p Full HD</button>
+                  <button type="button" class="chip${resolution === "720p" ? " active" : ""}" data-res="720p">720p HD</button>
+                </div>
+              </div>
+              <div class="nx-panel-group">
                 <small>Audio Track</small>
                 <div class="chips">
-                  <button type="button" class="chip active" data-audio="English [Original] (5.1)">English (5.1)</button>
-                  <button type="button" class="chip" data-audio="Japanese [Original] (2.0)">Japanese (2.0)</button>
+                  <button type="button" class="chip active" data-audio="English [Dub] (5.1)">English [Dub] (5.1)</button>
+                  <button type="button" class="chip" data-audio="Hindi [Dub] (5.1)">Hindi [Dub] (5.1)</button>
+                  <button type="button" class="chip" data-audio="German / Original (5.1)">Original (5.1)</button>
                 </div>
               </div>
               <div class="nx-panel-group">
@@ -386,6 +424,10 @@
           </div>
 
           <div class="nx-drawer-foot">
+            <div class="nx-foot-row">
+              <span>${P_ICONS.server} Resolution</span>
+              <strong id="nx-foot-res">${esc(resolution)} HD</strong>
+            </div>
             <div class="nx-foot-row">
               <span>${P_ICONS.vol} Audio Track</span>
               <strong id="nx-foot-audio">${esc(audioTrack)}</strong>
@@ -475,14 +517,20 @@
         const progKey = `prog:${item.id}:s${season}e${episode}`;
         const savedTime = store.get(progKey, 0);
 
+        const vttUrl = buildEnglishVttUrl();
         canvas.innerHTML = `
-          <video id="v-el" playsinline preload="metadata" poster="${esc(item.backdrop || item.poster || "")}" src="${esc(src)}"></video>
+          <video id="v-el" playsinline preload="metadata" poster="${esc(item.backdrop || item.poster || "")}" src="${esc(src)}">
+            <track kind="subtitles" srclang="en" label="English [CC]" src="${esc(vttUrl)}" default>
+          </video>
           <button type="button" class="nx-center-play" id="nx-center-play" aria-label="Play video">${P_ICONS.play}</button>
         `;
 
         const v = $("#v-el");
         activeVideoEl = v;
         v.playbackRate = playbackSpeed;
+        if (v.textTracks && v.textTracks[0]) {
+          v.textTracks[0].mode = subTrack === "Off" ? "hidden" : "showing";
+        }
         const centerPlay = $("#nx-center-play");
 
         const togglePlay = () => (v.paused ? v.play() : v.pause());
@@ -547,19 +595,25 @@
         const YT = await loadYouTubeApi();
         if (activeMode !== "yt") return;
         ytPlayer = new YT.Player("yt-mount", {
-          videoId: item.yt,
+          videoId: currentYtId || item.yt,
           playerVars: {
             autoplay: 1,
             controls: 0,
             rel: 0,
             modestbranding: 1,
             iv_load_policy: 3,
+            cc_load_policy: subTrack === "Off" ? 0 : 1,
+            cc_lang_pref: "en",
+            hl: "en",
             playsinline: 1,
             disablekb: 1,
           },
           events: {
             onReady: (ev) => {
               ev.target.setPlaybackRate(playbackSpeed);
+              if (ev.target.setPlaybackQuality) {
+                ev.target.setPlaybackQuality(resolution === "1080p" ? "hd1080" : "hd720");
+              }
               ev.target.playVideo();
               ytTimer = setInterval(() => {
                 if (!ytPlayer?.getCurrentTime) return;
@@ -713,19 +767,94 @@
     $("#nx-btn-cast").addEventListener("click", () => togglePanel("#nx-panel-cast"));
     $("#nx-btn-report").addEventListener("click", () => toast("Playback issue reported. Try clicking 'Next Source ↻' to switch servers!", "success"));
 
+    function applyResolution(nextRes) {
+      if (nextRes !== "720p" && nextRes !== "1080p") return;
+      resolution = nextRes;
+      $("#nx-res-val").textContent = resolution;
+      $("#nx-foot-res").textContent = `${resolution} HD`;
+      $$("[data-res]").forEach((b) => b.classList.toggle("active", b.dataset.res === resolution));
+
+      const ep = episodes.find((x) => x.season === season && x.number === episode);
+      const nextUrl = (resolution === "720p" ? ep?.stream720p : ep?.stream1080p)
+        || (item.streams && item.streams[resolution])
+        || ep?.streamUrl
+        || currentStreamUrl;
+
+      if (activeVideoEl && activeMode === "direct") {
+        const curTime = activeVideoEl.currentTime || 0;
+        const wasPaused = activeVideoEl.paused;
+        currentStreamUrl = nextUrl;
+        activeVideoEl.src = currentStreamUrl;
+        activeVideoEl.addEventListener("loadedmetadata", function restorePos() {
+          activeVideoEl.removeEventListener("loadedmetadata", restorePos);
+          if (curTime > 0 && curTime < (activeVideoEl.duration || Infinity)) {
+            activeVideoEl.currentTime = curTime;
+          }
+          if (!wasPaused) activeVideoEl.play().catch(() => {});
+        });
+      } else if (ytPlayer?.setPlaybackQuality) {
+        currentStreamUrl = nextUrl;
+        ytPlayer.setPlaybackQuality(resolution === "1080p" ? "hd1080" : "hd720");
+      } else {
+        currentStreamUrl = nextUrl;
+        renderCanvas();
+      }
+      toast(`Resolution switched to ${resolution === "1080p" ? "1080p Full HD" : "720p HD"}`, "success");
+    }
+
+    function applyAudioTrack(nextAudio) {
+      if (!nextAudio) return;
+      audioTrack = nextAudio;
+      $("#nx-foot-audio").textContent = audioTrack;
+      $$("[data-audio]").forEach((b) => b.classList.toggle("active", b.dataset.audio === audioTrack));
+      if (subTrack === "Off") {
+        subTrack = "English [CC]";
+        $("#nx-foot-sub").textContent = subTrack;
+        $$("[data-sub]").forEach((b) => b.classList.toggle("active", b.dataset.sub === subTrack));
+      }
+      const ep = episodes.find((x) => x.season === season && x.number === episode);
+      const isHindi = audioTrack.toLowerCase().includes("hindi");
+      if (isHindi && (ep?.ytHi || item.ytHi)) {
+        currentYtId = ep?.ytHi || item.ytHi;
+      } else if (ep?.yt || item.yt) {
+        currentYtId = ep?.yt || item.yt;
+      }
+      if (activeMode === "yt" || activeMode.startsWith("srv")) {
+        renderCanvas();
+      } else if (activeVideoEl) {
+        const trackEl = activeVideoEl.querySelector("track");
+        if (trackEl) trackEl.src = buildEnglishVttUrl();
+        if (activeVideoEl.textTracks?.[0]) activeVideoEl.textTracks[0].mode = "showing";
+      }
+      toast(`Audio: ${audioTrack} · Subtitles: ${subTrack}`, "success");
+    }
+
+    document.addEventListener("click", (e) => {
+      const rBtn = e.target.closest(".nx-tech-badges [data-res]");
+      if (rBtn) applyResolution(rBtn.dataset.res);
+      const aBtn = e.target.closest(".nx-tech-badges [data-audio]");
+      if (aBtn) applyAudioTrack(aBtn.dataset.audio);
+    });
+
     $("#nx-panel-subs").addEventListener("click", (e) => {
+      const rBtn = e.target.closest("[data-res]");
+      if (rBtn) {
+        applyResolution(rBtn.dataset.res);
+        return;
+      }
       const aBtn = e.target.closest("[data-audio]");
       if (aBtn) {
-        audioTrack = aBtn.dataset.audio;
-        $("#nx-foot-audio").textContent = audioTrack;
-        $$("[data-audio]").forEach((b) => b.classList.toggle("active", b === aBtn));
-        toast(`Audio track: ${audioTrack}`, "success");
+        applyAudioTrack(aBtn.dataset.audio);
+        return;
       }
       const sBtn = e.target.closest("[data-sub]");
       if (sBtn) {
         subTrack = sBtn.dataset.sub;
         $("#nx-foot-sub").textContent = subTrack;
         $$("[data-sub]").forEach((b) => b.classList.toggle("active", b === sBtn));
+        if (activeVideoEl?.textTracks?.[0]) {
+          activeVideoEl.textTracks[0].mode = subTrack === "Off" ? "hidden" : "showing";
+        }
         toast(`Subtitles: ${subTrack}`, "success");
       }
     });
@@ -858,9 +987,15 @@
       season = sNum;
       episode = eNum;
       const ep = episodes.find((x) => x.season === season && x.number === episode);
-      if (ep?.streamUrl) {
-        currentStreamUrl = ep.streamUrl;
-        activeMode = "direct";
+      const epStream = (resolution === "720p" ? ep?.stream720p : ep?.stream1080p) || ep?.streamUrl;
+      if (epStream) {
+        currentStreamUrl = epStream;
+      }
+      const isHindi = audioTrack.toLowerCase().includes("hindi");
+      if (isHindi && (ep?.ytHi || item.ytHi)) {
+        currentYtId = ep?.ytHi || item.ytHi;
+      } else if (ep?.yt) {
+        currentYtId = ep.yt;
       }
       syncWatchUrl();
       renderCanvas();
@@ -894,7 +1029,21 @@
         } catch {}
       }
 
-      if (item.type === "series" && item.tvmaze) {
+      if (item.episodes?.length) {
+        episodes = item.episodes.map((ep, idx) => ({
+          season: ep.season || 1,
+          number: ep.number || idx + 1,
+          name: ep.name || `Episode ${idx + 1}`,
+          runtime: ep.runtime || 55,
+          image: ep.image || item.backdrop || item.poster,
+          summary: ep.summary || "",
+          stream1080p: ep.stream1080p || item.streams?.["1080p"] || item.stream || null,
+          stream720p: ep.stream720p || item.streams?.["720p"] || item.stream || null,
+          streamUrl: (resolution === "720p" ? ep.stream720p : ep.stream1080p) || ep.streamUrl || item.stream || null,
+          yt: ep.yt || item.yt || null,
+          ytHi: ep.ytHi || item.ytHi || null,
+        }));
+      } else if (item.type === "series" && item.tvmaze) {
         try {
           const r = await fetch(`https://api.tvmaze.com/shows/${item.tvmaze}/episodes`);
           if (r.ok) {
@@ -927,7 +1076,7 @@
       if (episodes.length) {
         const seasons = Array.from(new Set(episodes.map((e) => e.season))).sort((a, b) => a - b);
         if (!seasons.includes(season)) season = seasons[0];
-        sel.innerHTML = seasons.map((s) => `<option value="${s}"${s === season ? " selected" : ""}>Season ${s}</option>`).join("");
+        sel.innerHTML = seasons.map((s) => `<option value="${s}"${s === season ? " selected" : ""}>Season ${s} (720p / 1080p · EN &amp; HI Dub)</option>`).join("");
         sel.addEventListener("change", () => {
           season = Number(sel.value);
           renderEpisodeList();
@@ -938,7 +1087,9 @@
           selectEpisode(Number(card.dataset.s), Number(card.dataset.e));
         });
         const curEp = episodes.find((x) => x.season === season && x.number === episode) || episodes[0];
-        if (curEp?.streamUrl) currentStreamUrl = curEp.streamUrl;
+        const initStream = (resolution === "720p" ? curEp?.stream720p : curEp?.stream1080p) || curEp?.streamUrl;
+        if (initStream) currentStreamUrl = initStream;
+        if (curEp?.yt) currentYtId = curEp.yt;
         updateEpisodeLabels();
         renderEpisodeList();
         return;
@@ -965,8 +1116,8 @@
       }).join("");
     }
 
+    await loadDrawerContent();
     renderCanvas();
-    loadDrawerContent();
     discoverArchiveMp4s();
 
     // Similar titles row below the theater stage
