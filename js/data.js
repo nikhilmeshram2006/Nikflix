@@ -1,6 +1,47 @@
 // Catalog data
 window.CATALOG = [
  {
+  "id": "s-chillin-in-another-world-lvl2",
+  "type": "series",
+  "title": "Chillin' in Another World with Level 2 Super Cheat Powers",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "fantasy",
+   "romance",
+   "comedy"
+  ],
+  "rating": 6.9,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Original (2.0)"
+  ],
+  "subtitles": [
+   "Off"
+  ],
+  "noSubtitles": true,
+  "desc": "The Magical Kingdom of Klyrode summons hundreds of heroes from other worlds every year to fight in their war against the Dark One and his army of powerful demons. Banaza is one of those heroes, summoned from the Royal Capital Paluma, but something’s not right—Banaza is only an average merchant. He has no magic, no fighting ability,...",
+  "poster": "assets/posters/s-chillin-in-another-world-lvl2.webp",
+  "backdrop": "assets/backdrops/s-chillin-in-another-world-lvl2.webp",
+  "yt": "NhbP4NB0_0c",
+  "stream": null,
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Chillin' in Another World with Level 2 Super Cheat Powers (Complete Series)",
+    "runtime": 280,
+    "image": "assets/backdrops/s-chillin-in-another-world-lvl2.webp",
+    "summary": "Watch the complete Season 1 marathon of Chillin' in Another World with Level 2 Super Cheat Powers.",
+    "yt": "NhbP4NB0_0c"
+   }
+  ]
+ },
+ {
   "id": "m-sore-a-wife-from-future",
   "type": "movie",
   "title": "Sore: A Wife from the Future",

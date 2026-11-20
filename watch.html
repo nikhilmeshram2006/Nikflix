@@ -210,7 +210,8 @@
       }
       if (mode === "yt-proxy") {
         const yid = currentYtId || item.yt;
-        if (yid) return `https://yewtu.be/embed/${encodeURIComponent(yid)}?autoplay=1&listen=0&subtitles=English`;
+        const subParam = subTrack === "Off" ? "" : "&subtitles=English";
+        if (yid) return `https://yewtu.be/embed/${encodeURIComponent(yid)}?autoplay=1&listen=0${subParam}`;
       }
       if (mode === "ia-emb") {
         const iaId = item.ia || discoveredIaStreams[0]?.ia;
@@ -240,7 +241,7 @@
                 <button type="button" class="nx-badge nx-badge-btn${resolution === "720p" ? " active" : ""}" data-res="720p" title="Switch to 720p HD">720p HD</button>
                 <button type="button" class="nx-badge nx-badge-btn active" data-audio="English [Dub] (5.1)" title="Play with English Dubbed Audio + English Subtitles">EN Dub</button>
                 <button type="button" class="nx-badge nx-badge-btn" data-audio="Hindi [Dub] (5.1)" title="Play with Hindi Dubbed Audio + English Subtitles">Hindi Dub</button>
-                <span class="nx-badge">EN Sub [CC]</span>
+                <span class="nx-badge" id="nx-top-sub-badge">${subTrack === "Off" ? "Subtitles OFF" : "EN Sub [CC]"}</span>
                 <button type="button" class="nx-badge nx-badge-btn nx-shield-badge active" id="nx-ad-shield-btn" title="YouTube Ad-Shield blocks tracking cookies, mutes & skips detected ad breaks">${P_ICONS.shield} Ad-Shield ON</button>
               </div>
             </div>
@@ -345,8 +346,8 @@
               <div class="nx-panel-group">
                 <small>Subtitles</small>
                 <div class="chips">
-                  <button type="button" class="chip active" data-sub="English [CC]">English [CC]</button>
-                  <button type="button" class="chip" data-sub="Off">Off</button>
+                  <button type="button" class="chip${subTrack !== "Off" ? " active" : ""}" data-sub="English [CC]">English [CC]</button>
+                  <button type="button" class="chip${subTrack === "Off" ? " active" : ""}" data-sub="Off">Off</button>
                 </div>
               </div>
             </div>
@@ -604,6 +605,9 @@
                 if (subTrack !== "Off") {
                   ev.target.loadModule?.("captions");
                   ev.target.setOption?.("captions", "track", { languageCode: "en" });
+                } else {
+                  ev.target.unloadModule?.("captions");
+                  ev.target.setOption?.("captions", "track", {});
                 }
               } catch {}
               ev.target.playVideo();
@@ -669,6 +673,12 @@
               const playing = ev.data === YT.PlayerState.PLAYING;
               canvas.classList.toggle("playing", playing);
               playBtn.innerHTML = playing ? P_ICONS.pause : P_ICONS.play;
+              if (playing && subTrack === "Off") {
+                try {
+                  ev.target.unloadModule?.("captions");
+                  ev.target.setOption?.("captions", "track", {});
+                } catch {}
+              }
             },
             onError: () => {
               toast("Switching to Ad-Free Proxy stream...", "info");
