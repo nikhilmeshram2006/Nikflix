@@ -12,7 +12,7 @@
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="css/style.css?v=20261121">
+  <link rel="stylesheet" href="css/style.css?v=20261121c">
 </head>
 <body data-page="watch" class="watch-body">
   <main id="main" class="watch-main">
@@ -437,6 +437,7 @@
     let activeVideoEl = null;
     let ytPlayer = null;
     let ytTimer = null;
+    let ytCoverTimer = null;
 
     function loadYouTubeApi() {
       if (window.YT && window.YT.Player) return Promise.resolve(window.YT);
@@ -456,15 +457,25 @@
 
     function clearYtTimer() {
       if (ytTimer) { clearInterval(ytTimer); ytTimer = null; }
+      if (ytCoverTimer) { clearTimeout(ytCoverTimer); ytCoverTimer = null; }
       if (ytPlayer?.destroy) { try { ytPlayer.destroy(); } catch {} }
       ytPlayer = null;
     }
 
     async function renderCanvas() {
       clearYtTimer();
+      if (activeVideoEl) {
+        try {
+          activeVideoEl.pause();
+          activeVideoEl.removeAttribute("src");
+          activeVideoEl.load();
+        } catch {}
+        activeVideoEl = null;
+      }
       renderSourcePills();
       updateEpisodeLabels();
       const canvas = $("#nx-canvas");
+      canvas.classList.remove("playing", "yt-live");
       const playBtn = $("#v-play");
       const seek = $("#v-seek");
       const fill = $("#nx-progress-fill");
@@ -549,17 +560,32 @@
         return;
       }
 
-      // MODE B: Privacy-Enhanced YouTube Player (youtube-nocookie.com + Nikflix Ad-Shield)
+      // MODE B: Privacy-Enhanced YouTube Player (youtube-nocookie.com + Nikflix Ad-Shield + Clean Chrome Mask)
       if (activeMode === "yt" && (currentYtId || item.yt)) {
         activeVideoEl = null;
         progressWrap.hidden = false;
-        canvas.classList.remove("playing");
+        canvas.classList.remove("playing", "yt-live");
         const expectedVid = currentYtId || item.yt;
         const progKey = `prog:${item.id}:s${season}e${episode}`;
         const savedStart = Math.max(0, Number(store.get(progKey, 0)) || 0);
+        const coverBg = item.backdrop || item.poster || "";
+        const coverSub = item.type === "series"
+          ? `S${season}:E${episode} • ${currentEpName}`
+          : `${item.year || "Feature Film"} • HD Stream`;
 
         canvas.innerHTML = `
-          <div id="yt-mount"></div>
+          <div class="nx-yt-stage">
+            <div id="yt-mount"></div>
+          </div>
+          <div class="nx-yt-cover" id="nx-yt-cover" aria-hidden="true">
+            ${coverBg ? `<div class="nx-yt-cover-bg" style="background-image:url('${esc(coverBg)}')"></div>` : ""}
+            <div class="nx-yt-cover-scrim"></div>
+            <div class="nx-yt-cover-meta">
+              <span class="nx-yt-cover-kicker" id="nx-yt-cover-kicker">READY TO PLAY</span>
+              <strong class="nx-yt-cover-title">${esc(item.title)}</strong>
+              <span class="nx-yt-cover-sub">${esc(coverSub)}</span>
+            </div>
+          </div>
           <div class="nx-click-shield" id="nx-yt-shield" title="Click to play or pause"></div>
           <div class="nx-ad-overlay" id="nx-ad-overlay" hidden>
             <strong>${P_ICONS.shield} Nikflix Ad-Shield Active</strong>
@@ -577,6 +603,22 @@
         let wasMutedBeforeAd = false;
         let lastReloadAt = 0;
         let lastSaveAt = 0;
+        let hasStartedPlaying = false;
+
+        const coverKicker = $("#nx-yt-cover-kicker");
+        const showYtCover = (label) => {
+          if (ytCoverTimer) { clearTimeout(ytCoverTimer); ytCoverTimer = null; }
+          if (coverKicker && label) coverKicker.textContent = label;
+          canvas.classList.remove("yt-live");
+        };
+        const hideYtCoverSoon = () => {
+          if (ytCoverTimer) clearTimeout(ytCoverTimer);
+          ytCoverTimer = setTimeout(() => {
+            if (activeMode === "yt" && ytPlayer?.getPlayerState?.() === YT.PlayerState.PLAYING) {
+              canvas.classList.add("yt-live");
+            }
+          }, 240);
+        };
 
         ytPlayer = new YT.Player("yt-mount", {
           host: "https://www.youtube-nocookie.com",
@@ -670,14 +712,28 @@
               }, 300);
             },
             onStateChange: (ev) => {
-              const playing = ev.data === YT.PlayerState.PLAYING;
+              const st = ev.data;
+              const playing = st === YT.PlayerState.PLAYING;
               canvas.classList.toggle("playing", playing);
               playBtn.innerHTML = playing ? P_ICONS.pause : P_ICONS.play;
-              if (playing && subTrack === "Off") {
-                try {
-                  ev.target.unloadModule?.("captions");
-                  ev.target.setOption?.("captions", "track", {});
-                } catch {}
+
+              if (st === YT.PlayerState.PLAYING) {
+                hasStartedPlaying = true;
+                hideYtCoverSoon();
+                if (subTrack === "Off") {
+                  try {
+                    ev.target.unloadModule?.("captions");
+                    ev.target.setOption?.("captions", "track", {});
+                  } catch {}
+                }
+              } else if (st === YT.PlayerState.PAUSED) {
+                showYtCover("PAUSED");
+              } else if (st === YT.PlayerState.ENDED) {
+                showYtCover("EPISODE ENDED");
+              } else if (st === YT.PlayerState.BUFFERING) {
+                if (!hasStartedPlaying) showYtCover("LOADING STREAM...");
+              } else {
+                showYtCover("READY TO PLAY");
               }
             },
             onError: () => {
@@ -691,8 +747,12 @@
         const toggleYt = () => {
           if (!ytPlayer?.getPlayerState) return;
           const st = ytPlayer.getPlayerState();
-          if (st === 1) ytPlayer.pauseVideo();
-          else ytPlayer.playVideo();
+          if (st === 1) {
+            showYtCover("PAUSED");
+            ytPlayer.pauseVideo();
+          } else {
+            ytPlayer.playVideo();
+          }
         };
         $("#nx-yt-shield")?.addEventListener("click", () => {
           if (isFullscreen()) toggleFsControls();
@@ -727,8 +787,15 @@
         if (activeVideoEl.paused) activeVideoEl.play();
         else activeVideoEl.pause();
       } else if (ytPlayer?.getPlayerState) {
-        if (ytPlayer.getPlayerState() === 1) ytPlayer.pauseVideo();
-        else ytPlayer.playVideo();
+        if (ytPlayer.getPlayerState() === 1) {
+          if (ytCoverTimer) { clearTimeout(ytCoverTimer); ytCoverTimer = null; }
+          const k = $("#nx-yt-cover-kicker");
+          if (k) k.textContent = "PAUSED";
+          $("#nx-canvas")?.classList.remove("yt-live");
+          ytPlayer.pauseVideo();
+        } else {
+          ytPlayer.playVideo();
+        }
       }
     });
     $("#v-rw").addEventListener("click", () => {

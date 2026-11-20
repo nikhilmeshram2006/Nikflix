@@ -544,7 +544,7 @@ input[type="search"]::-webkit-search-cancel-button { display: none; }
   place-items: center;
   overflow: hidden;
 }
-.nx-canvas video, .nx-canvas iframe {
+.nx-canvas video, .nx-canvas > iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -552,15 +552,101 @@ input[type="search"]::-webkit-search-cancel-button { display: none; }
   display: block;
   background: #000;
 }
-.nx-click-shield {
+
+/* YouTube Clean Theater Wrapper (clips YouTube title, channel, Copy link & YouTube logo without cropping 16:9 video) */
+.nx-yt-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  z-index: 1;
+}
+.nx-yt-stage iframe,
+.nx-yt-stage #yt-mount {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100% !important;
+  height: calc(100% + 280px) !important;
+  transform: translateY(-50%);
+  border: 0;
+  display: block;
+  background: #000;
+  pointer-events: none;
+}
+
+/* Nikflix Cinema Cover for YouTube Unstarted / Paused / Ended states (hides YouTube "More videos", title, channel, Copy link & logo) */
+.nx-yt-cover {
   position: absolute;
   inset: 0;
   z-index: 2;
+  background: #050505;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.08s ease;
+}
+.nx-canvas.yt-live .nx-yt-cover {
+  opacity: 0;
+  transition: opacity 0.24s ease;
+}
+.nx-yt-cover-bg {
+  position: absolute;
+  inset: -16px;
+  background-size: cover;
+  background-position: center;
+  filter: blur(14px) brightness(0.32) saturate(1.15);
+  transform: scale(1.06);
+}
+.nx-yt-cover-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.88) 78%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.15) 45%, rgba(0, 0, 0, 0.82) 100%);
+}
+.nx-yt-cover-meta {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  pointer-events: none;
+}
+.nx-yt-cover-kicker {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.nx-yt-cover-title {
+  font-size: clamp(1rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+.nx-yt-cover-sub {
+  font-size: 0.82rem;
+  color: #c8c8c8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nx-click-shield {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
   cursor: pointer;
 }
 .nx-center-play {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   width: 68px;
   height: 68px;
   border-radius: 50%;
@@ -1107,12 +1193,25 @@ input[type="search"]::-webkit-search-cancel-button { display: none; }
 .nx-video-pane:fullscreen .nx-canvas video,
 .nx-video-pane:-webkit-full-screen .nx-canvas video,
 .nx-video-pane.nx-fs-active .nx-canvas video,
-.nx-video-pane:fullscreen .nx-canvas iframe,
-.nx-video-pane:-webkit-full-screen .nx-canvas iframe,
-.nx-video-pane.nx-fs-active .nx-canvas iframe {
+.nx-video-pane:fullscreen .nx-canvas > iframe,
+.nx-video-pane:-webkit-full-screen .nx-canvas > iframe,
+.nx-video-pane.nx-fs-active .nx-canvas > iframe {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.nx-video-pane:fullscreen .nx-yt-stage,
+.nx-video-pane:-webkit-full-screen .nx-yt-stage,
+.nx-video-pane.nx-fs-active .nx-yt-stage {
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+}
+
+.nx-video-pane:fullscreen .nx-yt-cover-meta,
+.nx-video-pane:-webkit-full-screen .nx-yt-cover-meta,
+.nx-video-pane.nx-fs-active .nx-yt-cover-meta {
+  bottom: 92px;
 }
 
 .nx-video-pane:fullscreen .nx-fs-exit-btn,
