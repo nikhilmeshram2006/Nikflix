@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https:; connect-src 'self' https://api.tvmaze.com https://archive.org; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://www.youtube-nocookie.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https:; connect-src 'self' https://api.tvmaze.com https://archive.org; base-uri 'self'; form-action 'self'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Watch Now - Nikflix</title>
   <meta name="description" content="Watch full-length movies, TV series and anime episodes directly inside the Nikflix theater video player with popup shield and multi-server streaming.">
@@ -112,6 +112,7 @@
     let activeVideoBlobUrl = null;
     let activeSubBlobUrl = null;
     let playbackSpeed = 1;
+    let adShieldEnabled = store.get("ad_shield", true);
     let audioTrack = (item.audio && item.audio[0]) || "English [Dub] (5.1)";
     let subTrack = (item.subtitles && item.subtitles[0]) || "English [CC]";
     let episodes = [];
@@ -158,8 +159,9 @@
       const list = [
         { key: "direct", label: "HTML5 Player", desc: "Direct MP4 stream (No popups)" },
       ];
-      if (item.yt) {
-        list.push({ key: "yt", label: "YouTube HD", desc: "Instant HD stream with custom controls" });
+      if (item.yt || currentYtId) {
+        list.push({ key: "yt", label: "YouTube Ad-Free", desc: "Privacy-enhanced youtube-nocookie player with Ad-Shield" });
+        list.push({ key: "yt-proxy", label: "Ad-Free Proxy", desc: "Alternative privacy proxy stream (Zero YouTube ads)" });
       }
       if (item.ia || discoveredIaStreams.length) {
         list.push({ key: "ia-emb", label: "Archive Stream", desc: "Internet Archive ad-free player" });
@@ -205,6 +207,10 @@
           ? `https://www.NontonGo.win/embed/tv/?id=${encodeURIComponent(imdb)}&s=${season}&e=${episode}&lang=${langCode}&sub=en`
           : `https://www.NontonGo.win/embed/movie/${encodeURIComponent(imdb)}?lang=${langCode}&sub=en`;
       }
+      if (mode === "yt-proxy") {
+        const yid = currentYtId || item.yt;
+        if (yid) return `https://yewtu.be/embed/${encodeURIComponent(yid)}?autoplay=1&listen=0&subtitles=English`;
+      }
       if (mode === "ia-emb") {
         const iaId = item.ia || discoveredIaStreams[0]?.ia;
         if (iaId) return `https://archive.org/embed/${encodeURIComponent(iaId)}?autoplay=1`;
@@ -234,7 +240,7 @@
                 <button type="button" class="nx-badge nx-badge-btn active" data-audio="English [Dub] (5.1)" title="Play with English Dubbed Audio + English Subtitles">EN Dub</button>
                 <button type="button" class="nx-badge nx-badge-btn" data-audio="Hindi [Dub] (5.1)" title="Play with Hindi Dubbed Audio + English Subtitles">Hindi Dub</button>
                 <span class="nx-badge">EN Sub [CC]</span>
-                <span class="nx-badge nx-shield-badge" title="All popups and third-party redirects are blocked">${P_ICONS.shield} Redirect Shield ON</span>
+                <button type="button" class="nx-badge nx-badge-btn nx-shield-badge active" id="nx-ad-shield-btn" title="YouTube Ad-Shield blocks tracking cookies, mutes & skips detected ad breaks">${P_ICONS.shield} Ad-Shield ON</button>
               </div>
             </div>
             <div class="nx-top-actions">
@@ -529,23 +535,41 @@
         return;
       }
 
-      // MODE B: YouTube HD inside our custom Cyberpunk player (controlled by our own bottom bar, zero external redirects!)
+      // MODE B: Privacy-Enhanced YouTube Player (youtube-nocookie.com + Nikflix Ad-Shield)
       if (activeMode === "yt" && (currentYtId || item.yt)) {
         activeVideoEl = null;
         progressWrap.hidden = false;
         canvas.classList.remove("playing");
+        const expectedVid = currentYtId || item.yt;
+        const progKey = `prog:${item.id}:s${season}e${episode}`;
+        const savedStart = Math.max(0, Number(store.get(progKey, 0)) || 0);
+
         canvas.innerHTML = `
           <div id="yt-mount"></div>
           <div class="nx-click-shield" id="nx-yt-shield" title="Click to play or pause"></div>
+          <div class="nx-ad-overlay" id="nx-ad-overlay" hidden>
+            <strong>${P_ICONS.shield} Nikflix Ad-Shield Active</strong>
+            <span>Blocking YouTube ad break and resuming your episode...</span>
+          </div>
           <button type="button" class="nx-center-play" id="nx-center-play" aria-label="Play video">${P_ICONS.play}</button>
         `;
 
         const YT = await loadYouTubeApi();
         if (activeMode !== "yt") return;
+
+        let lastContentTime = savedStart;
+        let expectedDuration = 0;
+        let inAdBreak = false;
+        let wasMutedBeforeAd = false;
+        let lastReloadAt = 0;
+        let lastSaveAt = 0;
+
         ytPlayer = new YT.Player("yt-mount", {
-          videoId: currentYtId || item.yt,
+          host: "https://www.youtube-nocookie.com",
+          videoId: expectedVid,
           playerVars: {
             autoplay: 1,
+            start: savedStart > 15 ? Math.floor(savedStart) : 0,
             controls: 0,
             rel: 0,
             modestbranding: 1,
@@ -555,6 +579,7 @@
             hl: "en",
             playsinline: 1,
             disablekb: 1,
+            origin: location.origin,
           },
           events: {
             onReady: (ev) => {
@@ -569,15 +594,63 @@
                 }
               } catch {}
               ev.target.playVideo();
+
+              const adOverlay = $("#nx-ad-overlay");
               ytTimer = setInterval(() => {
                 if (!ytPlayer?.getCurrentTime) return;
                 const cur = ytPlayer.getCurrentTime() || 0;
                 const dur = ytPlayer.getDuration() || 0;
+                const vData = ytPlayer.getVideoData ? ytPlayer.getVideoData() : null;
+                const activeVid = vData?.video_id || "";
+
+                // Track true content duration once loaded
+                if (activeVid === expectedVid && dur > 120) {
+                  expectedDuration = dur;
+                }
+
+                // Ad-Shield Detection: mismatched video_id OR sudden short ad clip interrupting main content
+                const adDetected = adShieldEnabled && (
+                  (activeVid && activeVid !== expectedVid) ||
+                  (expectedDuration > 180 && dur > 0 && dur <= 95)
+                );
+
+                if (adDetected) {
+                  if (!inAdBreak) {
+                    inAdBreak = true;
+                    wasMutedBeforeAd = ytPlayer.isMuted ? ytPlayer.isMuted() : false;
+                    ytPlayer.mute?.();
+                    if (adOverlay) adOverlay.hidden = false;
+                  }
+                  const now = Date.now();
+                  if (now - lastReloadAt > 6000) {
+                    lastReloadAt = now;
+                    try {
+                      ytPlayer.loadVideoById({ videoId: expectedVid, startSeconds: Math.floor(lastContentTime) });
+                    } catch {}
+                  }
+                  timeEl.textContent = "AD-SHIELD · SKIPPING";
+                  return;
+                }
+
+                if (inAdBreak) {
+                  inAdBreak = false;
+                  if (adOverlay) adOverlay.hidden = true;
+                  if (!wasMutedBeforeAd) ytPlayer.unMute?.();
+                  toast("Ad blocked by Nikflix Ad-Shield", "success", 2000);
+                }
+
+                if (cur > 0) lastContentTime = cur;
                 const pct = dur ? (cur / dur) * 100 : 0;
                 fill.style.width = `${pct.toFixed(2)}%`;
                 if (dur) seek.value = String(Math.round(pct * 10));
                 timeEl.textContent = `${fmtTime(cur)}  /  ${fmtTime(dur)}`;
-              }, 400);
+
+                const now = Date.now();
+                if (cur > 10 && now - lastSaveAt > 5000) {
+                  lastSaveAt = now;
+                  store.set(progKey, Math.floor(cur));
+                }
+              }, 300);
             },
             onStateChange: (ev) => {
               const playing = ev.data === YT.PlayerState.PLAYING;
@@ -585,8 +658,8 @@
               playBtn.innerHTML = playing ? P_ICONS.pause : P_ICONS.play;
             },
             onError: () => {
-              toast("Switching to Direct HTML5 Player...", "info");
-              activeMode = "direct";
+              toast("Switching to Ad-Free Proxy stream...", "info");
+              activeMode = "yt-proxy";
               renderCanvas();
             },
           },
@@ -691,6 +764,20 @@
       const pane = $("#nx-video-pane");
       if (document.fullscreenElement) document.exitFullscreen();
       else pane.requestFullscreen?.();
+    });
+
+    const adShieldBtn = $("#nx-ad-shield-btn");
+    const syncAdShieldBtn = () => {
+      if (!adShieldBtn) return;
+      adShieldBtn.classList.toggle("active", adShieldEnabled);
+      adShieldBtn.innerHTML = `${P_ICONS.shield} Ad-Shield ${adShieldEnabled ? "ON" : "OFF"}`;
+    };
+    syncAdShieldBtn();
+    adShieldBtn?.addEventListener("click", () => {
+      adShieldEnabled = !adShieldEnabled;
+      store.set("ad_shield", adShieldEnabled);
+      syncAdShieldBtn();
+      toast(`Nikflix YouTube Ad-Shield ${adShieldEnabled ? "enabled" : "disabled"}`, "info");
     });
 
     // Toggle right drawer
