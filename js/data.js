@@ -421,11 +421,10 @@ window.CATALOG = [
   "seasons": 2,
   "genres": [
    "anime",
-   "romance",
    "comedy",
-   "drama"
+   "romance"
   ],
-  "rating": 7.4,
+  "rating": 6.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -669,11 +668,10 @@ window.CATALOG = [
   "seasons": 1,
   "genres": [
    "anime",
-   "romance",
    "comedy",
-   "drama"
+   "romance"
   ],
-  "rating": 7.6,
+  "rating": 7.2,
   "resolutions": [
    "1080p",
    "720p"
@@ -809,11 +807,11 @@ window.CATALOG = [
   "seasons": 3,
   "genres": [
    "anime",
+   "action",
    "comedy",
-   "fantasy",
-   "action"
+   "fantasy"
   ],
-  "rating": 8.2,
+  "rating": 7.9,
   "resolutions": [
    "1080p",
    "720p"
@@ -1138,10 +1136,10 @@ window.CATALOG = [
   "seasons": 2,
   "genres": [
    "anime",
-   "romance",
-   "comedy"
+   "comedy",
+   "romance"
   ],
-  "rating": 8.3,
+  "rating": 8.2,
   "resolutions": [
    "1080p",
    "720p"
@@ -1394,10 +1392,10 @@ window.CATALOG = [
   "seasons": 1,
   "genres": [
    "anime",
-   "romance",
-   "comedy"
+   "comedy",
+   "romance"
   ],
-  "rating": 7.3,
+  "rating": 6.9,
   "resolutions": [
    "1080p",
    "720p"
@@ -1542,11 +1540,11 @@ window.CATALOG = [
   "seasons": 1,
   "genres": [
    "anime",
-   "romance",
    "comedy",
-   "drama"
+   "drama",
+   "romance"
   ],
-  "rating": 7.7,
+  "rating": 7.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -1678,14 +1676,15 @@ window.CATALOG = [
   "id": "s-date-a-live",
   "type": "series",
   "title": "Date A Live",
-  "year": 2024,
+  "year": 2013,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "comedy",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -1697,7 +1696,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Date A Live full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Thirty years before a strange phenomena called a \"spacequake\" devastated the center of Eurasia, claiming the lives of at least 150 million people. Since then, smaller spacequakes plague the world on an irregular basis. Shidou Itsuka, a seemingly ordinary high schooler comes across a mysterious girl at the ground zero of a spacequake...",
   "yt": "szbZcxuPffA",
   "episodes": [
    {
@@ -1727,11 +1726,12 @@ window.CATALOG = [
   "id": "s-re-zero-starting-life-in-another-world",
   "type": "series",
   "title": "Re:ZERO -Starting Life in Another World-",
-  "year": 2024,
+  "year": 2016,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "drama",
    "fantasy"
   ],
   "rating": 8.1,
@@ -1746,7 +1746,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Re:ZERO -Starting Life in Another World- full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "In the story, Subaru Natsuki is an ordinary high school student who is lost in an alternate world, where he is rescued by a beautiful, silver-haired girl. He stays near her to return the favor, but the destiny she is burdened with is more than Subaru can imagine. Enemies attack one by one, and both of them are killed. He then finds...",
   "yt": "o2GjkflJU9k",
   "episodes": [
    {
@@ -1803,14 +1803,15 @@ window.CATALOG = [
   "id": "s-black-torch",
   "type": "series",
   "title": "BLACK TORCH",
-  "year": 2024,
+  "year": 2026,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "fantasy",
+   "scifi"
   ],
-  "rating": 8.1,
+  "rating": 6.9,
   "resolutions": [
    "1080p",
    "720p"
@@ -1822,7 +1823,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream BLACK TORCH full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Jirou Azuma is no average high schooler. A descendant of ninjas and trained in the ancient warrior art of the shinobi, Jirou is also able to talk with animals. After a mysterious encounter with an injured cat named Ragou, Jirou discovers the feline is actually the legendary Black Star of Doom! Joined by the Bureau of Espionage, they...",
   "yt": "u2rA2cjpk5k",
   "episodes": [
    {
@@ -1843,14 +1844,13 @@ window.CATALOG = [
   "id": "s-the-world-is-dancing",
   "type": "series",
   "title": "THE WORLD IS DANCING",
-  "year": 2024,
+  "year": 2026,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "drama"
   ],
-  "rating": 8.1,
+  "rating": 7.1,
   "resolutions": [
    "1080p",
    "720p"
@@ -1862,7 +1862,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream THE WORLD IS DANCING full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Born into a life of acting and dance with a traveling theater troupe in 14th-century Japan, 12-year old Oniyasha has one problem—he doesn't know what the point of any of it is. \"Why must I step with the left foot here instead of the right? Why is one performance good and another, bad? Why do people dance at all?\" It all seems...",
   "yt": "WkHynft8XWo",
   "episodes": [
    {
@@ -1883,14 +1883,14 @@ window.CATALOG = [
   "id": "s-the-world-s-strongest-rearguard",
   "type": "series",
   "title": "The World's Strongest Rearguard",
-  "year": 2024,
+  "year": 2026,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 5.7,
   "resolutions": [
    "1080p",
    "720p"
@@ -1902,7 +1902,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream The World's Strongest Rearguard full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "After a fatal accident, overworked office worker Arihito Atobe is reborn in the Labyrinth Country as a Seeker with the rare Rearguard class—an all-purpose support role that excels in attack, defense, and healing. Joined by a fierce demi-human mercenary and his former boss, Arihito dives into deadly dungeons and rises through the...",
   "yt": "NSRzMNrH3fY",
   "episodes": [
    {
@@ -1923,11 +1923,12 @@ window.CATALOG = [
   "id": "s-mushoku-tensei-jobless-reincarnation",
   "type": "series",
   "title": "Mushoku Tensei: Jobless Reincarnation",
-  "year": 2024,
+  "year": 2021,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "drama",
    "fantasy"
   ],
   "rating": 8.1,
@@ -1942,7 +1943,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Mushoku Tensei: Jobless Reincarnation full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "When a 34-year-old underachiever gets run over by a bus, his story doesn’t end there. Reincarnated in a new world as an infant, Rudeus will seize every opportunity to live the life he’s always wanted. Armed with new friends, some freshly acquired magical abilities, and the courage to do the things he’s always dreamed of, he’s...",
   "yt": "WSwizRmdofM",
   "episodes": [
    {
@@ -1963,14 +1964,15 @@ window.CATALOG = [
   "id": "s-skeleton-knight-in-another-world",
   "type": "series",
   "title": "Skeleton Knight in Another World",
-  "year": 2024,
+  "year": 2022,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "comedy",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 7.0,
   "resolutions": [
    "1080p",
    "720p"
@@ -1982,7 +1984,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Skeleton Knight in Another World full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "One day, a gamer played video games until he fell asleep…and when he woke up, he found himself in the game world–as a skeleton! Equipped with the powerful weapons and armor of his avatar but stuck with its frightening skeletal appearance, Arc has to find a place for himself in this new, fantastical land. All his hopes for a quiet life...",
   "yt": "t9aevrLkHA8",
   "episodes": [
    {
@@ -2003,14 +2005,15 @@ window.CATALOG = [
   "id": "s-that-time-i-got-reincarnated-as-a-slime",
   "type": "series",
   "title": "That Time I Got Reincarnated as a Slime",
-  "year": 2024,
+  "year": 2018,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "comedy",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 8.0,
   "resolutions": [
    "1080p",
    "720p"
@@ -2022,7 +2025,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream That Time I Got Reincarnated as a Slime full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Lonely thirty-seven-year-old Satoru Mikami is stuck in a dead-end job, unhappy with his mundane life, but after dying at the hands of a robber, he awakens to a fresh start in a fantasy realm...as a slime monster! As he acclimates to his goopy new existence, his exploits with the other monsters set off a chain of events that will...",
   "yt": "xDr5LT4bQP4",
   "episodes": [
    {
@@ -2052,14 +2055,14 @@ window.CATALOG = [
   "id": "s-hunter-x-hunter",
   "type": "series",
   "title": "Hunter x Hunter",
-  "year": 2024,
+  "year": 1999,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 8.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -2071,7 +2074,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Hunter x Hunter full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "A Hunter is one who travels the world doing all sorts of dangerous tasks. From capturing criminals to searching deep within uncharted lands for any lost treasures. Gon is a young boy whose father disappeared long ago, being a Hunter. He believes if he could also follow his father's path, he could one day reunite with him. After...",
   "yt": "RYg5yd5n0E0",
   "episodes": [
    {
@@ -2137,14 +2140,14 @@ window.CATALOG = [
   "id": "s-stardust-telepath",
   "type": "series",
   "title": "Stardust Telepath",
-  "year": 2024,
+  "year": 2023,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "drama"
   ],
-  "rating": 8.1,
+  "rating": 7.0,
   "resolutions": [
    "1080p",
    "720p"
@@ -2156,7 +2159,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Stardust Telepath full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Konohoshi Umika is a high-schooler who is very bad at communicating with others. Feeling almost like an alien trapped on Earth with nowhere to belong, one day she meets a girl who claims to be an actual alien!",
   "yt": "o16tEePMNAc",
   "episodes": [
    {
@@ -2177,14 +2180,14 @@ window.CATALOG = [
   "id": "s-i-chu",
   "type": "series",
   "title": "I★CHU",
-  "year": 2024,
+  "year": 2021,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.2,
   "resolutions": [
    "1080p",
    "720p"
@@ -2196,7 +2199,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream I★CHU full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Youths aiming to become full-fledged idols enroll in the Étoile Vio School where the students are called IChu. But soon after they begin, Kuma Kocho gets them off to a rocky start with a single phrase...?! As they each work toward their individual goals, their activities as idols make the IChu begin to wonder... \"What is an idol?\" In...",
   "yt": "8cpZ2JAZHoo",
   "episodes": [
    {
@@ -2217,14 +2220,15 @@ window.CATALOG = [
   "id": "s-lucifer-and-biscuit-hammer",
   "type": "series",
   "title": "Lucifer and Biscuit Hammer",
-  "year": 2024,
+  "year": 2022,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "comedy",
+   "drama"
   ],
-  "rating": 8.1,
+  "rating": 5.0,
   "resolutions": [
    "1080p",
    "720p"
@@ -2236,7 +2240,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Lucifer and Biscuit Hammer full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "One day, unremarkable college student Yuuhi Amamiya meets a talking lizard who asks for his help saving Earth from a crisis. Before he can refuse, Yuuhi is turned into a member of the Beast Knights and given a ring that gives him the psychic power “domain control.” He is then immediately attacked by an enemy! But just as all seems...",
   "yt": "0n9IfTPB2Cs",
   "episodes": [
    {
@@ -2257,14 +2261,15 @@ window.CATALOG = [
   "id": "s-junji-ito-collection",
   "type": "series",
   "title": "Junji Ito Collection",
-  "year": 2024,
+  "year": 2018,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "drama",
+   "horror",
+   "thriller"
   ],
-  "rating": 8.1,
+  "rating": 6.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -2276,7 +2281,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Junji Ito Collection full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "In the light of day and in the dead of night, mysterious horrors await in the darkest shadows of every corner. They are unexplainable, inescapable, and undefeatable. Be prepared, or you may become their next victim. Sit back in terror as traumatizing tales of unparalleled terror unfold. Tales, such as that of a cursed jade carving...",
   "yt": "lpujdYMSqkg",
   "episodes": [
    {
@@ -2297,14 +2302,14 @@ window.CATALOG = [
   "id": "s-momokuri",
   "type": "series",
   "title": "Momokuri",
-  "year": 2024,
+  "year": 2016,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "romance"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -2316,7 +2321,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Momokuri full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The story revolves around Yuki Kurihara, a girl who has finally been granted her wish of dating her crush Momo. At first glance, she just looks like a normal but very cute girl. However, she is in fact a maniac over Momo, taking notes of his activities and never missing the chance to see him in a cute moment. Momo, on the other hand,...",
   "yt": "erhAGo9ob-Q",
   "episodes": [
    {
@@ -2337,14 +2342,14 @@ window.CATALOG = [
   "id": "s-police-in-a-pod",
   "type": "series",
   "title": "Police in a Pod",
-  "year": 2024,
+  "year": 2022,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "drama"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -2356,7 +2361,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Police in a Pod full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Officer Mai Kawai has had enough! She’s sick of being a police officer—but just when she’s about to hand in her resignation, the arrival of a brilliant (and beautiful) ace detective named Seiko Fuji changes her mind. Will Fuji reignite Mai’s passion for policing? And will Mai uncover the mystery of why Fuji was transferred to this...",
   "yt": "UYmnqR8dU24",
   "episodes": [
    {
@@ -2377,14 +2382,15 @@ window.CATALOG = [
   "id": "s-alice-zoroku",
   "type": "series",
   "title": "Alice & Zoroku",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "fantasy",
+   "thriller"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -2396,7 +2402,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Alice & Zoroku full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The fantasy story begins with a group of young girls who hold a power named \"Alice's Dream,\" which allows them to make their imaginations come true. These girls have been locked up and treated as research subjects. Sana, one of these girls whose specific power includes the ability ignore the laws of physics and physically manifest...",
   "yt": "fkkpHEj6Qn8",
   "episodes": [
    {
@@ -2417,14 +2423,14 @@ window.CATALOG = [
   "id": "s-matoi-the-sacred-slayer",
   "type": "series",
   "title": "Matoi the Sacred Slayer",
-  "year": 2024,
+  "year": 2016,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -2436,7 +2442,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Matoi the Sacred Slayer full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "It is 2016. Matoi Sumeragi, a second-year junior high school student, works part-time as a shrine maiden at Tenman Shrine in the city of Kamaya. Ever since being separated from her mother in early childhood, Matoi has been entrusted to her grandparents on her father's side, but three months ago, she finally began to live with her...",
   "yt": "2S4REMFabJQ",
   "episodes": [
    {
@@ -2457,14 +2463,14 @@ window.CATALOG = [
   "id": "s-last-period-the-journey-to-the-end-of-the-",
   "type": "series",
   "title": "Last Period: The Journey To The End of The Despair",
-  "year": 2024,
+  "year": 2018,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.0,
   "resolutions": [
    "1080p",
    "720p"
@@ -2476,7 +2482,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Last Period: The Journey To The End of The Despair full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The story takes place in a world where fantastic beasts called \"Spirals\" are born from isolation. Those who can defeat the beasts are called \"Periods.\" Haru is an apprentice Period who belongs to the Arc End 8th Branch. However, after a mysterious theft incident, there is an economic collapse, and the Arc End headquarters abandons the...",
   "yt": "EB_jY0vis1g",
   "episodes": [
    {
@@ -2497,14 +2503,15 @@ window.CATALOG = [
   "id": "s-girls-last-tour",
   "type": "series",
   "title": "Girls' Last Tour",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "scifi",
+   "comedy"
   ],
-  "rating": 8.1,
+  "rating": 8.2,
   "resolutions": [
    "1080p",
    "720p"
@@ -2516,7 +2523,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Girls' Last Tour full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Civilization is dead, but Chito and Yuuri are still alive. So they hop aboard their beloved Kettenkrad motorbike and aimlessly wander the ruins of the world they once knew. Day after hopeless day, they look for their next meal and fuel for their ride. But as long as the two are together, even an existence as bleak as theirs has a ray...",
   "yt": "ATCELb2vNXo",
   "episodes": [
    {
@@ -2537,14 +2544,13 @@ window.CATALOG = [
   "id": "s-new-game",
   "type": "series",
   "title": "NEW GAME!",
-  "year": 2024,
+  "year": 2016,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy"
   ],
-  "rating": 8.1,
+  "rating": 7.4,
   "resolutions": [
    "1080p",
    "720p"
@@ -2556,7 +2562,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream NEW GAME! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Fresh out of high school, 18-year-old Aoba Suzukaze is bright-eyed, bushy-tailed, and ready for her first day of work at her dream job. She’s joining the character design team at Eagle Jump, the company that makes her favorite video games! But the real world of office culture can be a challenge for a total noob. From her awkward first...",
   "yt": "PBH6E7xex_k",
   "episodes": [
    {
@@ -2586,14 +2592,14 @@ window.CATALOG = [
   "id": "s-luck-logic",
   "type": "series",
   "title": "Luck & Logic",
-  "year": 2024,
+  "year": 2016,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 5.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -2605,7 +2611,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Luck & Logic full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "In L.C. 922, people faced a sudden crisis. In Tetra Heaven, the land of legend, a hundred years of war had come to a close. The gods who lost the war searched for a new place to live, and found it in Septpia, the human world, which they proceeded to attack. The Logicalists attached to ALCA, a special police agency whose duty it was to...",
   "yt": "4Gwdt3U51wU",
   "episodes": [
    {
@@ -2626,14 +2632,15 @@ window.CATALOG = [
   "id": "s-iroduku-the-world-in-colors",
   "type": "series",
   "title": "IRODUKU: The World in Colors",
-  "year": 2024,
+  "year": 2018,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "drama",
+   "romance",
+   "comedy"
   ],
-  "rating": 8.1,
+  "rating": 7.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -2645,7 +2652,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream IRODUKU: The World in Colors full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Hitomi Tsukishiro may be the child of a family of witches, but after losing her ability to see color, she also lost her sense of magic. Nothing has been able to help her regain that gift — nothing until Hitomi’s grandmother, that is, sends Hitomi back in time to the year 2018! There Hitomi meets her grandmother’s younger self. She...",
   "yt": "LotGvdiwcZ0",
   "episodes": [
    {
@@ -2666,14 +2673,14 @@ window.CATALOG = [
   "id": "s-hina-logic",
   "type": "series",
   "title": "Hina Logic",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.4,
   "resolutions": [
    "1080p",
    "720p"
@@ -2685,7 +2692,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Hina Logic full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "On a spring day when the cherry blossoms have started to fall, the naïve princess of a small country, Lion begins her days at a school in Hokkaido. The school houses a special facility run by ALCA that trains Logicalists who protect the peace of the world. Lion has a lot of unique classmates in Class 1-S, including Nina, a Logicalist....",
   "yt": "PceIdg1ehLE",
   "episodes": [
    {
@@ -2706,14 +2713,14 @@ window.CATALOG = [
   "id": "s-bang-dream-yume-mita",
   "type": "series",
   "title": "BanG Dream! YUME∞MITA",
-  "year": 2024,
+  "year": 2026,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "drama"
   ],
-  "rating": 8.1,
+  "rating": 7.5,
   "resolutions": [
    "1080p",
    "720p"
@@ -2725,7 +2732,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream BanG Dream! YUME∞MITA full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Suddenly thrown together, a group of girls are now debuting as the virtual band, Mugendai Mewtype. They’ve got talent and personality, but no clue how to perform as one. Can they survive, let alone make it to the top in this unforgiving music world?",
   "yt": "K3LJSIXnYyA",
   "episodes": [
    {
@@ -2746,14 +2753,14 @@ window.CATALOG = [
   "id": "s-tada-never-falls-in-love",
   "type": "series",
   "title": "Tada Never Falls In Love",
-  "year": 2024,
+  "year": 2018,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "romance"
   ],
-  "rating": 8.1,
+  "rating": 7.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -2765,7 +2772,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Tada Never Falls In Love full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Mitsuyoshi Tada, a boy who has never known love, is taking pictures of the cherry blossoms in full bloom when he meets Teresa Wagner, a transfer student from Luxembourg. Upon arriving in Japan, she got lost, separated from her travel companion. Mitsuyoshi helps her and brings her to his grandfather's coffee shop.",
   "yt": "tv4wC9VE5Cg",
   "episodes": [
    {
@@ -2786,14 +2793,15 @@ window.CATALOG = [
   "id": "s-made-in-abyss",
   "type": "series",
   "title": "Made in Abyss",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "drama",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 8.4,
   "resolutions": [
    "1080p",
    "720p"
@@ -2805,7 +2813,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Made in Abyss full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The \"Abyss\" is the last unexplored place in the world. Strange and wonderful creatures roam within, and it is full of precious relics that present humans can't recreate. Those that dare to explore the depths are known as \"Cave Raiders.\" An orphan girl named Riko lives on the rim. Her dream is to become a Cave Raider like her mother...",
   "yt": "UbjvZpJUIds",
   "episodes": [
    {
@@ -2835,14 +2843,15 @@ window.CATALOG = [
   "id": "s-i-want-to-escape-from-princess-lessons",
   "type": "series",
   "title": "I Want to Escape from Princess Lessons",
-  "year": 2024,
+  "year": 2025,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "fantasy",
+   "romance"
   ],
-  "rating": 8.1,
+  "rating": 5.4,
   "resolutions": [
    "1080p",
    "720p"
@@ -2854,7 +2863,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream I Want to Escape from Princess Lessons full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Leticia Dorman, daughter of a duke, is less than thrilled to be engaged to a crown prince. Betrothed since childhood and trained to be queen, she always hoped Prince Clarke would fall for someone else one day. So when he shows up at a ball with another woman, Lettie excitedly retreats to the countryside to start her new life—only for...",
   "yt": "AyXyrsCXV0s",
   "episodes": [
    {
@@ -2875,14 +2884,14 @@ window.CATALOG = [
   "id": "s-saiyuki-reload-zeroin",
   "type": "series",
   "title": "SAIYUKI RELOAD -ZEROIN-",
-  "year": 2024,
+  "year": 2022,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.1,
   "resolutions": [
    "1080p",
    "720p"
@@ -2894,7 +2903,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream SAIYUKI RELOAD -ZEROIN- full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "When the monstrous Gyumaoh was defeated by the war god Nataku Taishi and imprisoned in Houtou Castle, an era of peace began in the land of Togenkyo. Now, hundreds of years later, those seeking to resurrect Gyumaoh have unleashed a plague upon the world. The wave of negative power generated by his attempted resurrection has driven...",
   "yt": "c2wWFi2oZM0",
   "episodes": [
    {
@@ -2922,7 +2931,7 @@ window.CATALOG = [
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 5.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -2934,7 +2943,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream HAIGAKURA full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Nozomu wants to be a writer, but for now she's just trying to find the right story. Walking home from school one day she bumps into some guys, and even though it's an accident, they hassle her until she is saved by a mysterious man. His name is Ichiyou, and he is searching for Gods. Nozomu sends him along his way only to be approached...",
   "yt": "-cz4QHvA9p4",
   "episodes": [
    {
@@ -2959,10 +2968,10 @@ window.CATALOG = [
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "drama",
+   "comedy"
   ],
-  "rating": 8.1,
+  "rating": 7.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -2974,7 +2983,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Jellyfish Can’t Swim in the Night full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "\"I want to find what I enjoy.\" Shibuya is a city full of identity. It is here on Shibuya’s late night streets that illustrator Mahiru Kozuki, former idol Kano Yamanouchi, Vtuber Kiui Watase and composer Mei Kim Anouk Takanashi — four young women who are slightly outside the world — join together and form an anonymous artist group...",
   "yt": "FYxU6VQWxVU",
   "episodes": [
    {
@@ -2995,14 +3004,15 @@ window.CATALOG = [
   "id": "s-just-because",
   "type": "series",
   "title": "Just Because!",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "drama",
+   "romance",
+   "comedy"
   ],
-  "rating": 8.1,
+  "rating": 7.0,
   "resolutions": [
    "1080p",
    "720p"
@@ -3014,7 +3024,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Just Because! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The original anime Just Because! focuses on subtly portraying the feelings of a group of high school students nearing graduation. Near the end of second semester at third year, when students have very little time in high school left, and are just waiting for graduation, the appearance of a new transfer student begins to change what...",
   "yt": "faUuReo9u34",
   "episodes": [
    {
@@ -3035,14 +3045,14 @@ window.CATALOG = [
   "id": "s-easygoing-territory-defense-by-the-optimis",
   "type": "series",
   "title": "Easygoing Territory Defense by the Optimistic Lord",
-  "year": 2024,
+  "year": 2026,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -3054,7 +3064,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Easygoing Territory Defense by the Optimistic Lord full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Van, fourth son of a marquis, is just a toddler when he realizes he’s been reincarnated. Thanks to his literal lifetime of knowledge, he’s raised as a child prodigy—until his production magic manifests, and it’s the last thing his snooty mage family wants to see! His disappointed father banishes him to a podunk town on the verge of...",
   "yt": "1V5E039lQ-Q",
   "episodes": [
    {
@@ -3080,9 +3090,10 @@ window.CATALOG = [
   "genres": [
    "anime",
    "action",
+   "drama",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -3094,7 +3105,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Chained Soldier full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Yuuki Wakura watches as dueling supernatural forces ravage the Earth. Mato are portals to another dimension, avenues from which dangerous monsters escape. Peaches are resources given to women granting them abilities. Chief of the Seventh Unity of the Anti-Demon Corp, Kyouka Uzen arrives to save Yuuki from a monster. Surprisingly,...",
   "yt": "BDJAuyetRKw",
   "episodes": [
    {
@@ -3115,14 +3126,15 @@ window.CATALOG = [
   "id": "s-no-guns-life",
   "type": "series",
   "title": "No Guns Life",
-  "year": 2024,
+  "year": 2019,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "drama",
+   "scifi"
   ],
-  "rating": 8.1,
+  "rating": 6.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -3134,7 +3146,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream No Guns Life full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "After the war, there are many \"Extends\" in the city, people whose bodies were modified to make them into dangerous weapons. Inui Juuzou is one of them, and he has no memories of his life and body before his head was transformed into a gun. Strangely enough, his head-gun is designed so that only someone behind him can pull the trigger....",
   "yt": "A26RJmJDeGw",
   "episodes": [
    {
@@ -3164,14 +3176,15 @@ window.CATALOG = [
   "id": "s-alderamin-on-the-sky",
   "type": "series",
   "title": "Alderamin on the Sky",
-  "year": 2024,
+  "year": 2016,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "drama",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 7.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -3183,7 +3196,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Alderamin on the Sky full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The Katvarna Empire is at war with the neighboring Republic of Kioka. In the Katvarna Empire, the lazy, woman-admiring Ikuta hates war, but due to certain circumstances, he grudgingly takes the High Grade Military Officer Exam. No one would have expected that this 17-year-old young man would eventually become a soldier called a great...",
   "yt": "ngGqbyFeCXg",
   "episodes": [
    {
@@ -3204,14 +3217,15 @@ window.CATALOG = [
   "id": "s-dr-ramune-mysterious-disease-specialist",
   "type": "series",
   "title": "Dr. Ramune -Mysterious Disease Specialist-",
-  "year": 2024,
+  "year": 2021,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
+   "drama",
+   "tragedy",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.9,
   "resolutions": [
    "1080p",
    "720p"
@@ -3223,7 +3237,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Dr. Ramune -Mysterious Disease Specialist- full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "As long as hearts exist inside people, there will always be those who suffer. And then something \"strange\" enters their mind and causes a strange disease to manifest itself in the body. The illness, which is called a \"mystery disease\" is unknown to most, but certainly exists. There is a doctor and apprentice who fights the disease,...",
   "yt": "zdLV5VRhG-8",
   "episodes": [
    {
@@ -3244,14 +3258,15 @@ window.CATALOG = [
   "id": "s-armed-girl-s-machiavellism",
   "type": "series",
   "title": "Armed Girl's Machiavellism",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "comedy",
+   "romance"
   ],
-  "rating": 8.1,
+  "rating": 6.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -3263,7 +3278,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Armed Girl's Machiavellism full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Originally, Aichi Coexistence Private Academy was an all-girls school for privileged young ladies until it was decided that it would become co-ed. The fearful girls were permitted to bring weapons to protect themselves, and then a vigilante group was established called the “Supreme Five Swords.\" When rebellious Nomura Fudou is sent to...",
   "yt": "nMRx8py08I4",
   "episodes": [
    {
@@ -3284,14 +3299,13 @@ window.CATALOG = [
   "id": "s-hand-shakers",
   "type": "series",
   "title": "Hand Shakers",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "action"
   ],
-  "rating": 8.1,
+  "rating": 4.2,
   "resolutions": [
    "1080p",
    "720p"
@@ -3303,7 +3317,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Hand Shakers full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "In Osaka in the year \"AD20XX,\" Hand Shakers are partners who can summon \"Nimrodes,\" weapons born from their deep psyche by joining hands. In order to grant the pair's wish, the Hand Shakers compete with and fight other Hand Shaker pairs. The top pair will then meet and challenge \"God.\"",
   "yt": "C6JyLlgtx5w",
   "episodes": [
    {
@@ -3324,14 +3338,14 @@ window.CATALOG = [
   "id": "s-riddle-story-of-devil",
   "type": "series",
   "title": "Riddle Story of Devil",
-  "year": 2024,
+  "year": 2014,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "drama"
   ],
-  "rating": 8.1,
+  "rating": 6.4,
   "resolutions": [
    "1080p",
    "720p"
@@ -3343,7 +3357,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Riddle Story of Devil full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The story is set at Myoujou Academy, a private girls' boarding school. The 10th year's Kurogumi class has 12 assassins with their sights on one target, Haru Ichinose. Tokaku Azuma is a recent transfer student who is also targeting Ichinose, but she gradually develops feelings for Ichinose.",
   "yt": "2iLtVq1OdjI",
   "episodes": [
    {
@@ -3364,14 +3378,15 @@ window.CATALOG = [
   "id": "s-shy",
   "type": "series",
   "title": "SHY",
-  "year": 2024,
+  "year": 2023,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "drama",
+   "tragedy"
   ],
-  "rating": 8.1,
+  "rating": 6.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -3383,7 +3398,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream SHY full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "On the brink of a third World War, superheroes appeared on Earth. Gifted with powers, their appearance brings peace to the world. The heroes each selected a country in which they would reside, serve, and protect its citizens. Shy is Japan’s hero, endowed with super strength. Her most daunting enemy yet? Crippling shyness. Join Shy and...",
   "yt": "Df0QTXUSRos",
   "episodes": [
    {
@@ -3411,7 +3426,7 @@ window.CATALOG = [
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 5.5,
   "resolutions": [
    "1080p",
    "720p"
@@ -3423,7 +3438,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream CANDY CARIES full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "A promotional video released on the day Wit Studio announced the establishment of a stop-motion studio with Tomoki Misato.",
   "yt": "w1Ghvdcz8nI",
   "episodes": [
    {
@@ -3462,14 +3477,15 @@ window.CATALOG = [
   "id": "s-shiboyugi-playing-death-games-to-put-food-",
   "type": "series",
   "title": "SHIBOYUGI:  Playing Death Games to Put Food on the Table",
-  "year": 2024,
+  "year": 2026,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "drama",
+   "thriller"
   ],
-  "rating": 8.1,
+  "rating": 7.1,
   "resolutions": [
    "1080p",
    "720p"
@@ -3481,7 +3497,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream SHIBOYUGI:  Playing Death Games to Put Food on the Table full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "At just seventeen, Yuki is a professional death game player. She’s survived enough rounds to know that survival is calculation, not luck—and that failure is final. For most players, the games are a nightmare with no escape. For Yuki, they’re simply business. Yet in a world where rooms turn into graves and every choice could be her...",
   "yt": "WTWwI7_viH8",
   "episodes": [
    {
@@ -3502,14 +3518,15 @@ window.CATALOG = [
   "id": "s-in-spectre",
   "type": "series",
   "title": "In/Spectre",
-  "year": 2024,
+  "year": 2020,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "thriller",
+   "romance"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -3521,7 +3538,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream In/Spectre full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "At the young age of 11, Kotoko Iwanaga was abducted by youkai for two weeks and asked to become their \"God of Wisdom,\" a mediator between the spirit and human worlds, to which the girl quickly agreed but at the cost of her right eye and left leg. Now, six years later, whenever youkai wish for their problems to be solved, they make...",
   "yt": "MzN3eQZm4Rw",
   "episodes": [
    {
@@ -3560,14 +3577,14 @@ window.CATALOG = [
   "id": "s-uq-holder",
   "type": "series",
   "title": "UQ Holder!",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -3579,7 +3596,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream UQ Holder! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "In the decade since the world became aware of the existence of magic, the world has undergone massive upheaval. However, a boy named Touta lives in seclusion in a rural town far removed from these changes. His ordinary life is highlighted by his magic-using female teacher and his supportive friends. When his tranquil daily life is...",
   "yt": "mJFtEgkmGAI",
   "episodes": [
    {
@@ -3600,14 +3617,14 @@ window.CATALOG = [
   "id": "s-uq-holder-oad",
   "type": "series",
   "title": "UQ Holder! OAD",
-  "year": 2024,
+  "year": 2017,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -3619,7 +3636,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream UQ Holder! OAD full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Bundled with the 14th, 16th, and 17th volume of the UQ Holder! manga.",
   "yt": "xFQPc1TmHlw",
   "episodes": [
    {
@@ -3640,14 +3657,15 @@ window.CATALOG = [
   "id": "s-ushio-and-tora",
   "type": "series",
   "title": "Ushio and Tora",
-  "year": 2024,
+  "year": 2015,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "comedy",
+   "drama"
   ],
-  "rating": 8.1,
+  "rating": 7.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -3659,7 +3677,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Ushio and Tora full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Long ago, a ferocious monster terrorized the land, until a samurai, wielding the legendary “Beast Spear”, sealed him away. 500 years later, a middle school student named Ushio Aotsuki accidently uncovers the monster in a hidden cellar under his family’s temple. The unsealed monster and the spear attract many other supernatural...",
   "yt": "6ebj3yaT_gs",
   "episodes": [
    {
@@ -3680,14 +3698,15 @@ window.CATALOG = [
   "id": "s-momentary-lily",
   "type": "series",
   "title": "MOMENTARY LILY",
-  "year": 2024,
+  "year": 2025,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "thriller",
+   "scifi"
   ],
-  "rating": 8.1,
+  "rating": 5.5,
   "resolutions": [
    "1080p",
    "720p"
@@ -3699,7 +3718,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream MOMENTARY LILY full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Robotic invaders wiped out all life, but Renge fights to survive using her powers. With no memories, she roams the city until she meets five other young women, each with unique abilities. Together, they make the most of their lives, cooking delicious meals between battles with mechanical monstrosities. As they uncover the secrets of...",
   "yt": "p267_jQCH8g",
   "episodes": [
    {
@@ -3720,14 +3739,15 @@ window.CATALOG = [
   "id": "s-mob-psycho-100",
   "type": "series",
   "title": "Mob Psycho 100",
-  "year": 2024,
+  "year": 2016,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "comedy",
+   "drama"
   ],
-  "rating": 8.1,
+  "rating": 8.4,
   "resolutions": [
    "1080p",
    "720p"
@@ -3739,7 +3759,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Mob Psycho 100 full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The story revolves around \"Mob,\" a boy who will explode if his emotional capacity reaches 100%. This boy with psychic powers earned his nickname \"Mob\" because he does not stand out among other people. He keeps his psychic powers bottled up so he can live normally, but if his emotional level reaches 100, something will overwhelm his...",
   "yt": "WVawhUo84u0",
   "episodes": [
    {
@@ -3760,14 +3780,14 @@ window.CATALOG = [
   "id": "s-snowball-earth",
   "type": "series",
   "title": "Snowball Earth",
-  "year": 2024,
+  "year": 2026,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "scifi"
   ],
-  "rating": 8.1,
+  "rating": 6.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -3779,7 +3799,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Snowball Earth full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "\"Yukio... I'm going to make a friend.\" A shy boy named Tetsuo. The only thing he had was a giant robot named Yukio. They became \"saviors\" in the fight against the galactic monsters coming from outer space. After the final battle, Tetsuo returns to Earth for the first time in ten years and witnesses an astonishing world. It's a frozen...",
   "yt": "_Min5OGZ0GM",
   "episodes": [
    {
@@ -3800,14 +3820,15 @@ window.CATALOG = [
   "id": "s-always-a-catch",
   "type": "series",
   "title": "Always a Catch!",
-  "year": 2024,
+  "year": 2026,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "fantasy",
+   "romance"
   ],
-  "rating": 8.1,
+  "rating": 7.1,
   "resolutions": [
    "1080p",
    "720p"
@@ -3819,7 +3840,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Always a Catch! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Born into a legendary ducal family, martial prodigy Maria “Mimi” Annovazzi loses her claim as heir and is suddenly ordered to marry into prestige. With no options left in her homeland, she transfers to a neighboring kingdom—only to be publicly dumped at graduation by a prince she’s never met over an engagement she didn’t even know she...",
   "yt": "TpqrWOwgjVo",
   "episodes": [
    {
@@ -3840,14 +3861,15 @@ window.CATALOG = [
   "id": "s-hyouka",
   "type": "series",
   "title": "Hyouka",
-  "year": 2024,
+  "year": 2012,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "thriller",
+   "romance",
+   "comedy"
   ],
-  "rating": 8.1,
+  "rating": 7.8,
   "resolutions": [
    "1080p",
    "720p"
@@ -3859,7 +3881,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Hyouka full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Energy-conservative high school student Houtarou Oreki ends up with more than he bargained for when he signs up for the Classic Literature Club at his sister's behest—especially when he realizes how deep-rooted the club's history really is. Begrudgingly, Oreki is dragged into an investigation concerning the 45-year-old mystery that...",
   "yt": "lTAAB0xn3yY",
   "episodes": [
    {
@@ -3889,14 +3911,15 @@ window.CATALOG = [
   "id": "s-dark-gathering",
   "type": "series",
   "title": "Dark Gathering",
-  "year": 2024,
+  "year": 2023,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "horror",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 7.5,
   "resolutions": [
    "1080p",
    "720p"
@@ -3908,7 +3931,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Dark Gathering full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "After a devastating encounter with a restless spirit, ghost-fearing psychic Keitarou Gentouga became a shut-in to avoid additional spectral catastrophes. But no man is a haunted island, and Keitarou eventually reintegrates with society by getting a part-time job as a tutor to the child prodigy Yayoi Houzuki. Yayoi isn’t just an...",
   "yt": "fCpxHdFuXSI",
   "episodes": [
    {
@@ -3929,14 +3952,14 @@ window.CATALOG = [
   "id": "s-the-god-of-high-school",
   "type": "series",
   "title": "THE GOD OF HIGH SCHOOL",
-  "year": 2024,
+  "year": 2020,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.9,
   "resolutions": [
    "1080p",
    "720p"
@@ -3948,7 +3971,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream THE GOD OF HIGH SCHOOL full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "It all began as a fighting tournament to seek out for the best fighter among all high school students in Korea. Mori Jin, a Taekwondo specialist and a high school student, soon learns that there is something much greater beneath the stage of the tournament.",
   "yt": "p_YbpHDBhzc",
   "episodes": [
    {
@@ -3969,14 +3992,15 @@ window.CATALOG = [
   "id": "s-the-devil-is-a-part-timer-season-2-part-1",
   "type": "series",
   "title": "The DEVIL Is A Part-Timer! Season 2 Part 1",
-  "year": 2024,
+  "year": 2022,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "fantasy",
+   "romance"
   ],
-  "rating": 8.1,
+  "rating": 6.5,
   "resolutions": [
    "1080p",
    "720p"
@@ -3988,7 +4012,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream The DEVIL Is A Part-Timer! Season 2 Part 1 full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "MgRonald’s best demon lord worker is back, climbing the corporate ladder to become ruler of Earth. But Maou’s plans of domination might need to be put on hold when a small girl claims to be his and Emi’s child!",
   "yt": "ygzV9aFEbus",
   "episodes": [
    {
@@ -4009,14 +4033,15 @@ window.CATALOG = [
   "id": "s-the-devil-is-a-part-timer-season-2-part-2",
   "type": "series",
   "title": "The DEVIL Is A Part-Timer! Season 2 Part 2",
-  "year": 2024,
+  "year": 2023,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "comedy",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -4028,7 +4053,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream The DEVIL Is A Part-Timer! Season 2 Part 2 full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Lucifer and company face new challenges, form new alliances and...now there's a baby! Your favorite otherwordly crew returns in this continuation.",
   "yt": "JycxA8eFQB4",
   "episodes": [
    {
@@ -4053,10 +4078,10 @@ window.CATALOG = [
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
+   "comedy",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 6.7,
   "resolutions": [
    "1080p",
    "720p"
@@ -4068,7 +4093,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Sasaki and Peeps full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Sasaki is a middle-aged office worker living in Japan. Feeling drained by the vapid corporate world, he heads to the pet shop in search of a new companion. There he finds an adorable bird named Peeps and takes him home. But Sasaki quickly learns that Peeps isn’t your average bird…he’s a powerful mage from another world! Together, they...",
   "yt": "nwdEh2NddHI",
   "episodes": [
    {
@@ -4089,14 +4114,14 @@ window.CATALOG = [
   "id": "s-and-you-thought-there-is-never-a-girl-onli",
   "type": "series",
   "title": "And You Thought There Is Never a Girl Online?",
-  "year": 2024,
+  "year": 2016,
   "seasons": 1,
   "genres": [
    "anime",
-   "action",
-   "fantasy"
+   "comedy",
+   "romance"
   ],
-  "rating": 8.1,
+  "rating": 6.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -4108,7 +4133,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream And You Thought There Is Never a Girl Online? full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The story centers on Hideki Nishimura, a young man who confessed to a person he thought was a girl online, only for that person to turn out to be a boy. He keeps this \"black history\" secret and swears to never to trust a \"girl\" online again. However, one day a girl online confesses to him, and it turns out she's actually a beautiful...",
   "yt": "tXZwBM9RWVQ",
   "episodes": [
    {
@@ -4129,14 +4154,14 @@ window.CATALOG = [
   "id": "s-lord-of-vermilion-the-crimson-king",
   "type": "series",
   "title": "Lord of Vermilion: The Crimson King",
-  "year": 2024,
+  "year": 2018,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 4.7,
   "resolutions": [
    "1080p",
    "720p"
@@ -4148,7 +4173,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Lord of Vermilion: The Crimson King full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The anime takes place in Tokyo in 2030. In a suburban area, suddenly a high-frequency resonant sound is heard, and at the same time a red mist shrouds the area. Anyone who hears the sound, be it human or animal, loses consciousness. The government estimates that it might be an unidentified virus, and fearful of an epidemic, blockades...",
   "yt": "lpKkC_3J4fA",
   "episodes": [
    {
@@ -4169,14 +4194,15 @@ window.CATALOG = [
   "id": "s-cells-at-work",
   "type": "series",
   "title": "Cells at Work!",
-  "year": 2024,
+  "year": 2018,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "comedy",
+   "scifi"
   ],
-  "rating": 8.1,
+  "rating": 7.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -4188,7 +4214,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Cells at Work! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "The average human body contains about 60 trillion cells, and each of them has work to do! But when you get injured, viruses or bacteria invade, or when an allergic reaction flares up, everyone from the silent but deadly white blood cells to the brainy neurons has to work together to get through the crisis!",
   "yt": "K4miofrz2DM",
   "episodes": [
    {
@@ -4227,14 +4253,15 @@ window.CATALOG = [
   "id": "s-blast-of-tempest",
   "type": "series",
   "title": "Blast of Tempest",
-  "year": 2024,
+  "year": 2012,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "drama",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 7.6,
   "resolutions": [
    "1080p",
    "720p"
@@ -4246,7 +4273,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Blast of Tempest full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "One day, a sorceress princess was stuffed into a barrel and banished. One day, a single girl was suddenly murdered, and the culprit still runs free. And one day, a battle spanning time and space over magic and revenge began! Sanity and madness, sense and intelligence, self-confidence and convictions. The tragic tale of this irrational...",
   "yt": "Rhk4819FCso",
   "episodes": [
    {
@@ -4267,14 +4294,15 @@ window.CATALOG = [
   "id": "s-ragna-crimson",
   "type": "series",
   "title": "Ragna Crimson",
-  "year": 2024,
+  "year": 2023,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
-   "fantasy"
+   "fantasy",
+   "thriller"
   ],
-  "rating": 8.1,
+  "rating": 7.4,
   "resolutions": [
    "1080p",
    "720p"
@@ -4286,7 +4314,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Ragna Crimson full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Dragons reign terror over the earth, sea and sky. If sworn dragon hunters like Ragna are to have any hope of dealing death to these seemingly invincible, fire-breathing beasts, they must find a way to level the odds. Ragna teams up with a mysterious man named Crimson who has likewise sworn to stand against the dragons menacing the...",
   "yt": "aDlEmGIrxZU",
   "episodes": [
    {
@@ -4307,14 +4335,15 @@ window.CATALOG = [
   "id": "s-spy-x-family",
   "type": "series",
   "title": "Spy x Family",
-  "year": 2024,
+  "year": 2022,
   "seasons": 1,
   "genres": [
    "anime",
    "action",
+   "comedy",
    "fantasy"
   ],
-  "rating": 8.1,
+  "rating": 8.3,
   "resolutions": [
    "1080p",
    "720p"
@@ -4326,7 +4355,7 @@ window.CATALOG = [
    "English [CC]",
    "Off"
   ],
-  "desc": "Stream Spy x Family full season marathon episodes in HD with English subtitles on Nikflix.",
+  "desc": "Everyone has a part of themselves they cannot show to anyone else. At a time when all nations of the world were involved in a fierce war of information happening behind closed doors, Ostania and Westalis had been in a state of cold war against one another for decades. The Westalis Intelligence Services' Eastern-Focused Division (WISE)...",
   "yt": "1EBKSwYWVSw",
   "episodes": [
    {
