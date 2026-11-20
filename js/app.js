@@ -3,9 +3,8 @@
 
   const SITE = {
     name: "Nikflix",
-    phone: "+91 98765 43210",
-    phoneHref: "tel:+919876543210",
-    email: "nikhilmeshram2006@gmail.com",
+    github: "https://github.com/nikhilmeshram2006/Nikflix",
+    issues: "https://github.com/nikhilmeshram2006/Nikflix/issues",
   };
 
   const CATEGORIES = [
@@ -469,8 +468,8 @@
             <div>
               <h3>Get in touch</h3>
               <ul>
-                <li><a href="${SITE.phoneHref}">${SITE.phone}</a></li>
-                <li><a href="mailto:${SITE.email}">${SITE.email}</a></li>
+                <li><a href="help.html#contact">Send a Message</a></li>
+                <li><a href="${SITE.issues}" target="_blank" rel="noopener noreferrer">Report an Issue on GitHub</a></li>
               </ul>
             </div>
           </div>
