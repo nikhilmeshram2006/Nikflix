@@ -1,6 +1,176 @@
 // Catalog data
 window.CATALOG = [
  {
+  "id": "s-dan-da-dan",
+  "type": "series",
+  "title": "DAN DA DAN",
+  "year": 2024,
+  "seasons": 2,
+  "genres": [
+   "anime",
+   "action",
+   "comedy",
+   "drama"
+  ],
+  "rating": 8.3,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "This is a story about Momo, a high school girl who comes from a family of spirit mediums, and her classmate Okarun, an occult fanatic. After Momo rescues Okarun from being bullied, they begin talking. However, an argument ensues between them since Momo believes in ghosts but denies aliens exist, and Okarun believes in aliens but...",
+  "poster": "assets/posters/s-dan-da-dan.webp",
+  "backdrop": "assets/backdrops/s-dan-da-dan.webp",
+  "yt": "1ecHNmAnfw8",
+  "stream": null,
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "DAN DA DAN - Season 1 (Complete Series) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/1ecHNmAnfw8/hqdefault.jpg",
+    "summary": "Watch the complete Season 1 marathon of DAN DA DAN with English subtitles.",
+    "yt": "1ecHNmAnfw8"
+   },
+   {
+    "season": 2,
+    "number": 1,
+    "name": "DAN DA DAN - Season 2 (Complete Series) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/edAV5VHmUME/hqdefault.jpg",
+    "summary": "Watch the complete Season 2 marathon of DAN DA DAN with English subtitles.",
+    "yt": "edAV5VHmUME"
+   }
+  ]
+ },
+ {
+  "id": "s-zom-100",
+  "type": "series",
+  "title": "Zom 100: Bucket List of the Dead",
+  "year": 2023,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "comedy",
+   "horror"
+  ],
+  "rating": 7.6,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "English [Dub] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Surviving a zombie apocalypse beats being a wage slave any day! After spending years slaving away for a soul-crushing company, Akira's life has lost its luster. He lives in a trash-filled apartment, his pay is abysmal, and he can't even muster up the nerve to confess his love to his beautiful co-worker. But when a zombie apocalypse...",
+  "poster": "assets/posters/s-zom-100.webp",
+  "backdrop": "assets/backdrops/s-zom-100.webp",
+  "yt": "-v61rZmufh0",
+  "stream": null,
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Zom 100: Bucket List of the Dead (Complete Series) [English Dub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/-v61rZmufh0/hqdefault.jpg",
+    "summary": "Watch the complete Season 1 marathon of Zom 100: Bucket List of the Dead in English Dub with English subtitles.",
+    "yt": "-v61rZmufh0"
+   }
+  ]
+ },
+ {
+  "id": "s-wrong-way-to-use-healing-magic",
+  "type": "series",
+  "title": "The Wrong Way to Use Healing Magic",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 7.5,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "An ordinary walk home from school turns into an epic journey for Usato. After suddenly being dropped into another world with two fellow students, Usato learns he was summoned there by accident. But things turn around when he discovers a unique aptitude for healing magic! Now, he trains beyond human limitations, using his self-healing...",
+  "poster": "assets/posters/s-wrong-way-to-use-healing-magic.webp",
+  "backdrop": "assets/backdrops/s-wrong-way-to-use-healing-magic.webp",
+  "yt": "QSe2sKEyDUA",
+  "stream": null,
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "The Wrong Way to Use Healing Magic (Complete Series) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/QSe2sKEyDUA/hqdefault.jpg",
+    "summary": "Watch the complete Season 1 marathon of The Wrong Way to Use Healing Magic with English subtitles.",
+    "yt": "QSe2sKEyDUA"
+   }
+  ]
+ },
+ {
+  "id": "s-our-dating-story",
+  "type": "series",
+  "title": "Our Dating Story: The Experienced You and The Inexperienced Me",
+  "year": 2023,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "romance"
+  ],
+  "rating": 6.7,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Ryuuto Kashima is the school’s gloomy introvert, and he’s got a crush on Runa Shirakawa, the popular girl. After losing a bet to classmates, he confesses his feelings to Runa one day. Shocked and secretly just as inexperienced as Ryuuto, Runa agrees to date him. The relationship grows between two people who are as similar as they are...",
+  "poster": "assets/posters/s-our-dating-story.webp",
+  "backdrop": "assets/backdrops/s-our-dating-story.webp",
+  "yt": "Fitc-aXuSGE",
+  "stream": null,
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Our Dating Story (Complete Series) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/Fitc-aXuSGE/hqdefault.jpg",
+    "summary": "Watch the complete Season 1 marathon of Our Dating Story: The Experienced You and The Inexperienced Me with English subtitles.",
+    "yt": "Fitc-aXuSGE"
+   }
+  ]
+ },
+ {
   "id": "s-shikimoris-not-just-a-cutie",
   "type": "series",
   "title": "Shikimori's Not Just a Cutie",
@@ -2122,7 +2292,7 @@ window.CATALOG = [
   "type": "series",
   "title": "Mushoku Tensei: Jobless Reincarnation",
   "year": 2021,
-  "seasons": 1,
+  "seasons": 3,
   "genres": [
    "anime",
    "action",
@@ -2142,15 +2312,33 @@ window.CATALOG = [
    "Off"
   ],
   "desc": "When a 34-year-old underachiever gets run over by a bus, his story doesn’t end there. Reincarnated in a new world as an infant, Rudeus will seize every opportunity to live the life he’s always wanted. Armed with new friends, some freshly acquired magical abilities, and the courage to do the things he’s always dreamed of, he’s...",
-  "yt": "WSwizRmdofM",
+  "yt": "La4AoJEqVg0",
   "episodes": [
    {
     "season": 1,
     "number": 1,
-    "name": "Mushoku Tensei: Jobless Reincarnation Season 3 Part 1 (Full Marathon) [ENG Sub]",
+    "name": "Mushoku Tensei: Jobless Reincarnation - Season 1 (Complete Series) [ENG Sub]",
+    "runtime": 540,
+    "image": "https://img.youtube.com/vi/La4AoJEqVg0/hqdefault.jpg",
+    "summary": "Watch the complete Season 1 marathon of Mushoku Tensei: Jobless Reincarnation with English subtitles.",
+    "yt": "La4AoJEqVg0"
+   },
+   {
+    "season": 2,
+    "number": 1,
+    "name": "Mushoku Tensei: Jobless Reincarnation - Season 2 (Complete Series) [ENG Sub]",
+    "runtime": 540,
+    "image": "https://img.youtube.com/vi/H_NR2pDijbg/hqdefault.jpg",
+    "summary": "Watch the complete Season 2 marathon of Mushoku Tensei: Jobless Reincarnation with English subtitles.",
+    "yt": "H_NR2pDijbg"
+   },
+   {
+    "season": 3,
+    "number": 1,
+    "name": "Mushoku Tensei: Jobless Reincarnation - Season 3 Part 1 (Complete Series) [ENG Sub]",
     "runtime": 280,
     "image": "https://img.youtube.com/vi/WSwizRmdofM/hqdefault.jpg",
-    "summary": "Watch the complete Mushoku Tensei: Jobless Reincarnation Season 3 Part 1 marathon with English subtitles.",
+    "summary": "Watch the complete Season 3 Part 1 marathon of Mushoku Tensei: Jobless Reincarnation with English subtitles.",
     "yt": "WSwizRmdofM"
    }
   ],
