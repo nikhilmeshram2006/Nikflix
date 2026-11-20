@@ -414,6 +414,3945 @@ window.CATALOG = [
   "ytHi": "sEhk1FM6Hgo"
  },
  {
+  "id": "s-masamune-kuns-revenge",
+  "type": "series",
+  "title": "Masamune-kun's Revenge",
+  "year": 2017,
+  "seasons": 2,
+  "genres": [
+   "anime",
+   "romance",
+   "comedy",
+   "drama"
+  ],
+  "rating": 7.4,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "As a child, Masamune Makabe was harshly rejected by the wealthy and beautiful Aki Adagaki, who nicknamed him 'Piggy'. Eight years later, transformed into a handsome high schooler, Masamune returns to enact his ultimate romantic revenge - across both Season 1 and Season 2 (Revenge R) with English subtitles.",
+  "yt": "P2xrTMFANMM",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Episode 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/P2xrTMFANMM/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "P2xrTMFANMM"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Episode 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/_uURTMXFXio/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "_uURTMXFXio"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Episode 3 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/05sgruQ3f8s/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "05sgruQ3f8s"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Episode 4 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/dNClEaBedIY/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "dNClEaBedIY"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Episode 5 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/MLcS9TX30gQ/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "MLcS9TX30gQ"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "Episode 6 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/IeMWSSF_RsI/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "IeMWSSF_RsI"
+   },
+   {
+    "season": 1,
+    "number": 7,
+    "name": "Episode 7 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/GjQZtxXkoVY/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "GjQZtxXkoVY"
+   },
+   {
+    "season": 1,
+    "number": 8,
+    "name": "Episode 8 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/DnP3sg8JBQI/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "DnP3sg8JBQI"
+   },
+   {
+    "season": 1,
+    "number": 9,
+    "name": "Episode 9 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/3jf4m97LuTs/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "3jf4m97LuTs"
+   },
+   {
+    "season": 1,
+    "number": 10,
+    "name": "Episode 10 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/hFCinXYDZPI/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "hFCinXYDZPI"
+   },
+   {
+    "season": 1,
+    "number": 11,
+    "name": "Episode 11 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/sBbSgNQPb_Q/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "sBbSgNQPb_Q"
+   },
+   {
+    "season": 1,
+    "number": 12,
+    "name": "Episode 12 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/xXL2rzn4NA4/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "xXL2rzn4NA4"
+   },
+   {
+    "season": 2,
+    "number": 1,
+    "name": "Episode 1 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/SH_GfGqGDnk/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "SH_GfGqGDnk"
+   },
+   {
+    "season": 2,
+    "number": 2,
+    "name": "Episode 2 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/DnUP5VvVVSs/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "DnUP5VvVVSs"
+   },
+   {
+    "season": 2,
+    "number": 3,
+    "name": "Episode 3 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/aoXckgC33wU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "aoXckgC33wU"
+   },
+   {
+    "season": 2,
+    "number": 4,
+    "name": "Episode 4 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/DkZ4JhCRv9g/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "DkZ4JhCRv9g"
+   },
+   {
+    "season": 2,
+    "number": 5,
+    "name": "Episode 5 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/XpdUlbgu7dE/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "XpdUlbgu7dE"
+   },
+   {
+    "season": 2,
+    "number": 6,
+    "name": "Episode 6 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/-VZX07lUw3g/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "-VZX07lUw3g"
+   },
+   {
+    "season": 2,
+    "number": 7,
+    "name": "Episode 7 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/WJNVFBvTThA/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "WJNVFBvTThA"
+   },
+   {
+    "season": 2,
+    "number": 8,
+    "name": "Episode 8 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/OyjVWQtaZCw/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "OyjVWQtaZCw"
+   },
+   {
+    "season": 2,
+    "number": 9,
+    "name": "Episode 9 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/SVrUp0ktT1M/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "SVrUp0ktT1M"
+   },
+   {
+    "season": 2,
+    "number": 10,
+    "name": "Episode 10 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/JGuZJqUm4YM/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "JGuZJqUm4YM"
+   },
+   {
+    "season": 2,
+    "number": 11,
+    "name": "Episode 11 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/TUdiopbW4xk/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "TUdiopbW4xk"
+   },
+   {
+    "season": 2,
+    "number": 12,
+    "name": "Episode 12 (Masamune-kun's Revenge R) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/pm--PxZjhiU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "pm--PxZjhiU"
+   }
+  ],
+  "poster": "assets/posters/s-masamune-kuns-revenge.webp",
+  "backdrop": "assets/backdrops/s-masamune-kuns-revenge.webp",
+  "stream": null
+ },
+ {
+  "id": "s-masamune-kuns-revenge-r",
+  "type": "series",
+  "title": "Masamune-kun's Revenge R",
+  "year": 2023,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "romance",
+   "comedy",
+   "drama"
+  ],
+  "rating": 7.6,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "During the class trip to Paris, Masamune and Aki's relationship takes an unexpected turn when a mysterious French heiress draws them into a new web of secrets and romance. Complete Season 2 (Episodes 1-12) with English subtitles.",
+  "yt": "SH_GfGqGDnk",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Episode 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/SH_GfGqGDnk/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "SH_GfGqGDnk"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Episode 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/DnUP5VvVVSs/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "DnUP5VvVVSs"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Episode 3 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/aoXckgC33wU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "aoXckgC33wU"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Episode 4 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/DkZ4JhCRv9g/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "DkZ4JhCRv9g"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Episode 5 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/XpdUlbgu7dE/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "XpdUlbgu7dE"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "Episode 6 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/-VZX07lUw3g/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "-VZX07lUw3g"
+   },
+   {
+    "season": 1,
+    "number": 7,
+    "name": "Episode 7 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/WJNVFBvTThA/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "WJNVFBvTThA"
+   },
+   {
+    "season": 1,
+    "number": 8,
+    "name": "Episode 8 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/OyjVWQtaZCw/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "OyjVWQtaZCw"
+   },
+   {
+    "season": 1,
+    "number": 9,
+    "name": "Episode 9 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/SVrUp0ktT1M/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "SVrUp0ktT1M"
+   },
+   {
+    "season": 1,
+    "number": 10,
+    "name": "Episode 10 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/JGuZJqUm4YM/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "JGuZJqUm4YM"
+   },
+   {
+    "season": 1,
+    "number": 11,
+    "name": "Episode 11 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/TUdiopbW4xk/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "TUdiopbW4xk"
+   },
+   {
+    "season": 1,
+    "number": 12,
+    "name": "Episode 12 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/pm--PxZjhiU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "pm--PxZjhiU"
+   }
+  ],
+  "poster": "assets/posters/s-masamune-kuns-revenge-r.webp",
+  "backdrop": "assets/backdrops/s-masamune-kuns-revenge-r.webp",
+  "stream": null
+ },
+ {
+  "id": "s-konosuba",
+  "type": "series",
+  "title": "KonoSuba: God's Blessing on This Wonderful World!",
+  "year": 2016,
+  "seasons": 3,
+  "genres": [
+   "anime",
+   "comedy",
+   "fantasy",
+   "action"
+  ],
+  "rating": 8.2,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "After an untimely and embarrassing death, shut-in gamer Kazuma Satou is reincarnated into a fantasy RPG world alongside the useless goddess Aqua, explosion-obsessed mage Megumin, and masochistic crusader Darkness. All 3 Seasons + Bonus Stage OVAs (33 episodes) with English subtitles.",
+  "yt": "SeI5GETL4o0",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Season 1 Episode 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/SeI5GETL4o0/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "SeI5GETL4o0"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Season 1 Episode 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/dtKKt8Yc4jc/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "dtKKt8Yc4jc"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Season 1 Episode 3 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/CKBZiWI7tN0/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "CKBZiWI7tN0"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Season 1 Episode 4 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/WH1CqGiwUt0/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "WH1CqGiwUt0"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Season 1 Episode 5 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/6YV1gvgahqQ/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "6YV1gvgahqQ"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "Season 1 Episode 6 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/kh04frkEW8E/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "kh04frkEW8E"
+   },
+   {
+    "season": 1,
+    "number": 7,
+    "name": "Season 1 Episode 7 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/lHS7dLWpyX0/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "lHS7dLWpyX0"
+   },
+   {
+    "season": 1,
+    "number": 8,
+    "name": "Season 1 Episode 8 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/m-8Gks2djpc/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "m-8Gks2djpc"
+   },
+   {
+    "season": 1,
+    "number": 9,
+    "name": "Season 1 Episode 9 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/KukudnBq8G0/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "KukudnBq8G0"
+   },
+   {
+    "season": 1,
+    "number": 10,
+    "name": "Season 1 Episode 10 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/4E242nbWYEE/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "4E242nbWYEE"
+   },
+   {
+    "season": 2,
+    "number": 1,
+    "name": "Season 2 Episode 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/CYgr71483No/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "CYgr71483No"
+   },
+   {
+    "season": 2,
+    "number": 2,
+    "name": "Season 2 Episode 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/WStOY2tyWbQ/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "WStOY2tyWbQ"
+   },
+   {
+    "season": 2,
+    "number": 3,
+    "name": "Season 2 Episode 3 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/JmgS_WxMGcA/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "JmgS_WxMGcA"
+   },
+   {
+    "season": 2,
+    "number": 4,
+    "name": "Season 2 Episode 4 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/tUjJ4guwBMU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "tUjJ4guwBMU"
+   },
+   {
+    "season": 2,
+    "number": 5,
+    "name": "Season 2 Episode 5 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/3I3usJtjJKc/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "3I3usJtjJKc"
+   },
+   {
+    "season": 2,
+    "number": 6,
+    "name": "Season 2 Episode 6 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Nuch3TBjlcM/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "Nuch3TBjlcM"
+   },
+   {
+    "season": 2,
+    "number": 7,
+    "name": "Season 2 Episode 7 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/S3VPLzwRRng/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "S3VPLzwRRng"
+   },
+   {
+    "season": 2,
+    "number": 8,
+    "name": "Season 2 Episode 8 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/H7rytdiYzVU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "H7rytdiYzVU"
+   },
+   {
+    "season": 2,
+    "number": 9,
+    "name": "Season 2 Episode 9 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/TR3UOSKdW18/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "TR3UOSKdW18"
+   },
+   {
+    "season": 2,
+    "number": 10,
+    "name": "Season 2 Episode 10 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/S-CctXVhAm4/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "S-CctXVhAm4"
+   },
+   {
+    "season": 3,
+    "number": 1,
+    "name": "Season 3 Episode 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Hg4VAsBKrHU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "Hg4VAsBKrHU"
+   },
+   {
+    "season": 3,
+    "number": 2,
+    "name": "Season 3 Episode 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/gOLDEDHtOw4/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "gOLDEDHtOw4"
+   },
+   {
+    "season": 3,
+    "number": 3,
+    "name": "Season 3 Episode 3 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/_IiGt4sYYqY/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "_IiGt4sYYqY"
+   },
+   {
+    "season": 3,
+    "number": 4,
+    "name": "Season 3 Episode 4 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/xuY9PuTCA8c/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "xuY9PuTCA8c"
+   },
+   {
+    "season": 3,
+    "number": 5,
+    "name": "Season 3 Episode 5 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/jnrDea7VczU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "jnrDea7VczU"
+   },
+   {
+    "season": 3,
+    "number": 6,
+    "name": "Season 3 Episode 6 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/bKxd71O8_Oo/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "bKxd71O8_Oo"
+   },
+   {
+    "season": 3,
+    "number": 7,
+    "name": "Season 3 Episode 7 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/VbNa39tUK70/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "VbNa39tUK70"
+   },
+   {
+    "season": 3,
+    "number": 8,
+    "name": "Season 3 Episode 8 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/vcMQZ6pynSg/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "vcMQZ6pynSg"
+   },
+   {
+    "season": 3,
+    "number": 9,
+    "name": "Season 3 Episode 9 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/vU5pWvtipiE/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "vU5pWvtipiE"
+   },
+   {
+    "season": 3,
+    "number": 10,
+    "name": "Season 3 Episode 10 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/g82xQPEkSV4/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "g82xQPEkSV4"
+   },
+   {
+    "season": 3,
+    "number": 11,
+    "name": "Season 3 Episode 11 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/z3LhwSjqlWo/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "z3LhwSjqlWo"
+   },
+   {
+    "season": 3,
+    "number": 12,
+    "name": "Season 3 Bonus Stage OVA 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Z2rJ5SWp2wk/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "Z2rJ5SWp2wk"
+   },
+   {
+    "season": 3,
+    "number": 13,
+    "name": "Season 3 Bonus Stage OVA 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/jt8rmWV_3tg/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "jt8rmWV_3tg"
+   }
+  ],
+  "poster": "assets/posters/s-konosuba.webp",
+  "backdrop": "assets/backdrops/s-konosuba.webp",
+  "stream": null
+ },
+ {
+  "id": "s-you-and-i-are-polar-opposites",
+  "type": "series",
+  "title": "You and I Are Polar Opposites",
+  "year": 2026,
+  "seasons": 2,
+  "genres": [
+   "anime",
+   "romance",
+   "comedy"
+  ],
+  "rating": 8.3,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Energetic, outgoing Suzuki and quiet, straightforward Tani couldn't be more different, yet their polar-opposite personalities spark a sweet and hilarious high school romance. Complete Seasons 1 & 2 (Episodes 1-25) with English subtitles.",
+  "yt": "Q2Jkm9GqhzQ",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Episode 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Q2Jkm9GqhzQ/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "Q2Jkm9GqhzQ"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Episode 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/W3G411wIJws/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "W3G411wIJws"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Episode 3 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Ng9IXT7BGQE/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "Ng9IXT7BGQE"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Episode 4 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/0GPSAYakiHo/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "0GPSAYakiHo"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Episode 5 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/la7ZpykR2dA/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "la7ZpykR2dA"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "Episode 6 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/RC4FnGZiw4E/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "RC4FnGZiw4E"
+   },
+   {
+    "season": 1,
+    "number": 7,
+    "name": "Episode 7 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/gMSlSVYigxQ/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "gMSlSVYigxQ"
+   },
+   {
+    "season": 1,
+    "number": 8,
+    "name": "Episode 8 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/dumpZHnfWKg/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "dumpZHnfWKg"
+   },
+   {
+    "season": 1,
+    "number": 9,
+    "name": "Episode 9 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/lZlt0gQ0yQQ/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "lZlt0gQ0yQQ"
+   },
+   {
+    "season": 1,
+    "number": 10,
+    "name": "Episode 10 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Mg_c4CDGxO8/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "Mg_c4CDGxO8"
+   },
+   {
+    "season": 1,
+    "number": 11,
+    "name": "Episode 11 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/20LU_LKSHbQ/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "20LU_LKSHbQ"
+   },
+   {
+    "season": 1,
+    "number": 12,
+    "name": "Episode 12 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/MW-aLfuolP0/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "MW-aLfuolP0"
+   },
+   {
+    "season": 2,
+    "number": 1,
+    "name": "Episode 13 (Season 2 #1) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/p2GDNsK2kp4/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "p2GDNsK2kp4"
+   },
+   {
+    "season": 2,
+    "number": 2,
+    "name": "Episode 14 (Season 2 #2) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/r_JHPbbV1NU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "r_JHPbbV1NU"
+   },
+   {
+    "season": 2,
+    "number": 3,
+    "name": "Episode 15 (Season 2 #3) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/wPd2V6YvcPw/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "wPd2V6YvcPw"
+   },
+   {
+    "season": 2,
+    "number": 4,
+    "name": "Episode 16 (Season 2 #4) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/scbG2XGbQmM/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "scbG2XGbQmM"
+   },
+   {
+    "season": 2,
+    "number": 5,
+    "name": "Episode 17 (Season 2 #5) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/-IvbhOWE3yY/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "-IvbhOWE3yY"
+   },
+   {
+    "season": 2,
+    "number": 6,
+    "name": "Episode 18 (Season 2 #6) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/xWlDK12QdC4/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "xWlDK12QdC4"
+   },
+   {
+    "season": 2,
+    "number": 7,
+    "name": "Episode 19 (Season 2 #7) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/VtXVghe_NiI/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "VtXVghe_NiI"
+   },
+   {
+    "season": 2,
+    "number": 8,
+    "name": "Episode 20 (Season 2 #8) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/STjcBVslXTo/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "STjcBVslXTo"
+   },
+   {
+    "season": 2,
+    "number": 9,
+    "name": "Episode 21 (Season 2 #9) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/HWJouzVx6JM/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "HWJouzVx6JM"
+   },
+   {
+    "season": 2,
+    "number": 10,
+    "name": "Episode 22 (Season 2 #10) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/gRv1KYfKHKU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "gRv1KYfKHKU"
+   },
+   {
+    "season": 2,
+    "number": 11,
+    "name": "Episode 23 (Season 2 #11) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/rfVqdyq061I/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "rfVqdyq061I"
+   },
+   {
+    "season": 2,
+    "number": 12,
+    "name": "Episode 24 (Season 2 #12) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/t9n-1IqB-p0/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "t9n-1IqB-p0"
+   },
+   {
+    "season": 2,
+    "number": 13,
+    "name": "Episode 25 (Season 2 #13) [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/jTJvId5Zw3g/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "jTJvId5Zw3g"
+   }
+  ],
+  "poster": "assets/posters/s-you-and-i-are-polar-opposites.webp",
+  "backdrop": "assets/backdrops/s-you-and-i-are-polar-opposites.webp",
+  "stream": null
+ },
+ {
+  "id": "s-the-girl-i-like-forgot-her-glasses",
+  "type": "series",
+  "title": "The Girl I Like Forgot Her Glasses",
+  "year": 2023,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "romance",
+   "comedy"
+  ],
+  "rating": 7.3,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Kaede Komura has a huge crush on his desk neighbor Ai Mie, who has terrible eyesight and constantly forgets her glasses - bringing her face inches away from his every single day. Complete Season 1 (Episodes 1-13) with English subtitles.",
+  "yt": "YQBqvLfquNU",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Episode 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/YQBqvLfquNU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "YQBqvLfquNU"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Episode 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/HT7YHIx_fSA/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "HT7YHIx_fSA"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Episode 3 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/JzpfPJY9PrY/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "JzpfPJY9PrY"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Episode 4 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/XRZnfMGRsrY/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "XRZnfMGRsrY"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Episode 5 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/IFpr28z2UHY/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "IFpr28z2UHY"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "Episode 6 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/l6YJ_2EQWPI/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "l6YJ_2EQWPI"
+   },
+   {
+    "season": 1,
+    "number": 7,
+    "name": "Episode 7 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/jOJ7DLdWtRI/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "jOJ7DLdWtRI"
+   },
+   {
+    "season": 1,
+    "number": 8,
+    "name": "Episode 8 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/8ruyPnIKloE/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "8ruyPnIKloE"
+   },
+   {
+    "season": 1,
+    "number": 9,
+    "name": "Episode 9 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/zqzvfYlU7AA/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "zqzvfYlU7AA"
+   },
+   {
+    "season": 1,
+    "number": 10,
+    "name": "Episode 10 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/J6xpmCIVI_I/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "J6xpmCIVI_I"
+   },
+   {
+    "season": 1,
+    "number": 11,
+    "name": "Episode 11 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/o4fYWTu4n-U/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "o4fYWTu4n-U"
+   },
+   {
+    "season": 1,
+    "number": 12,
+    "name": "Episode 12 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Fl0k1Jf209o/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "Fl0k1Jf209o"
+   },
+   {
+    "season": 1,
+    "number": 13,
+    "name": "Episode 13 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/8aoj3hd0dJI/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "8aoj3hd0dJI"
+   }
+  ],
+  "poster": "assets/posters/s-the-girl-i-like-forgot-her-glasses.webp",
+  "backdrop": "assets/backdrops/s-the-girl-i-like-forgot-her-glasses.webp",
+  "stream": null
+ },
+ {
+  "id": "s-more-than-a-married-couple",
+  "type": "series",
+  "title": "More than a Married Couple, But Not Lovers",
+  "year": 2022,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "romance",
+   "comedy",
+   "drama"
+  ],
+  "rating": 7.7,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "High school introvert Jirou Yakuin is paired with gyaru Akari Watanabe for their school's 'Marriage Practical' training program. To earn enough points to swap partners and be with their respective crushes, they must act like newlyweds under one roof. Complete Season 1 (Episodes 1-12) with English subtitles.",
+  "yt": "VTTBAbJzZOk",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Episode 1 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/VTTBAbJzZOk/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "VTTBAbJzZOk"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Episode 2 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/HaBK3yM23DA/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "HaBK3yM23DA"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Episode 3 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/mom7cqMRqDc/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "mom7cqMRqDc"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Episode 4 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/pVSedrXE6vo/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "pVSedrXE6vo"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Episode 5 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/QVQg4IpJNxk/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "QVQg4IpJNxk"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "Episode 6 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/va6RlZrbs1E/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "va6RlZrbs1E"
+   },
+   {
+    "season": 1,
+    "number": 7,
+    "name": "Episode 7 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/ATqgrPrSmKQ/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "ATqgrPrSmKQ"
+   },
+   {
+    "season": 1,
+    "number": 8,
+    "name": "Episode 8 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/EKD19q-SGMs/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "EKD19q-SGMs"
+   },
+   {
+    "season": 1,
+    "number": 9,
+    "name": "Episode 9 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/TEZN-83ChaU/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "TEZN-83ChaU"
+   },
+   {
+    "season": 1,
+    "number": 10,
+    "name": "Episode 10 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/lO9VrGFFtmc/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "lO9VrGFFtmc"
+   },
+   {
+    "season": 1,
+    "number": 11,
+    "name": "Episode 11 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/h33943W4Rwc/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "h33943W4Rwc"
+   },
+   {
+    "season": 1,
+    "number": 12,
+    "name": "Episode 12 [ENG Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/7E628eZ_T5w/hqdefault.jpg",
+    "summary": "Full episode with English subtitles (ENG Sub | JP Dub).",
+    "yt": "7E628eZ_T5w"
+   }
+  ],
+  "poster": "assets/posters/s-more-than-a-married-couple.webp",
+  "backdrop": "assets/backdrops/s-more-than-a-married-couple.webp",
+  "stream": null
+ },
+ {
+  "id": "s-date-a-live",
+  "type": "series",
+  "title": "Date A Live",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Date A Live full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "szbZcxuPffA",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Date A Live III (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/szbZcxuPffA/hqdefault.jpg",
+    "summary": "Watch the complete Date A Live III marathon with English subtitles.",
+    "yt": "szbZcxuPffA"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Date A Live V (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/SMsDH70_qTE/hqdefault.jpg",
+    "summary": "Watch the complete Date A Live V marathon with English subtitles.",
+    "yt": "SMsDH70_qTE"
+   }
+  ],
+  "poster": "assets/posters/s-date-a-live.webp",
+  "backdrop": "assets/backdrops/s-date-a-live.webp",
+  "stream": null
+ },
+ {
+  "id": "s-re-zero-starting-life-in-another-world",
+  "type": "series",
+  "title": "Re:ZERO -Starting Life in Another World-",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Re:ZERO -Starting Life in Another World- full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "o2GjkflJU9k",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Re:ZERO -Starting Life in Another World- Season 4 Part 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/o2GjkflJU9k/hqdefault.jpg",
+    "summary": "Watch the complete Re:ZERO -Starting Life in Another World- Season 4 Part 2 marathon with English subtitles.",
+    "yt": "o2GjkflJU9k"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Re:ZERO -Starting Life in Another World- Season 4 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/HNh-aSYP2FE/hqdefault.jpg",
+    "summary": "Watch the complete Re:ZERO -Starting Life in Another World- Season 4 marathon with English subtitles.",
+    "yt": "HNh-aSYP2FE"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Re:ZERO -Starting Life in Another World- Season 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/eKQSt13KXN4/hqdefault.jpg",
+    "summary": "Watch the complete Re:ZERO -Starting Life in Another World- Season 2 marathon with English subtitles.",
+    "yt": "eKQSt13KXN4"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Re:ZERO -Starting Life in Another World- Season 3 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/w4XCZaaasOY/hqdefault.jpg",
+    "summary": "Watch the complete Re:ZERO -Starting Life in Another World- Season 3 marathon with English subtitles.",
+    "yt": "w4XCZaaasOY"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Re:ZERO -Starting Life in Another World- Season 1 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/BQ0tO1XU_ic/hqdefault.jpg",
+    "summary": "Watch the complete Re:ZERO -Starting Life in Another World- Season 1 marathon with English subtitles.",
+    "yt": "BQ0tO1XU_ic"
+   }
+  ],
+  "poster": "assets/posters/s-re-zero-starting-life-in-another-world.webp",
+  "backdrop": "assets/backdrops/s-re-zero-starting-life-in-another-world.webp",
+  "stream": null
+ },
+ {
+  "id": "s-black-torch",
+  "type": "series",
+  "title": "BLACK TORCH",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream BLACK TORCH full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "u2rA2cjpk5k",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "BLACK TORCH (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/u2rA2cjpk5k/hqdefault.jpg",
+    "summary": "Watch the complete BLACK TORCH marathon with English subtitles.",
+    "yt": "u2rA2cjpk5k"
+   }
+  ],
+  "poster": "assets/posters/s-black-torch.webp",
+  "backdrop": "assets/backdrops/s-black-torch.webp",
+  "stream": null
+ },
+ {
+  "id": "s-the-world-is-dancing",
+  "type": "series",
+  "title": "THE WORLD IS DANCING",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream THE WORLD IS DANCING full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "WkHynft8XWo",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "THE WORLD IS DANCING (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/WkHynft8XWo/hqdefault.jpg",
+    "summary": "Watch the complete THE WORLD IS DANCING marathon with English subtitles.",
+    "yt": "WkHynft8XWo"
+   }
+  ],
+  "poster": "assets/posters/s-the-world-is-dancing.webp",
+  "backdrop": "assets/backdrops/s-the-world-is-dancing.webp",
+  "stream": null
+ },
+ {
+  "id": "s-the-world-s-strongest-rearguard",
+  "type": "series",
+  "title": "The World's Strongest Rearguard",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream The World's Strongest Rearguard full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "NSRzMNrH3fY",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "The World's Strongest Rearguard (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/NSRzMNrH3fY/hqdefault.jpg",
+    "summary": "Watch the complete The World's Strongest Rearguard marathon with English subtitles.",
+    "yt": "NSRzMNrH3fY"
+   }
+  ],
+  "poster": "assets/posters/s-the-world-s-strongest-rearguard.webp",
+  "backdrop": "assets/backdrops/s-the-world-s-strongest-rearguard.webp",
+  "stream": null
+ },
+ {
+  "id": "s-mushoku-tensei-jobless-reincarnation",
+  "type": "series",
+  "title": "Mushoku Tensei: Jobless Reincarnation",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Mushoku Tensei: Jobless Reincarnation full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "WSwizRmdofM",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Mushoku Tensei: Jobless Reincarnation Season 3 Part 1 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/WSwizRmdofM/hqdefault.jpg",
+    "summary": "Watch the complete Mushoku Tensei: Jobless Reincarnation Season 3 Part 1 marathon with English subtitles.",
+    "yt": "WSwizRmdofM"
+   }
+  ],
+  "poster": "assets/posters/s-mushoku-tensei-jobless-reincarnation.webp",
+  "backdrop": "assets/backdrops/s-mushoku-tensei-jobless-reincarnation.webp",
+  "stream": null
+ },
+ {
+  "id": "s-skeleton-knight-in-another-world",
+  "type": "series",
+  "title": "Skeleton Knight in Another World",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Skeleton Knight in Another World full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "t9aevrLkHA8",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Skeleton Knight in Another World Season 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/t9aevrLkHA8/hqdefault.jpg",
+    "summary": "Watch the complete Skeleton Knight in Another World Season 2 marathon with English subtitles.",
+    "yt": "t9aevrLkHA8"
+   }
+  ],
+  "poster": "assets/posters/s-skeleton-knight-in-another-world.webp",
+  "backdrop": "assets/backdrops/s-skeleton-knight-in-another-world.webp",
+  "stream": null
+ },
+ {
+  "id": "s-that-time-i-got-reincarnated-as-a-slime",
+  "type": "series",
+  "title": "That Time I Got Reincarnated as a Slime",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream That Time I Got Reincarnated as a Slime full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "xDr5LT4bQP4",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "That Time I Got Reincarnated as a Slime Season 4 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/xDr5LT4bQP4/hqdefault.jpg",
+    "summary": "Watch the complete That Time I Got Reincarnated as a Slime Season 4 marathon with English subtitles.",
+    "yt": "xDr5LT4bQP4"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "That Time I Got Reincarnated as a Slime Season 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/NNL56VNXHUk/hqdefault.jpg",
+    "summary": "Watch the complete That Time I Got Reincarnated as a Slime Season 2 marathon with English subtitles.",
+    "yt": "NNL56VNXHUk"
+   }
+  ],
+  "poster": "assets/posters/s-that-time-i-got-reincarnated-as-a-slime.webp",
+  "backdrop": "assets/backdrops/s-that-time-i-got-reincarnated-as-a-slime.webp",
+  "stream": null
+ },
+ {
+  "id": "s-hunter-x-hunter",
+  "type": "series",
+  "title": "Hunter x Hunter",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Hunter x Hunter full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "RYg5yd5n0E0",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "HUNTER×HUNTER (Hunter Exam Arc) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/RYg5yd5n0E0/hqdefault.jpg",
+    "summary": "Watch the complete HUNTER×HUNTER (Hunter Exam Arc) marathon with English subtitles.",
+    "yt": "RYg5yd5n0E0"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "HUNTER×HUNTER (Phantom Troupe Arc) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/rs1uGHBLsEw/hqdefault.jpg",
+    "summary": "Watch the complete HUNTER×HUNTER (Phantom Troupe Arc) marathon with English subtitles.",
+    "yt": "rs1uGHBLsEw"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "HUNTER×HUNTER (Greed Island Arc) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/XP5-kXlXmzc/hqdefault.jpg",
+    "summary": "Watch the complete HUNTER×HUNTER (Greed Island Arc) marathon with English subtitles.",
+    "yt": "XP5-kXlXmzc"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "HUNTER×HUNTER (Chimera Ant Arc Part 1) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/1LAt4c5Fpg8/hqdefault.jpg",
+    "summary": "Watch the complete HUNTER×HUNTER (Chimera Ant Arc Part 1) marathon with English subtitles.",
+    "yt": "1LAt4c5Fpg8"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "HUNTER×HUNTER (Chimera Ant Arc Part 2) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/XXRfDW6d_Js/hqdefault.jpg",
+    "summary": "Watch the complete HUNTER×HUNTER (Chimera Ant Arc Part 2) marathon with English subtitles.",
+    "yt": "XXRfDW6d_Js"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "HUNTER×HUNTER (Election Arc) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/3HpMdtFHgYc/hqdefault.jpg",
+    "summary": "Watch the complete HUNTER×HUNTER (Election Arc) marathon with English subtitles.",
+    "yt": "3HpMdtFHgYc"
+   }
+  ],
+  "poster": "assets/posters/s-hunter-x-hunter.webp",
+  "backdrop": "assets/backdrops/s-hunter-x-hunter.webp",
+  "stream": null
+ },
+ {
+  "id": "s-stardust-telepath",
+  "type": "series",
+  "title": "Stardust Telepath",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Stardust Telepath full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "o16tEePMNAc",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Stardust Telepath (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/o16tEePMNAc/hqdefault.jpg",
+    "summary": "Watch the complete Stardust Telepath marathon with English subtitles.",
+    "yt": "o16tEePMNAc"
+   }
+  ],
+  "poster": "assets/posters/s-stardust-telepath.webp",
+  "backdrop": "assets/backdrops/s-stardust-telepath.webp",
+  "stream": null
+ },
+ {
+  "id": "s-i-chu",
+  "type": "series",
+  "title": "I★CHU",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream I★CHU full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "8cpZ2JAZHoo",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "I★CHU (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/8cpZ2JAZHoo/hqdefault.jpg",
+    "summary": "Watch the complete I★CHU marathon with English subtitles.",
+    "yt": "8cpZ2JAZHoo"
+   }
+  ],
+  "poster": "assets/posters/s-i-chu.webp",
+  "backdrop": "assets/backdrops/s-i-chu.webp",
+  "stream": null
+ },
+ {
+  "id": "s-lucifer-and-biscuit-hammer",
+  "type": "series",
+  "title": "Lucifer and Biscuit Hammer",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Lucifer and Biscuit Hammer full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "0n9IfTPB2Cs",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Lucifer and Biscuit Hammer (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/0n9IfTPB2Cs/hqdefault.jpg",
+    "summary": "Watch the complete Lucifer and Biscuit Hammer marathon with English subtitles.",
+    "yt": "0n9IfTPB2Cs"
+   }
+  ],
+  "poster": "assets/posters/s-lucifer-and-biscuit-hammer.webp",
+  "backdrop": "assets/backdrops/s-lucifer-and-biscuit-hammer.webp",
+  "stream": null
+ },
+ {
+  "id": "s-junji-ito-collection",
+  "type": "series",
+  "title": "Junji Ito Collection",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Junji Ito Collection full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "lpujdYMSqkg",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Junji Ito Collection (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/lpujdYMSqkg/hqdefault.jpg",
+    "summary": "Watch the complete Junji Ito Collection marathon with English subtitles.",
+    "yt": "lpujdYMSqkg"
+   }
+  ],
+  "poster": "assets/posters/s-junji-ito-collection.webp",
+  "backdrop": "assets/backdrops/s-junji-ito-collection.webp",
+  "stream": null
+ },
+ {
+  "id": "s-momokuri",
+  "type": "series",
+  "title": "Momokuri",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Momokuri full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "erhAGo9ob-Q",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Momokuri (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/erhAGo9ob-Q/hqdefault.jpg",
+    "summary": "Watch the complete Momokuri marathon with English subtitles.",
+    "yt": "erhAGo9ob-Q"
+   }
+  ],
+  "poster": "assets/posters/s-momokuri.webp",
+  "backdrop": "assets/backdrops/s-momokuri.webp",
+  "stream": null
+ },
+ {
+  "id": "s-police-in-a-pod",
+  "type": "series",
+  "title": "Police in a Pod",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Police in a Pod full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "UYmnqR8dU24",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Police in a Pod (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/UYmnqR8dU24/hqdefault.jpg",
+    "summary": "Watch the complete Police in a Pod marathon with English subtitles.",
+    "yt": "UYmnqR8dU24"
+   }
+  ],
+  "poster": "assets/posters/s-police-in-a-pod.webp",
+  "backdrop": "assets/backdrops/s-police-in-a-pod.webp",
+  "stream": null
+ },
+ {
+  "id": "s-alice-zoroku",
+  "type": "series",
+  "title": "Alice & Zoroku",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Alice & Zoroku full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "fkkpHEj6Qn8",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Alice & Zoroku (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/fkkpHEj6Qn8/hqdefault.jpg",
+    "summary": "Watch the complete Alice & Zoroku marathon with English subtitles.",
+    "yt": "fkkpHEj6Qn8"
+   }
+  ],
+  "poster": "assets/posters/s-alice-zoroku.webp",
+  "backdrop": "assets/backdrops/s-alice-zoroku.webp",
+  "stream": null
+ },
+ {
+  "id": "s-matoi-the-sacred-slayer",
+  "type": "series",
+  "title": "Matoi the Sacred Slayer",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Matoi the Sacred Slayer full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "2S4REMFabJQ",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Matoi the Sacred Slayer (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/2S4REMFabJQ/hqdefault.jpg",
+    "summary": "Watch the complete Matoi the Sacred Slayer marathon with English subtitles.",
+    "yt": "2S4REMFabJQ"
+   }
+  ],
+  "poster": "assets/posters/s-matoi-the-sacred-slayer.webp",
+  "backdrop": "assets/backdrops/s-matoi-the-sacred-slayer.webp",
+  "stream": null
+ },
+ {
+  "id": "s-last-period-the-journey-to-the-end-of-the-",
+  "type": "series",
+  "title": "Last Period: The Journey To The End of The Despair",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Last Period: The Journey To The End of The Despair full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "EB_jY0vis1g",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Last Period: The Journey To The End of The Despair (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/EB_jY0vis1g/hqdefault.jpg",
+    "summary": "Watch the complete Last Period: The Journey To The End of The Despair marathon with English subtitles.",
+    "yt": "EB_jY0vis1g"
+   }
+  ],
+  "poster": "assets/posters/s-last-period-the-journey-to-the-end-of-the-.webp",
+  "backdrop": "assets/backdrops/s-last-period-the-journey-to-the-end-of-the-.webp",
+  "stream": null
+ },
+ {
+  "id": "s-girls-last-tour",
+  "type": "series",
+  "title": "Girls' Last Tour",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Girls' Last Tour full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "ATCELb2vNXo",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Girls' Last Tour (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/ATCELb2vNXo/hqdefault.jpg",
+    "summary": "Watch the complete Girls' Last Tour marathon with English subtitles.",
+    "yt": "ATCELb2vNXo"
+   }
+  ],
+  "poster": "assets/posters/s-girls-last-tour.webp",
+  "backdrop": "assets/backdrops/s-girls-last-tour.webp",
+  "stream": null
+ },
+ {
+  "id": "s-new-game",
+  "type": "series",
+  "title": "NEW GAME!",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream NEW GAME! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "PBH6E7xex_k",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "NEW GAME! (S1) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/PBH6E7xex_k/hqdefault.jpg",
+    "summary": "Watch the complete NEW GAME! (S1) marathon with English subtitles.",
+    "yt": "PBH6E7xex_k"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "NEW GAME!! (S2) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/4ap_mgqfvH8/hqdefault.jpg",
+    "summary": "Watch the complete NEW GAME!! (S2) marathon with English subtitles.",
+    "yt": "4ap_mgqfvH8"
+   }
+  ],
+  "poster": "assets/posters/s-new-game.webp",
+  "backdrop": "assets/backdrops/s-new-game.webp",
+  "stream": null
+ },
+ {
+  "id": "s-luck-logic",
+  "type": "series",
+  "title": "Luck & Logic",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Luck & Logic full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "4Gwdt3U51wU",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Luck & Logic (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/4Gwdt3U51wU/hqdefault.jpg",
+    "summary": "Watch the complete Luck & Logic marathon with English subtitles.",
+    "yt": "4Gwdt3U51wU"
+   }
+  ],
+  "poster": "assets/posters/s-luck-logic.webp",
+  "backdrop": "assets/backdrops/s-luck-logic.webp",
+  "stream": null
+ },
+ {
+  "id": "s-iroduku-the-world-in-colors",
+  "type": "series",
+  "title": "IRODUKU: The World in Colors",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream IRODUKU: The World in Colors full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "LotGvdiwcZ0",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "IRODUKU: The World in Colors (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/LotGvdiwcZ0/hqdefault.jpg",
+    "summary": "Watch the complete IRODUKU: The World in Colors marathon with English subtitles.",
+    "yt": "LotGvdiwcZ0"
+   }
+  ],
+  "poster": "assets/posters/s-iroduku-the-world-in-colors.webp",
+  "backdrop": "assets/backdrops/s-iroduku-the-world-in-colors.webp",
+  "stream": null
+ },
+ {
+  "id": "s-hina-logic",
+  "type": "series",
+  "title": "Hina Logic",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Hina Logic full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "PceIdg1ehLE",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Hina Logic (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/PceIdg1ehLE/hqdefault.jpg",
+    "summary": "Watch the complete Hina Logic marathon with English subtitles.",
+    "yt": "PceIdg1ehLE"
+   }
+  ],
+  "poster": "assets/posters/s-hina-logic.webp",
+  "backdrop": "assets/backdrops/s-hina-logic.webp",
+  "stream": null
+ },
+ {
+  "id": "s-bang-dream-yume-mita",
+  "type": "series",
+  "title": "BanG Dream! YUME∞MITA",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream BanG Dream! YUME∞MITA full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "K3LJSIXnYyA",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "BanG Dream! YUME∞MITA (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/K3LJSIXnYyA/hqdefault.jpg",
+    "summary": "Watch the complete BanG Dream! YUME∞MITA marathon with English subtitles.",
+    "yt": "K3LJSIXnYyA"
+   }
+  ],
+  "poster": "assets/posters/s-bang-dream-yume-mita.webp",
+  "backdrop": "assets/backdrops/s-bang-dream-yume-mita.webp",
+  "stream": null
+ },
+ {
+  "id": "s-tada-never-falls-in-love",
+  "type": "series",
+  "title": "Tada Never Falls In Love",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Tada Never Falls In Love full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "tv4wC9VE5Cg",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Tada Never Falls In Love (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/tv4wC9VE5Cg/hqdefault.jpg",
+    "summary": "Watch the complete Tada Never Falls In Love marathon with English subtitles.",
+    "yt": "tv4wC9VE5Cg"
+   }
+  ],
+  "poster": "assets/posters/s-tada-never-falls-in-love.webp",
+  "backdrop": "assets/backdrops/s-tada-never-falls-in-love.webp",
+  "stream": null
+ },
+ {
+  "id": "s-made-in-abyss",
+  "type": "series",
+  "title": "Made in Abyss",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Made in Abyss full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "UbjvZpJUIds",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Made in Abyss (S1) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/UbjvZpJUIds/hqdefault.jpg",
+    "summary": "Watch the complete Made in Abyss (S1) marathon with English subtitles.",
+    "yt": "UbjvZpJUIds"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Made in Abyss: The Golden City of the Scorching Sun (S2) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/AASJoiIBUxw/hqdefault.jpg",
+    "summary": "Watch the complete Made in Abyss: The Golden City of the Scorching Sun (S2) marathon with English subtitles.",
+    "yt": "AASJoiIBUxw"
+   }
+  ],
+  "poster": "assets/posters/s-made-in-abyss.webp",
+  "backdrop": "assets/backdrops/s-made-in-abyss.webp",
+  "stream": null
+ },
+ {
+  "id": "s-i-want-to-escape-from-princess-lessons",
+  "type": "series",
+  "title": "I Want to Escape from Princess Lessons",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream I Want to Escape from Princess Lessons full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "AyXyrsCXV0s",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "I Want to Escape from Princess Lessons (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/AyXyrsCXV0s/hqdefault.jpg",
+    "summary": "Watch the complete I Want to Escape from Princess Lessons marathon with English subtitles.",
+    "yt": "AyXyrsCXV0s"
+   }
+  ],
+  "poster": "assets/posters/s-i-want-to-escape-from-princess-lessons.webp",
+  "backdrop": "assets/backdrops/s-i-want-to-escape-from-princess-lessons.webp",
+  "stream": null
+ },
+ {
+  "id": "s-saiyuki-reload-zeroin",
+  "type": "series",
+  "title": "SAIYUKI RELOAD -ZEROIN-",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream SAIYUKI RELOAD -ZEROIN- full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "c2wWFi2oZM0",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "SAIYUKI RELOAD -ZEROIN- (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/c2wWFi2oZM0/hqdefault.jpg",
+    "summary": "Watch the complete SAIYUKI RELOAD -ZEROIN- marathon with English subtitles.",
+    "yt": "c2wWFi2oZM0"
+   }
+  ],
+  "poster": "assets/posters/s-saiyuki-reload-zeroin.webp",
+  "backdrop": "assets/backdrops/s-saiyuki-reload-zeroin.webp",
+  "stream": null
+ },
+ {
+  "id": "s-haigakura",
+  "type": "series",
+  "title": "HAIGAKURA",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream HAIGAKURA full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "-cz4QHvA9p4",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "HAIGAKURA (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/-cz4QHvA9p4/hqdefault.jpg",
+    "summary": "Watch the complete HAIGAKURA marathon with English subtitles.",
+    "yt": "-cz4QHvA9p4"
+   }
+  ],
+  "poster": "assets/posters/s-haigakura.webp",
+  "backdrop": "assets/backdrops/s-haigakura.webp",
+  "stream": null
+ },
+ {
+  "id": "s-jellyfish-can-t-swim-in-the-night",
+  "type": "series",
+  "title": "Jellyfish Can’t Swim in the Night",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Jellyfish Can’t Swim in the Night full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "FYxU6VQWxVU",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Jellyfish Can’t Swim in the Night (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/FYxU6VQWxVU/hqdefault.jpg",
+    "summary": "Watch the complete Jellyfish Can’t Swim in the Night marathon with English subtitles.",
+    "yt": "FYxU6VQWxVU"
+   }
+  ],
+  "poster": "assets/posters/s-jellyfish-can-t-swim-in-the-night.webp",
+  "backdrop": "assets/backdrops/s-jellyfish-can-t-swim-in-the-night.webp",
+  "stream": null
+ },
+ {
+  "id": "s-just-because",
+  "type": "series",
+  "title": "Just Because!",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Just Because! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "faUuReo9u34",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Just Because! (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/faUuReo9u34/hqdefault.jpg",
+    "summary": "Watch the complete Just Because! marathon with English subtitles.",
+    "yt": "faUuReo9u34"
+   }
+  ],
+  "poster": "assets/posters/s-just-because.webp",
+  "backdrop": "assets/backdrops/s-just-because.webp",
+  "stream": null
+ },
+ {
+  "id": "s-easygoing-territory-defense-by-the-optimis",
+  "type": "series",
+  "title": "Easygoing Territory Defense by the Optimistic Lord",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Easygoing Territory Defense by the Optimistic Lord full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "1V5E039lQ-Q",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Easygoing Territory Defense by the Optimistic Lord (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/1V5E039lQ-Q/hqdefault.jpg",
+    "summary": "Watch the complete Easygoing Territory Defense by the Optimistic Lord marathon with English subtitles.",
+    "yt": "1V5E039lQ-Q"
+   }
+  ],
+  "poster": "assets/posters/s-easygoing-territory-defense-by-the-optimis.webp",
+  "backdrop": "assets/backdrops/s-easygoing-territory-defense-by-the-optimis.webp",
+  "stream": null
+ },
+ {
+  "id": "s-chained-soldier",
+  "type": "series",
+  "title": "Chained Soldier",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Chained Soldier full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "BDJAuyetRKw",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Chained Soldier Season 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/BDJAuyetRKw/hqdefault.jpg",
+    "summary": "Watch the complete Chained Soldier Season 2 marathon with English subtitles.",
+    "yt": "BDJAuyetRKw"
+   }
+  ],
+  "poster": "assets/posters/s-chained-soldier.webp",
+  "backdrop": "assets/backdrops/s-chained-soldier.webp",
+  "stream": null
+ },
+ {
+  "id": "s-no-guns-life",
+  "type": "series",
+  "title": "No Guns Life",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream No Guns Life full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "A26RJmJDeGw",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "No Guns Life (Season 1) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/A26RJmJDeGw/hqdefault.jpg",
+    "summary": "Watch the complete No Guns Life (Season 1) marathon with English subtitles.",
+    "yt": "A26RJmJDeGw"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "No Guns Life (Season 2) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/n54QctomW7Q/hqdefault.jpg",
+    "summary": "Watch the complete No Guns Life (Season 2) marathon with English subtitles.",
+    "yt": "n54QctomW7Q"
+   }
+  ],
+  "poster": "assets/posters/s-no-guns-life.webp",
+  "backdrop": "assets/backdrops/s-no-guns-life.webp",
+  "stream": null
+ },
+ {
+  "id": "s-alderamin-on-the-sky",
+  "type": "series",
+  "title": "Alderamin on the Sky",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Alderamin on the Sky full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "ngGqbyFeCXg",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Alderamin on the Sky (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/ngGqbyFeCXg/hqdefault.jpg",
+    "summary": "Watch the complete Alderamin on the Sky marathon with English subtitles.",
+    "yt": "ngGqbyFeCXg"
+   }
+  ],
+  "poster": "assets/posters/s-alderamin-on-the-sky.webp",
+  "backdrop": "assets/backdrops/s-alderamin-on-the-sky.webp",
+  "stream": null
+ },
+ {
+  "id": "s-dr-ramune-mysterious-disease-specialist",
+  "type": "series",
+  "title": "Dr. Ramune -Mysterious Disease Specialist-",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Dr. Ramune -Mysterious Disease Specialist- full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "zdLV5VRhG-8",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Dr. Ramune -Mysterious Disease Specialist- (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/zdLV5VRhG-8/hqdefault.jpg",
+    "summary": "Watch the complete Dr. Ramune -Mysterious Disease Specialist- marathon with English subtitles.",
+    "yt": "zdLV5VRhG-8"
+   }
+  ],
+  "poster": "assets/posters/s-dr-ramune-mysterious-disease-specialist.webp",
+  "backdrop": "assets/backdrops/s-dr-ramune-mysterious-disease-specialist.webp",
+  "stream": null
+ },
+ {
+  "id": "s-armed-girl-s-machiavellism",
+  "type": "series",
+  "title": "Armed Girl's Machiavellism",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Armed Girl's Machiavellism full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "nMRx8py08I4",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Armed Girl's Machiavellism (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/nMRx8py08I4/hqdefault.jpg",
+    "summary": "Watch the complete Armed Girl's Machiavellism marathon with English subtitles.",
+    "yt": "nMRx8py08I4"
+   }
+  ],
+  "poster": "assets/posters/s-armed-girl-s-machiavellism.webp",
+  "backdrop": "assets/backdrops/s-armed-girl-s-machiavellism.webp",
+  "stream": null
+ },
+ {
+  "id": "s-hand-shakers",
+  "type": "series",
+  "title": "Hand Shakers",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Hand Shakers full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "C6JyLlgtx5w",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Hand Shakers (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/C6JyLlgtx5w/hqdefault.jpg",
+    "summary": "Watch the complete Hand Shakers marathon with English subtitles.",
+    "yt": "C6JyLlgtx5w"
+   }
+  ],
+  "poster": "assets/posters/s-hand-shakers.webp",
+  "backdrop": "assets/backdrops/s-hand-shakers.webp",
+  "stream": null
+ },
+ {
+  "id": "s-riddle-story-of-devil",
+  "type": "series",
+  "title": "Riddle Story of Devil",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Riddle Story of Devil full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "2iLtVq1OdjI",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Riddle Story of Devil (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/2iLtVq1OdjI/hqdefault.jpg",
+    "summary": "Watch the complete Riddle Story of Devil marathon with English subtitles.",
+    "yt": "2iLtVq1OdjI"
+   }
+  ],
+  "poster": "assets/posters/s-riddle-story-of-devil.webp",
+  "backdrop": "assets/backdrops/s-riddle-story-of-devil.webp",
+  "stream": null
+ },
+ {
+  "id": "s-shy",
+  "type": "series",
+  "title": "SHY",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream SHY full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "Df0QTXUSRos",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "SHY (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/Df0QTXUSRos/hqdefault.jpg",
+    "summary": "Watch the complete SHY marathon with English subtitles.",
+    "yt": "Df0QTXUSRos"
+   }
+  ],
+  "poster": "assets/posters/s-shy.webp",
+  "backdrop": "assets/backdrops/s-shy.webp",
+  "stream": null
+ },
+ {
+  "id": "s-candy-caries",
+  "type": "series",
+  "title": "CANDY CARIES",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream CANDY CARIES full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "w1Ghvdcz8nI",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "CANDY CARIES (Part 1) | EP01～12 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/w1Ghvdcz8nI/hqdefault.jpg",
+    "summary": "Watch the complete CANDY CARIES (Part 1) | EP01～12 marathon with English subtitles.",
+    "yt": "w1Ghvdcz8nI"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "CANDY CARIES (Part 2) | EP13～24 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/Ejo9O0fSKc0/hqdefault.jpg",
+    "summary": "Watch the complete CANDY CARIES (Part 2) | EP13～24 marathon with English subtitles.",
+    "yt": "Ejo9O0fSKc0"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "CANDY CARIES (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/_XWVmSFqbtA/hqdefault.jpg",
+    "summary": "Watch the complete CANDY CARIES marathon with English subtitles.",
+    "yt": "_XWVmSFqbtA"
+   }
+  ],
+  "poster": "assets/posters/s-candy-caries.webp",
+  "backdrop": "assets/backdrops/s-candy-caries.webp",
+  "stream": null
+ },
+ {
+  "id": "s-shiboyugi-playing-death-games-to-put-food-",
+  "type": "series",
+  "title": "SHIBOYUGI:  Playing Death Games to Put Food on the Table",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream SHIBOYUGI:  Playing Death Games to Put Food on the Table full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "WTWwI7_viH8",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "SHIBOYUGI:  Playing Death Games to Put Food on the Table (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/WTWwI7_viH8/hqdefault.jpg",
+    "summary": "Watch the complete SHIBOYUGI:  Playing Death Games to Put Food on the Table marathon with English subtitles.",
+    "yt": "WTWwI7_viH8"
+   }
+  ],
+  "poster": "assets/posters/s-shiboyugi-playing-death-games-to-put-food-.webp",
+  "backdrop": "assets/backdrops/s-shiboyugi-playing-death-games-to-put-food-.webp",
+  "stream": null
+ },
+ {
+  "id": "s-in-spectre",
+  "type": "series",
+  "title": "In/Spectre",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream In/Spectre full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "MzN3eQZm4Rw",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "In/Spectre Season 1 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/MzN3eQZm4Rw/hqdefault.jpg",
+    "summary": "Watch the complete In/Spectre Season 1 marathon with English subtitles.",
+    "yt": "MzN3eQZm4Rw"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "In/Spectre Season 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/AJNKrrLV9HA/hqdefault.jpg",
+    "summary": "Watch the complete In/Spectre Season 2 marathon with English subtitles.",
+    "yt": "AJNKrrLV9HA"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "In/Spectre (S1+S2) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/RHBsiOkQBos/hqdefault.jpg",
+    "summary": "Watch the complete In/Spectre (S1+S2) marathon with English subtitles.",
+    "yt": "RHBsiOkQBos"
+   }
+  ],
+  "poster": "assets/posters/s-in-spectre.webp",
+  "backdrop": "assets/backdrops/s-in-spectre.webp",
+  "stream": null
+ },
+ {
+  "id": "s-uq-holder",
+  "type": "series",
+  "title": "UQ Holder!",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream UQ Holder! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "mJFtEgkmGAI",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "UQ Holder! (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/mJFtEgkmGAI/hqdefault.jpg",
+    "summary": "Watch the complete UQ Holder! marathon with English subtitles.",
+    "yt": "mJFtEgkmGAI"
+   }
+  ],
+  "poster": "assets/posters/s-uq-holder.webp",
+  "backdrop": "assets/backdrops/s-uq-holder.webp",
+  "stream": null
+ },
+ {
+  "id": "s-uq-holder-oad",
+  "type": "series",
+  "title": "UQ Holder! OAD",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream UQ Holder! OAD full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "xFQPc1TmHlw",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "UQ Holder! OAD (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/xFQPc1TmHlw/hqdefault.jpg",
+    "summary": "Watch the complete UQ Holder! OAD marathon with English subtitles.",
+    "yt": "xFQPc1TmHlw"
+   }
+  ],
+  "poster": "assets/posters/s-uq-holder-oad.webp",
+  "backdrop": "assets/backdrops/s-uq-holder-oad.webp",
+  "stream": null
+ },
+ {
+  "id": "s-ushio-and-tora",
+  "type": "series",
+  "title": "Ushio and Tora",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Ushio and Tora full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "6ebj3yaT_gs",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Ushio and Tora (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/6ebj3yaT_gs/hqdefault.jpg",
+    "summary": "Watch the complete Ushio and Tora marathon with English subtitles.",
+    "yt": "6ebj3yaT_gs"
+   }
+  ],
+  "poster": "assets/posters/s-ushio-and-tora.webp",
+  "backdrop": "assets/backdrops/s-ushio-and-tora.webp",
+  "stream": null
+ },
+ {
+  "id": "s-momentary-lily",
+  "type": "series",
+  "title": "MOMENTARY LILY",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream MOMENTARY LILY full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "p267_jQCH8g",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "MOMENTARY LILY (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/p267_jQCH8g/hqdefault.jpg",
+    "summary": "Watch the complete MOMENTARY LILY marathon with English subtitles.",
+    "yt": "p267_jQCH8g"
+   }
+  ],
+  "poster": "assets/posters/s-momentary-lily.webp",
+  "backdrop": "assets/backdrops/s-momentary-lily.webp",
+  "stream": null
+ },
+ {
+  "id": "s-mob-psycho-100",
+  "type": "series",
+  "title": "Mob Psycho 100",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Mob Psycho 100 full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "WVawhUo84u0",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Mob Psycho 100 III (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/WVawhUo84u0/hqdefault.jpg",
+    "summary": "Watch the complete Mob Psycho 100 III marathon with English subtitles.",
+    "yt": "WVawhUo84u0"
+   }
+  ],
+  "poster": "assets/posters/s-mob-psycho-100.webp",
+  "backdrop": "assets/backdrops/s-mob-psycho-100.webp",
+  "stream": null
+ },
+ {
+  "id": "s-snowball-earth",
+  "type": "series",
+  "title": "Snowball Earth",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Snowball Earth full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "_Min5OGZ0GM",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Snowball Earth (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/_Min5OGZ0GM/hqdefault.jpg",
+    "summary": "Watch the complete Snowball Earth marathon with English subtitles.",
+    "yt": "_Min5OGZ0GM"
+   }
+  ],
+  "poster": "assets/posters/s-snowball-earth.webp",
+  "backdrop": "assets/backdrops/s-snowball-earth.webp",
+  "stream": null
+ },
+ {
+  "id": "s-always-a-catch",
+  "type": "series",
+  "title": "Always a Catch!",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Always a Catch! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "TpqrWOwgjVo",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Always a Catch! (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/TpqrWOwgjVo/hqdefault.jpg",
+    "summary": "Watch the complete Always a Catch! marathon with English subtitles.",
+    "yt": "TpqrWOwgjVo"
+   }
+  ],
+  "poster": "assets/posters/s-always-a-catch.webp",
+  "backdrop": "assets/backdrops/s-always-a-catch.webp",
+  "stream": null
+ },
+ {
+  "id": "s-hyouka",
+  "type": "series",
+  "title": "Hyouka",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Hyouka full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "lTAAB0xn3yY",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Hyouka (Part 1) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/lTAAB0xn3yY/hqdefault.jpg",
+    "summary": "Watch the complete Hyouka (Part 1) marathon with English subtitles.",
+    "yt": "lTAAB0xn3yY"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Hyouka (Part 2) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/l5PqcWRvyMk/hqdefault.jpg",
+    "summary": "Watch the complete Hyouka (Part 2) marathon with English subtitles.",
+    "yt": "l5PqcWRvyMk"
+   }
+  ],
+  "poster": "assets/posters/s-hyouka.webp",
+  "backdrop": "assets/backdrops/s-hyouka.webp",
+  "stream": null
+ },
+ {
+  "id": "s-dark-gathering",
+  "type": "series",
+  "title": "Dark Gathering",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Dark Gathering full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "fCpxHdFuXSI",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Dark Gathering (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/fCpxHdFuXSI/hqdefault.jpg",
+    "summary": "Watch the complete Dark Gathering marathon with English subtitles.",
+    "yt": "fCpxHdFuXSI"
+   }
+  ],
+  "poster": "assets/posters/s-dark-gathering.webp",
+  "backdrop": "assets/backdrops/s-dark-gathering.webp",
+  "stream": null
+ },
+ {
+  "id": "s-the-god-of-high-school",
+  "type": "series",
+  "title": "THE GOD OF HIGH SCHOOL",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream THE GOD OF HIGH SCHOOL full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "p_YbpHDBhzc",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "THE GOD OF HIGH SCHOOL (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/p_YbpHDBhzc/hqdefault.jpg",
+    "summary": "Watch the complete THE GOD OF HIGH SCHOOL marathon with English subtitles.",
+    "yt": "p_YbpHDBhzc"
+   }
+  ],
+  "poster": "assets/posters/s-the-god-of-high-school.webp",
+  "backdrop": "assets/backdrops/s-the-god-of-high-school.webp",
+  "stream": null
+ },
+ {
+  "id": "s-the-devil-is-a-part-timer-season-2-part-1",
+  "type": "series",
+  "title": "The DEVIL Is A Part-Timer! Season 2 Part 1",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream The DEVIL Is A Part-Timer! Season 2 Part 1 full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "ygzV9aFEbus",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "The DEVIL Is A Part-Timer! Season 2 Part 1 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/ygzV9aFEbus/hqdefault.jpg",
+    "summary": "Watch the complete The DEVIL Is A Part-Timer! Season 2 Part 1 marathon with English subtitles.",
+    "yt": "ygzV9aFEbus"
+   }
+  ],
+  "poster": "assets/posters/s-the-devil-is-a-part-timer-season-2-part-1.webp",
+  "backdrop": "assets/backdrops/s-the-devil-is-a-part-timer-season-2-part-1.webp",
+  "stream": null
+ },
+ {
+  "id": "s-the-devil-is-a-part-timer-season-2-part-2",
+  "type": "series",
+  "title": "The DEVIL Is A Part-Timer! Season 2 Part 2",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream The DEVIL Is A Part-Timer! Season 2 Part 2 full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "JycxA8eFQB4",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "The DEVIL Is A Part-Timer! Season 2 Part 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/JycxA8eFQB4/hqdefault.jpg",
+    "summary": "Watch the complete The DEVIL Is A Part-Timer! Season 2 Part 2 marathon with English subtitles.",
+    "yt": "JycxA8eFQB4"
+   }
+  ],
+  "poster": "assets/posters/s-the-devil-is-a-part-timer-season-2-part-2.webp",
+  "backdrop": "assets/backdrops/s-the-devil-is-a-part-timer-season-2-part-2.webp",
+  "stream": null
+ },
+ {
+  "id": "s-sasaki-and-peeps",
+  "type": "series",
+  "title": "Sasaki and Peeps",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Sasaki and Peeps full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "nwdEh2NddHI",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Sasaki and Peeps Season 1 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/nwdEh2NddHI/hqdefault.jpg",
+    "summary": "Watch the complete Sasaki and Peeps Season 1 marathon with English subtitles.",
+    "yt": "nwdEh2NddHI"
+   }
+  ],
+  "poster": "assets/posters/s-sasaki-and-peeps.webp",
+  "backdrop": "assets/backdrops/s-sasaki-and-peeps.webp",
+  "stream": null
+ },
+ {
+  "id": "s-and-you-thought-there-is-never-a-girl-onli",
+  "type": "series",
+  "title": "And You Thought There Is Never a Girl Online?",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream And You Thought There Is Never a Girl Online? full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "tXZwBM9RWVQ",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "And You Thought There Is Never a Girl Online? (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/tXZwBM9RWVQ/hqdefault.jpg",
+    "summary": "Watch the complete And You Thought There Is Never a Girl Online? marathon with English subtitles.",
+    "yt": "tXZwBM9RWVQ"
+   }
+  ],
+  "poster": "assets/posters/s-and-you-thought-there-is-never-a-girl-onli.webp",
+  "backdrop": "assets/backdrops/s-and-you-thought-there-is-never-a-girl-onli.webp",
+  "stream": null
+ },
+ {
+  "id": "s-lord-of-vermilion-the-crimson-king",
+  "type": "series",
+  "title": "Lord of Vermilion: The Crimson King",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Lord of Vermilion: The Crimson King full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "lpKkC_3J4fA",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Lord of Vermilion: The Crimson King (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/lpKkC_3J4fA/hqdefault.jpg",
+    "summary": "Watch the complete Lord of Vermilion: The Crimson King marathon with English subtitles.",
+    "yt": "lpKkC_3J4fA"
+   }
+  ],
+  "poster": "assets/posters/s-lord-of-vermilion-the-crimson-king.webp",
+  "backdrop": "assets/backdrops/s-lord-of-vermilion-the-crimson-king.webp",
+  "stream": null
+ },
+ {
+  "id": "s-cells-at-work",
+  "type": "series",
+  "title": "Cells at Work!",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Cells at Work! full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "K4miofrz2DM",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Cells at Work! (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/K4miofrz2DM/hqdefault.jpg",
+    "summary": "Watch the complete Cells at Work! marathon with English subtitles.",
+    "yt": "K4miofrz2DM"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Cells at Work!! (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/eO_ZxICOcW4/hqdefault.jpg",
+    "summary": "Watch the complete Cells at Work!! marathon with English subtitles.",
+    "yt": "eO_ZxICOcW4"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Cells at Work! CODE BLACK (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/_2hhVJa-AYI/hqdefault.jpg",
+    "summary": "Watch the complete Cells at Work! CODE BLACK marathon with English subtitles.",
+    "yt": "_2hhVJa-AYI"
+   }
+  ],
+  "poster": "assets/posters/s-cells-at-work.webp",
+  "backdrop": "assets/backdrops/s-cells-at-work.webp",
+  "stream": null
+ },
+ {
+  "id": "s-blast-of-tempest",
+  "type": "series",
+  "title": "Blast of Tempest",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Blast of Tempest full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "Rhk4819FCso",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Blast of Tempest (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/Rhk4819FCso/hqdefault.jpg",
+    "summary": "Watch the complete Blast of Tempest marathon with English subtitles.",
+    "yt": "Rhk4819FCso"
+   }
+  ],
+  "poster": "assets/posters/s-blast-of-tempest.webp",
+  "backdrop": "assets/backdrops/s-blast-of-tempest.webp",
+  "stream": null
+ },
+ {
+  "id": "s-ragna-crimson",
+  "type": "series",
+  "title": "Ragna Crimson",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Ragna Crimson full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "aDlEmGIrxZU",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Ragna Crimson (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/aDlEmGIrxZU/hqdefault.jpg",
+    "summary": "Watch the complete Ragna Crimson marathon with English subtitles.",
+    "yt": "aDlEmGIrxZU"
+   }
+  ],
+  "poster": "assets/posters/s-ragna-crimson.webp",
+  "backdrop": "assets/backdrops/s-ragna-crimson.webp",
+  "stream": null
+ },
+ {
+  "id": "s-spy-x-family",
+  "type": "series",
+  "title": "Spy x Family",
+  "year": 2024,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "action",
+   "fantasy"
+  ],
+  "rating": 8.1,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Stream Spy x Family full season marathon episodes in HD with English subtitles on Nikflix.",
+  "yt": "1EBKSwYWVSw",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "SPY×FAMILY (Season 1) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/1EBKSwYWVSw/hqdefault.jpg",
+    "summary": "Watch the complete SPY×FAMILY (Season 1) marathon with English subtitles.",
+    "yt": "1EBKSwYWVSw"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "SPY×FAMILY (Season 2) (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/0iSMAQw30_4/hqdefault.jpg",
+    "summary": "Watch the complete SPY×FAMILY (Season 2) marathon with English subtitles.",
+    "yt": "0iSMAQw30_4"
+   }
+  ],
+  "poster": "assets/posters/s-spy-x-family.webp",
+  "backdrop": "assets/backdrops/s-spy-x-family.webp",
+  "stream": null
+ },
+ {
   "id": "s-cyberpunk-edgerunners",
   "type": "series",
   "title": "Cyberpunk: Edgerunners",
@@ -1971,7 +5910,68 @@ window.CATALOG = [
   "backdrop": "assets/backdrops/s-attack-on-titan.webp",
   "tvmaze": 919,
   "imdb": "tt2560140",
-  "yt": "LV-nazLVmgo"
+  "yt": "KCG0wBFr3z8",
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Attack on Titan The Final Season Part 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/KCG0wBFr3z8/hqdefault.jpg",
+    "summary": "Watch the complete Attack on Titan The Final Season Part 2 marathon with English subtitles.",
+    "yt": "KCG0wBFr3z8"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Attack on Titan The Final Season Part 3 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/eY-rwYyWolM/hqdefault.jpg",
+    "summary": "Watch the complete Attack on Titan The Final Season Part 3 marathon with English subtitles.",
+    "yt": "eY-rwYyWolM"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Attack on Titan The Final Season Part 1 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/PO5OOi1kWqo/hqdefault.jpg",
+    "summary": "Watch the complete Attack on Titan The Final Season Part 1 marathon with English subtitles.",
+    "yt": "PO5OOi1kWqo"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Attack on Titan Season 3 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/QbaFu1hEPtU/hqdefault.jpg",
+    "summary": "Watch the complete Attack on Titan Season 3 marathon with English subtitles.",
+    "yt": "QbaFu1hEPtU"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Attack on Titan Season 2 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/dNZV3K7orZk/hqdefault.jpg",
+    "summary": "Watch the complete Attack on Titan Season 2 marathon with English subtitles.",
+    "yt": "dNZV3K7orZk"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "Attack on Titan Season 1 (Full Marathon) [ENG Sub]",
+    "runtime": 280,
+    "image": "https://img.youtube.com/vi/FU9-3Fmoh7w/hqdefault.jpg",
+    "summary": "Watch the complete Attack on Titan Season 1 marathon with English subtitles.",
+    "yt": "FU9-3Fmoh7w"
+   }
+  ],
+  "stream": null,
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ]
  },
  {
   "id": "s-death-note",

@@ -530,7 +530,7 @@
       }
 
       // MODE B: YouTube HD inside our custom Cyberpunk player (controlled by our own bottom bar, zero external redirects!)
-      if (activeMode === "yt" && item.yt) {
+      if (activeMode === "yt" && (currentYtId || item.yt)) {
         activeVideoEl = null;
         progressWrap.hidden = false;
         canvas.classList.remove("playing");
@@ -562,6 +562,12 @@
               if (ev.target.setPlaybackQuality) {
                 ev.target.setPlaybackQuality(resolution === "1080p" ? "hd1080" : "hd720");
               }
+              try {
+                if (subTrack !== "Off") {
+                  ev.target.loadModule?.("captions");
+                  ev.target.setOption?.("captions", "track", { languageCode: "en" });
+                }
+              } catch {}
               ev.target.playVideo();
               ytTimer = setInterval(() => {
                 if (!ytPlayer?.getCurrentTime) return;
@@ -878,6 +884,9 @@
       } else if (ep?.yt) {
         currentYtId = ep.yt;
       }
+      if (ep?.yt && !epStream) {
+        activeMode = "yt";
+      }
       syncWatchUrl();
       renderCanvas();
       renderEpisodeList();
@@ -970,7 +979,10 @@
         const curEp = episodes.find((x) => x.season === season && x.number === episode) || episodes[0];
         const initStream = (resolution === "720p" ? curEp?.stream720p : curEp?.stream1080p) || curEp?.streamUrl;
         if (initStream) currentStreamUrl = initStream;
-        if (curEp?.yt) currentYtId = curEp.yt;
+        if (curEp?.yt) {
+          currentYtId = curEp.yt;
+          if (!initStream) activeMode = "yt";
+        }
         updateEpisodeLabels();
         renderEpisodeList();
         return;
