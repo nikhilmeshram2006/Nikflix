@@ -1,6 +1,36 @@
 // Catalog data
 window.CATALOG = [
  {
+  "id": "m-sore-a-wife-from-future",
+  "type": "movie",
+  "title": "Sore: A Wife from the Future",
+  "year": 2017,
+  "genres": [
+   "romance",
+   "drama",
+   "fantasy",
+   "scifi"
+  ],
+  "rating": 8.4,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Original (5.1)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "Jonathan, a young Indonesian photographer living in Italy, has his life turned upside down when a mysterious woman named Sore suddenly appears in his bedroom claiming to be his wife from the future - sent back in time to change his habits and save his life before it is too late.",
+  "poster": "assets/posters/m-sore-a-wife-from-future.webp",
+  "backdrop": "assets/backdrops/m-sore-a-wife-from-future.webp",
+  "imdb": "tt10428144",
+  "yt": "KtobhWwWSx4",
+  "stream": null
+ },
+ {
   "id": "s-59746",
   "type": "series",
   "title": "The Empress (Die Kaiserin)",
