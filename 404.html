@@ -3,7 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <script>if (location.protocol !== "file:") { const b = location.hostname.endsWith(".github.io") && location.pathname.split("/").length > 2 ? "/" + location.pathname.split("/")[1] + "/" : "/"; document.write('<base href="' + b + '">'); }</script>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.tvmaze.com https://v3-cinemeta.strem.io https://api.github.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>
+    if (location.protocol !== "file:") {
+      const seg = location.pathname.split("/")[1] || "";
+      const b = location.hostname.endsWith(".github.io") && /^[a-zA-Z0-9._-]+$/.test(seg) ? "/" + seg + "/" : "/";
+      const base = document.createElement("base");
+      base.setAttribute("href", b);
+      document.head.appendChild(base);
+    }
+  </script>
   <title>Page Not Found (404) - Nikflix</title>
   <meta name="description" content="Sorry, the page you were looking for doesn't exist on Nikflix. Head back home or search for a movie or series.">
   <meta name="robots" content="noindex">

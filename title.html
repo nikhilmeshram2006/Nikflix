@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.tvmaze.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Title Details - Nikflix</title>
   <meta name="description" content="See the poster, synopsis, genres and trailer for this movie or series on Nikflix, and add it to your list.">
   <meta name="theme-color" content="#0b0b0b">
@@ -43,26 +45,7 @@
     let item = null;
     if (p.get("id")) {
       item = byId(p.get("id"));
-      if (!item) return notFound("Sorry, we couldn't find that movie or series. It may have been removed.");
-    } else if (/^\d+$/.test(p.get("tvmaze") || "")) {
-      // Live title from TVmaze (found through search)
-      const local = CATALOG.find((x) => x.tvmaze === +p.get("tvmaze"));
-      if (local) { location.replace("title.html?id=" + encodeURIComponent(local.id)); return; }
-      try {
-        const res = await fetch("https://api.tvmaze.com/shows/" + p.get("tvmaze"));
-        if (res.status === 404) return notFound("This series doesn't exist on TVmaze.");
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const s = await res.json();
-        item = {
-          id: "tvmaze-" + s.id, external: true, type: "series", title: s.name,
-          year: s.premiered ? +s.premiered.slice(0, 4) : null, rating: s.rating?.average || null,
-          genres: [], extGenres: s.genres || [],
-          desc: (s.summary || "No description available.").replace(/<[^>]+>/g, ""),
-          poster: s.image?.medium?.replace(/^http:/, "https:") || null, backdrop: null,
-        };
-      } catch {
-        return notFound("We couldn't load this series. Check your internet connection and try again.");
-      }
+      if (!item) return notFound("Sorry, this title is not available in the Nikflix catalog.");
     } else {
       return notFound("No title was selected. Pick something from Home or Search.");
     }

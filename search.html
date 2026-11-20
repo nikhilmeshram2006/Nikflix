@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; connect-src 'self' https://api.tvmaze.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Search Movies &amp; Series - Nikflix</title>
-  <meta name="description" content="Search Nikflix for movies, TV series and anime by title, genre or year. Find horror, romance, tragedy, sci-fi and more in seconds.">
+  <meta name="description" content="Search Nikflix for movies, TV series and anime by title, genre or year.">
   <meta name="theme-color" content="#0b0b0b">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.ico" sizes="32x32">
@@ -15,12 +17,12 @@
 <body data-page="search">
   <main id="main" class="container page">
     <h1 class="page-title">Search</h1>
-    <p class="page-sub">Find movies, series and anime by title, genre or year.</p>
+    <p class="page-sub">Find movies, series and anime available on Nikflix by title, genre or year.</p>
 
     <form class="search-box" id="search-form" role="search" action="search.html" method="get">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <label class="sr-only" for="q">Search movies and series</label>
-      <input id="q" name="q" type="search" placeholder="e.g. Naruto, horror, 2019..." autocomplete="off" autofocus>
+      <input id="q" name="q" type="search" placeholder="e.g. The Empress, Naruto, horror, 2022..." autocomplete="off" autofocus>
       <button class="icon-btn clear-btn" type="button" id="clear" aria-label="Clear search" hidden>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
@@ -33,14 +35,6 @@
     </div>
 
     <div id="results" aria-live="polite"></div>
-    <section class="section" id="live" hidden aria-labelledby="live-title">
-      <h2 id="live-title">More series from TVmaze</h2>
-      <div id="live-body"></div>
-    </section>
-    <section class="section" id="live-ia" hidden aria-labelledby="live-ia-title">
-      <h2 id="live-ia-title">Full-length streams from Internet Archive</h2>
-      <div id="live-ia-body"></div>
-    </section>
     <noscript><div class="notice error">Please enable JavaScript to search Nikflix.</div></noscript>
   </main>
 
@@ -48,16 +42,10 @@
   <script src="js/app.js"></script>
   <script>
   (function () {
-    const { $, $$, esc, CATALOG, CATEGORIES, search, gridHTML, emptyHTML, noticeHTML, debounce, params, cardHTML } = SF;
+    const { $, $$, esc, CATALOG, CATEGORIES, search, gridHTML, emptyHTML, debounce, params } = SF;
     const input = $("#q"), clear = $("#clear"), results = $("#results");
-    const live = $("#live"), liveBody = $("#live-body");
-    const liveIa = $("#live-ia"), liveIaBody = $("#live-ia-body");
     let type = ["movie", "series"].includes(params().get("type")) ? params().get("type") : "all";
     input.value = params().get("q") || "";
-
-    const knownTvmaze = new Set(CATALOG.filter((x) => x.tvmaze).map((x) => x.tvmaze));
-    const knownIa = new Set(CATALOG.filter((x) => x.ia).map((x) => x.ia));
-    let liveCtrl = null;
 
     const syncUrl = () => {
       const p = new URLSearchParams();
@@ -76,83 +64,21 @@
         results.innerHTML = `
           <h2 class="row-title" style="margin-bottom:10px">Popular genres</h2>
           <div class="chips">${CATEGORIES.map((c) => `<button class="chip" type="button" data-suggest="${esc(c.name)}">${esc(c.name)}</button>`).join("")}</div>
-          <h2 class="row-title" style="margin:18px 0 10px">Top picks for you</h2>
-          ${gridHTML(pool.slice(0, 24))}`;
-        live.hidden = true;
-        liveIa.hidden = true;
+          <h2 class="row-title" style="margin:18px 0 10px">Available on Nikflix (${pool.length})</h2>
+          ${gridHTML(pool.slice(0, 36))}`;
         return;
       }
 
       const found = search(q, type);
       results.innerHTML = found.length
         ? `<p class="result-count">${found.length} result${found.length === 1 ? "" : "s"} for "${esc(q)}"</p>${gridHTML(found)}`
-        : emptyHTML(`No results for "${q}"`, "Try a different title, a genre like <b>anime</b> or <b>horror</b>, or a year like <b>2019</b>.");
-      liveSearch(q);
+        : emptyHTML(`No results for "${q}"`, "Only movies and series added by the admin are available on Nikflix. Try another title or browse by category.");
     }
 
-    // Extra live results for series (TVmaze) and full-length movies/anime (Internet Archive).
-    const liveSearch = debounce(async (q) => {
-      if (q.length < 2) { live.hidden = true; liveIa.hidden = true; return; }
-      liveCtrl?.abort();
-      liveCtrl = new AbortController();
-
-      if (type !== "movie") {
-        live.hidden = false;
-        liveBody.innerHTML = '<div class="spinner" role="status" aria-label="Loading more results"></div>';
-        fetch("https://api.tvmaze.com/search/shows?q=" + encodeURIComponent(q), { signal: liveCtrl.signal })
-          .then((res) => { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
-          .then((data) => {
-            if (input.value.trim() !== q) return;
-            const items = data.map((r) => r.show)
-              .filter((s) => !knownTvmaze.has(s.id))
-              .slice(0, 14)
-              .map((s) => ({
-                id: "tvmaze-" + s.id, tvmaze: s.id, tvmazeOnly: true, type: "series", title: s.name,
-                year: s.premiered ? +s.premiered.slice(0, 4) : null, rating: s.rating?.average || null,
-                poster: s.image?.medium ? s.image.medium.replace(/^http:/, "https:") : null, genres: [],
-              }));
-            liveBody.innerHTML = items.length ? gridHTML(items) : `<p class="result-count">No extra series found on TVmaze for "${esc(q)}".</p>`;
-          })
-          .catch((err) => {
-            if (err.name === "AbortError") return;
-            liveBody.innerHTML = noticeHTML("error", "Couldn't load extra results from TVmaze.");
-          });
-      } else {
-        live.hidden = true;
-      }
-
-      liveIa.hidden = false;
-      liveIaBody.innerHTML = '<div class="spinner" role="status" aria-label="Loading Archive streams"></div>';
-      const iaQuery = `title:(${q.replace(/["():]/g, " ")}) AND mediatype:movies`;
-      const iaUrl = `https://archive.org/advancedsearch.php?q=${encodeURIComponent(iaQuery)}&fl[]=identifier,title,year&sort[]=downloads+desc&rows=12&output=json`;
-      fetch(iaUrl, { signal: liveCtrl.signal })
-        .then((res) => { if (!res.ok) throw new Error("HTTP " + res.status); return res.json(); })
-        .then((data) => {
-          if (input.value.trim() !== q) return;
-          const docs = (data.response?.docs || []).filter((d) => !knownIa.has(d.identifier));
-          const items = docs.map((d) => ({
-            id: "ia-" + d.identifier,
-            ia: d.identifier,
-            iaOnly: true,
-            type: "movie",
-            title: Array.isArray(d.title) ? d.title[0] : (d.title || d.identifier),
-            year: d.year ? parseInt(String(d.year).slice(0, 4), 10) : null,
-            rating: null,
-            poster: `https://archive.org/services/img/${encodeURIComponent(d.identifier)}`,
-            genres: [],
-          }));
-          liveIaBody.innerHTML = items.length ? gridHTML(items) : `<p class="result-count">No full-length streams found on Internet Archive for "${esc(q)}".</p>`;
-        })
-        .catch((err) => {
-          if (err.name === "AbortError") return;
-          liveIaBody.innerHTML = noticeHTML("error", "Couldn't load streams from Internet Archive.");
-        });
-    }, 450);
-
-    input.addEventListener("input", debounce(() => { syncUrl(); render(); }, 150));
+    input.addEventListener("input", debounce(() => { syncUrl(); render(); }, 120));
     $("#search-form").addEventListener("submit", (e) => {
       e.preventDefault();
-      if (!input.value.trim()) return; // app.js already shows the error message
+      if (!input.value.trim()) return;
       syncUrl(); render(); input.blur();
     });
     clear.addEventListener("click", () => { input.value = ""; syncUrl(); render(); input.focus(); });

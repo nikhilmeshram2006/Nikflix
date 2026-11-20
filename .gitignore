@@ -1,4 +1,24 @@
-__pycache__/
-*.pyc
-aaja
+# Environment and secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+secrets.*
+config.local.*
 
+# Logs, backups, and databases
+*.log
+*.bak
+*.tmp
+*.swp
+*.sqlite
+*.sqlite3
+*.db
+
+# Local tooling and OS files
+tools/
+__pycache__/
+.DS_Store
+Thumbs.db

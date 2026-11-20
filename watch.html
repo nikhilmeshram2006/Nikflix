@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.youtube.com https://s.ytimg.com; style-src 'self' 'unsafe-inline'; img-src 'self' https: data: blob:; media-src 'self' https: blob:; frame-src https:; connect-src 'self' https://api.tvmaze.com https://archive.org; base-uri 'self'; form-action 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Watch Now - Nikflix</title>
   <meta name="description" content="Watch full-length movies, TV series and anime episodes directly inside the Nikflix theater video player with popup shield and multi-server streaming.">
   <meta name="theme-color" content="#0b0b0b">
@@ -91,49 +93,9 @@
 
     if (p.get("id")) {
       item = byId(p.get("id"));
-      if (!item) return showError("Sorry, that movie or series couldn't be found in the catalog.");
-    } else if (/^\d+$/.test(p.get("tvmaze") || "")) {
-      const local = CATALOG.find((x) => x.tvmaze === +p.get("tvmaze"));
-      if (local) {
-        item = local;
-      } else {
-        try {
-          const res = await fetch("https://api.tvmaze.com/shows/" + p.get("tvmaze"));
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          const s = await res.json();
-          item = {
-            id: "tvmaze-" + s.id, tvmaze: s.id, external: true, type: "series", title: s.name,
-            year: s.premiered ? +s.premiered.slice(0, 4) : null, rating: s.rating?.average || null,
-            imdb: s.externals?.imdb || null, genres: [],
-            desc: (s.summary || "No description available.").replace(/<[^>]+>/g, ""),
-            poster: s.image?.medium?.replace(/^http:/, "https:") || null,
-          };
-        } catch {
-          return showError("Couldn't load series details from TVmaze.");
-        }
-      }
-    } else if (p.get("ia")) {
-      const iaId = p.get("ia");
-      try {
-        const res = await fetch("https://archive.org/metadata/" + encodeURIComponent(iaId));
-        if (!res.ok) throw new Error("HTTP " + res.status);
-        const m = await res.json();
-        const md = m.metadata || {};
-        const mp4 = (m.files || []).find((f) => /\.mp4$/i.test(f.name) && !f.name.includes("ia_thumb"));
-        item = {
-          id: "ia-" + iaId, ia: iaId, external: true, type: "movie",
-          title: p.get("title") || (Array.isArray(md.title) ? md.title[0] : md.title) || iaId,
-          year: md.year ? parseInt(String(md.year).slice(0, 4), 10) : null,
-          rating: null, genres: [],
-          desc: String(Array.isArray(md.description) ? md.description.join(" ") : md.description || "Full-length video from the Internet Archive.").replace(/<[^>]+>/g, "").slice(0, 360),
-          poster: `https://archive.org/services/img/${encodeURIComponent(iaId)}`,
-          stream: mp4 ? `https://archive.org/download/${encodeURIComponent(iaId)}/${encodeURIComponent(mp4.name)}` : null,
-        };
-      } catch {
-        return showError("Couldn't load video stream from the Internet Archive.");
-      }
+      if (!item) return showError("Sorry, that movie or series is not in the Nikflix catalog.");
     } else {
-      item = byId("s-cyberpunk-edgerunners") || CATALOG.find((x) => x.stream) || CATALOG[0];
+      item = byId("s-59746") || byId("s-cyberpunk-edgerunners") || CATALOG[0];
       if (!item) return showError("No title selected.");
     }
 
@@ -277,8 +239,6 @@
             </div>
             <div class="nx-top-actions">
               <div class="nx-srv-pills" id="nx-srv-pills" role="tablist" aria-label="Stream source"></div>
-              <label class="nx-badge nx-badge-btn" for="local-file-input" tabindex="0" role="button" title="Play a video file from your computer">Local File</label>
-              <input id="local-file-input" type="file" accept="video/*,.mkv" class="sr-only">
               <button type="button" class="nx-icon-circle" id="nx-open-drawer" aria-label="Toggle episode & settings panel" title="Toggle side panel">${P_ICONS.panel}</button>
             </div>
           </div>
@@ -339,25 +299,13 @@
 
             <button type="button" class="nx-menu-item" id="nx-btn-servers">
               ${P_ICONS.server}
-              <span>Stream Sources &amp; Custom URL</span>
+              <span>Stream Sources</span>
               <strong class="nx-menu-val" id="nx-srv-val">Auto</strong>
             </button>
             <div class="nx-inline-panel" id="nx-panel-servers" hidden>
               <div class="nx-panel-group">
-                <small>Switch Stream Source (Redirect-Shielded)</small>
+                <small>Switch Stream Source</small>
                 <div class="chips" id="drawer-srv-chips"></div>
-              </div>
-              <div class="nx-panel-group" id="ia-stream-group" hidden>
-                <small>Direct Archive.org MP4 Streams Found</small>
-                <div class="chips" id="ia-stream-chips"></div>
-              </div>
-              <div class="nx-panel-group">
-                <small>Or Paste Any Direct Video URL (.mp4 / .webm)</small>
-                <div style="display:flex;gap:6px">
-                  <label class="sr-only" for="custom-mp4-url">Direct video URL</label>
-                  <input id="custom-mp4-url" type="url" placeholder="https://example.com/video.mp4" style="flex:1;padding:6px 8px;background:#0b0b0b;border:1px solid #333;border-radius:4px;font-size:.76rem">
-                  <button type="button" class="chip active" id="custom-mp4-go">Play</button>
-                </div>
               </div>
             </div>
 
@@ -650,19 +598,17 @@
         return;
       }
 
-      // MODE C: Sandboxed Multi-Server Iframe (blocks all popups & redirects!)
+      // MODE C: Multi-Server Iframe
       activeVideoEl = null;
       progressWrap.hidden = true;
       timeEl.textContent = "LIVE STREAM · SHIELDED";
       const src = embedUrlFor(activeMode);
-      // Note: sandbox omits allow-popups and allow-top-navigation so clicking inside the player can NEVER redirect or open third-party sites!
       canvas.innerHTML = `
         <iframe
           src="${esc(src)}"
           title="Watch ${esc(item.title)}"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-presentation"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-          referrerpolicy="no-referrer"
+          referrerpolicy="origin"
           allowfullscreen></iframe>`;
     }
 
@@ -880,25 +826,6 @@
     $("#nx-srv-pills").addEventListener("click", handleModeClick);
     $("#drawer-srv-chips").addEventListener("click", handleModeClick);
 
-    $("#custom-mp4-go").addEventListener("click", () => {
-      const url = $("#custom-mp4-url").value.trim();
-      if (!url) { toast("Paste a direct .mp4 or .webm URL first.", "error"); return; }
-      currentStreamUrl = url;
-      activeMode = "direct";
-      toast("Playing custom video stream", "success");
-      renderCanvas();
-    });
-
-    $("#local-file-input").addEventListener("change", (e) => {
-      const file = e.target.files?.[0];
-      if (!file) return;
-      if (activeVideoBlobUrl) URL.revokeObjectURL(activeVideoBlobUrl);
-      activeVideoBlobUrl = URL.createObjectURL(file);
-      activeMode = "local";
-      toast(`Playing local file: ${file.name}`, "success");
-      renderCanvas();
-    });
-
     // Keyboard shortcuts
     document.addEventListener("keydown", (e) => {
       if (["INPUT", "SELECT", "TEXTAREA"].includes(e.target.tagName)) return;
@@ -909,52 +836,6 @@
       else if (e.key.toLowerCase() === "f") { e.preventDefault(); $("#v-fs").click(); }
       else if (e.key.toLowerCase() === "m") { e.preventDefault(); $("#v-mute").click(); }
     });
-
-    // Auto-Discover Direct MP4 Streams on Internet Archive
-    async function discoverArchiveMp4s() {
-      try {
-        const q = `title:(${item.title.replace(/["():]/g, " ")}) AND mediatype:movies`;
-        const url = `https://archive.org/advancedsearch.php?q=${encodeURIComponent(q)}&fl[]=identifier,title&sort[]=downloads+desc&rows=5&output=json`;
-        const res = await fetch(url);
-        if (!res.ok) return;
-        const data = await res.json();
-        const docs = data.response?.docs || [];
-        if (!docs.length) return;
-
-        discoveredIaStreams = docs.map((d) => ({ ia: d.identifier, title: Array.isArray(d.title) ? d.title[0] : (d.title || d.identifier) }));
-        renderSourcePills();
-
-        // Check the top Archive result for a direct .mp4 file
-        const topId = docs[0].identifier;
-        const mRes = await fetch("https://archive.org/metadata/" + encodeURIComponent(topId));
-        if (mRes.ok) {
-          const m = await mRes.json();
-          const mp4s = (m.files || []).filter((f) => /\.mp4$/i.test(f.name) && !f.name.includes("ia_thumb"));
-          if (mp4s.length) {
-            const directUrl = `https://archive.org/download/${encodeURIComponent(topId)}/${encodeURIComponent(mp4s[0].name)}`;
-            if (!item.stream) {
-              currentStreamUrl = directUrl;
-            }
-            const grp = $("#ia-stream-group");
-            const chips = $("#ia-stream-chips");
-            grp.hidden = false;
-            chips.innerHTML = mp4s.slice(0, 6).map((f, i) => {
-              const fUrl = `https://archive.org/download/${encodeURIComponent(topId)}/${encodeURIComponent(f.name)}`;
-              const shortName = f.name.replace(/\.mp4$/i, "").split("/").pop().slice(0, 28);
-              return `<button type="button" class="chip" data-mp4="${esc(fUrl)}">Stream ${i + 1}: ${esc(shortName)}</button>`;
-            }).join("");
-            chips.addEventListener("click", (e) => {
-              const b = e.target.closest("[data-mp4]");
-              if (!b) return;
-              currentStreamUrl = b.dataset.mp4;
-              activeMode = "direct";
-              toast("Switched to Archive.org direct MP4 stream", "success");
-              renderCanvas();
-            });
-          }
-        }
-      } catch {}
-    }
 
     // Load Episodes / Streams into Right Drawer
     function renderEpisodeList() {
@@ -1118,7 +999,6 @@
 
     await loadDrawerContent();
     renderCanvas();
-    discoverArchiveMp4s();
 
     // Similar titles row below the theater stage
     if (item.genres?.length) {
