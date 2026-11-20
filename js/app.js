@@ -320,23 +320,43 @@
     }
   }, true);
 
+  function editDist1OrSwap(a, b) {
+    if (a === b) return true;
+    if (Math.abs(a.length - b.length) > 1) return false;
+    if (a.length < 4 || b.length < 4) return false;
+    let i = 0, j = 0, diffs = 0;
+    while (i < a.length && j < b.length) {
+      if (a[i] === b[j]) { i++; j++; continue; }
+      if (++diffs > 1) return false;
+      if (a[i + 1] === b[j] && a[i] === b[j + 1]) { i += 2; j += 2; continue; }
+      if (a.length > b.length) i++;
+      else if (b.length > a.length) j++;
+      else { i++; j++; }
+    }
+    return true;
+  }
+
   function search(query, type = "all") {
     const q = norm(query);
     let list = type === "all" ? CATALOG : CATALOG.filter((x) => x.type === type);
     if (!q) return [];
+    const qCompact = q.replace(/ /g, "");
     const tokens = q.split(" ");
-    const catHits = CATEGORIES.filter((c) => norm(c.name) === q || c.key === q.replace(/ /g, "")).map((c) => c.key);
+    const catHits = CATEGORIES.filter((c) => norm(c.name) === q || c.key === qCompact).map((c) => c.key);
     return list
       .map((item) => {
         const t = norm(item.title);
+        const tCompact = t.replace(/ /g, "");
+        const tWords = t.split(" ");
         const genreText = item.genres.map((g) => norm(CAT_MAP[g]?.name || g) + " " + g).join(" ");
-        const hay = `${t} ${genreText} ${item.year || ""} ${item.type} ${norm(item.desc)}`;
+        const hay = `${t} ${tCompact} ${genreText} ${item.year || ""} ${item.type} ${norm(item.desc)}`;
         let score = 0;
-        if (t === q) score += 100;
-        else if (t.startsWith(q)) score += 60;
-        else if (t.includes(q)) score += 40;
+        if (t === q || tCompact === qCompact) score += 100;
+        else if (t.startsWith(q) || tCompact.startsWith(qCompact)) score += 60;
+        else if (t.includes(q) || (qCompact.length >= 3 && tCompact.includes(qCompact))) score += 45;
         if (catHits.some((k) => item.genres.includes(k))) score += 30;
-        if (tokens.every((tok) => hay.includes(tok))) score += 10 + tokens.filter((tok) => t.includes(tok)).length * 5;
+        const tokMatch = (tok) => hay.includes(tok) || tWords.some((w) => editDist1OrSwap(tok, w));
+        if (tokens.every(tokMatch)) score += 10 + tokens.filter((tok) => t.includes(tok) || tWords.some((w) => editDist1OrSwap(tok, w))).length * 5;
         return { item, score };
       })
       .filter((r) => r.score > 0)
