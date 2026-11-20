@@ -1,6 +1,163 @@
 // Catalog data
 window.CATALOG = [
  {
+  "id": "s-shikimoris-not-just-a-cutie",
+  "type": "series",
+  "title": "Shikimori's Not Just a Cutie",
+  "year": 2022,
+  "seasons": 1,
+  "genres": [
+   "anime",
+   "romance",
+   "comedy"
+  ],
+  "rating": 6.8,
+  "resolutions": [
+   "1080p",
+   "720p"
+  ],
+  "audio": [
+   "Japanese [Original] (2.0)"
+  ],
+  "subtitles": [
+   "English [CC]",
+   "Off"
+  ],
+  "desc": "The ultimate \"heartthrob girlfriend\" appears! Naturally unlucky high school student Izumi's girlfriend is his classmate Shikimori. She has a beautiful smile and kind personality and always seems happy when she's with Izumi. She's a pretty, cute, and loving girlfriend, but when Izumi's in trouble… she transforms into a super cool...",
+  "poster": "assets/posters/s-shikimoris-not-just-a-cutie.webp",
+  "backdrop": "assets/backdrops/s-shikimoris-not-just-a-cutie.webp",
+  "yt": "i3nhUubChP4",
+  "stream": null,
+  "episodes": [
+   {
+    "season": 1,
+    "number": 1,
+    "name": "Episode 1 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/i3nhUubChP4/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "i3nhUubChP4"
+   },
+   {
+    "season": 1,
+    "number": 2,
+    "name": "Episode 2 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/bm3qmO_FDE8/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "bm3qmO_FDE8"
+   },
+   {
+    "season": 1,
+    "number": 3,
+    "name": "Episode 3 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/UY6dI7UM4rM/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "UY6dI7UM4rM"
+   },
+   {
+    "season": 1,
+    "number": 4,
+    "name": "Episode 4 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/XzbBVqCJ4sw/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "XzbBVqCJ4sw"
+   },
+   {
+    "season": 1,
+    "number": 5,
+    "name": "Episode 5 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/5s0VjRUQJMY/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "5s0VjRUQJMY"
+   },
+   {
+    "season": 1,
+    "number": 6,
+    "name": "Episode 6 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Vf3Xs0C87Q0/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "Vf3Xs0C87Q0"
+   },
+   {
+    "season": 1,
+    "number": 7,
+    "name": "Episode 7 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/JBluGqYb808/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "JBluGqYb808"
+   },
+   {
+    "season": 1,
+    "number": 8,
+    "name": "Episode 8 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/-_PXo016mQ4/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "-_PXo016mQ4"
+   },
+   {
+    "season": 1,
+    "number": 9,
+    "name": "Episode 9 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/vcqhtQHRai0/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "vcqhtQHRai0"
+   },
+   {
+    "season": 1,
+    "number": 10,
+    "name": "Episode 10 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/JuMJYwwQGeQ/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "JuMJYwwQGeQ"
+   },
+   {
+    "season": 1,
+    "number": 11,
+    "name": "Episode 11 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/3JClUgop7_s/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "3JClUgop7_s"
+   },
+   {
+    "season": 1,
+    "number": 12,
+    "name": "Episode 12 [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/Tk-tpHwDvwQ/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "Tk-tpHwDvwQ"
+   },
+   {
+    "season": 1,
+    "number": 13,
+    "name": "Special Episode 1 (SP) [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/0i4rSfJEvdg/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "0i4rSfJEvdg"
+   },
+   {
+    "season": 1,
+    "number": 14,
+    "name": "Special Episode 2 (SP2) [English Sub]",
+    "runtime": 24,
+    "image": "https://img.youtube.com/vi/iONPY9CpewQ/hqdefault.jpg",
+    "summary": "Watch full episode of Shikimori's Not Just a Cutie with English subtitles.",
+    "yt": "iONPY9CpewQ"
+   }
+  ]
+ },
+ {
   "id": "s-chillin-in-another-world-lvl2",
   "type": "series",
   "title": "Chillin' in Another World with Level 2 Super Cheat Powers",
