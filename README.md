@@ -41,7 +41,7 @@ It runs entirely on vanilla HTML, CSS, and JavaScript (no frameworks or build st
 
 ### What's included
 
-- **106 curated titles** across 12 genres (`Anime`, `Horror`, `Romance`, `Tragedy`, `Action`, `Sci-Fi`, `Thriller`, `Crime`, `Comedy`, `Drama`, `Fantasy`, `Family`) with local WebP posters and backdrops.
+- **182 curated titles** across 12 genres (`Anime`, `Horror`, `Romance`, `Tragedy`, `Action`, `Sci-Fi`, `Thriller`, `Crime`, `Comedy`, `Drama`, `Fantasy`, `Family`) with local WebP posters and backdrops.
 - **Custom Theater Player (`watch.html`)** with a collapsible right-side drawer for switching seasons, episodes, servers, subtitles, playback speed, and cast info.
 - **Multi-Server Playback** supporting direct `.mp4` streams, YouTube embeds with custom timeline controls (-10s / +10s, scrub bar, volume, fullscreen), and fallback embed servers (VidSrc, SuperEmbed, AutoEmbed) with basic popup and redirect safeguards.
 - **Live Search** that queries the built-in catalog plus live series data from TVmaze and films from the Internet Archive.
