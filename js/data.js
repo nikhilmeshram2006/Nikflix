@@ -396,6 +396,7 @@ window.CATALOG = [
   "backdrop": "assets/backdrops/m-sore-a-wife-from-future.webp",
   "imdb": "tt10428144",
   "yt": "KtobhWwWSx4",
+  "subtitleFile": "assets/subtitles/m-sore-a-wife-from-future-en.vtt",
   "stream": null
  },
  {

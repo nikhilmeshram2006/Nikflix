@@ -12,7 +12,7 @@
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="css/style.css?v=20261121c">
+  <link rel="stylesheet" href="css/style.css?v=20261121d">
 </head>
 <body data-page="watch" class="watch-body">
   <main id="main" class="watch-main">
@@ -23,7 +23,7 @@
     <noscript><div class="container"><div class="notice error">Please enable JavaScript to use the Nikflix video player.</div></div></noscript>
   </main>
 
-  <script src="js/data.js?v=20261121"></script>
+  <script src="js/data.js?v=20261121d"></script>
   <script src="js/app.js?v=20261121b"></script>
   <script>
   (async function () {
@@ -120,8 +120,75 @@
     let iaFiles = [];
     let discoveredIaStreams = [];
     let currentEpName = item.type === "series" ? `Episode ${episode}` : item.title;
+    let customSubCues = [];
+    let lastSubText = "";
+
+    function parseVttTime(ts) {
+      const parts = ts.trim().split(":");
+      if (parts.length === 3) {
+        return Number(parts[0]) * 3600 + Number(parts[1]) * 60 + Number(parts[2].replace(",", "."));
+      }
+      if (parts.length === 2) {
+        return Number(parts[0]) * 60 + Number(parts[1].replace(",", "."));
+      }
+      return 0;
+    }
+
+    async function loadCustomSubtitles() {
+      customSubCues = [];
+      lastSubText = "";
+      if (!item.subtitleFile) return;
+      try {
+        const res = await fetch(item.subtitleFile);
+        if (!res.ok) return;
+        const text = (await res.text()).replace(/\r\n/g, "\n");
+        const blocks = text.split(/\n{2,}/);
+        for (const block of blocks) {
+          const lines = block.trim().split("\n");
+          const timeIdx = lines.findIndex((l) => l.includes("-->"));
+          if (timeIdx === -1) continue;
+          const [rawStart, rawEnd] = lines[timeIdx].split("-->");
+          const start = parseVttTime(rawStart);
+          const end = parseVttTime((rawEnd || "").trim().split(/\s+/)[0]);
+          const cueText = lines.slice(timeIdx + 1).join("\n").trim();
+          if (cueText && Number.isFinite(start) && Number.isFinite(end)) {
+            customSubCues.push({ start, end, text: cueText });
+          }
+        }
+      } catch {}
+    }
+
+    function renderCustomSubtitle(sec) {
+      const layer = $("#nx-sub-layer");
+      if (!layer) return;
+      if (subTrack === "Off" || !customSubCues.length || !Number.isFinite(sec)) {
+        if (lastSubText !== "") {
+          lastSubText = "";
+          layer.innerHTML = "";
+          layer.classList.remove("has-cue");
+        }
+        return;
+      }
+      const active = [];
+      for (let i = 0; i < customSubCues.length; i++) {
+        const c = customSubCues[i];
+        if (sec >= c.start && sec <= c.end) active.push(c.text);
+        else if (c.start > sec) break;
+      }
+      const joined = active.join("\n");
+      if (joined === lastSubText) return;
+      lastSubText = joined;
+      if (joined) {
+        layer.innerHTML = `<span class="nx-sub-line">${esc(joined)}</span>`;
+        layer.classList.add("has-cue");
+      } else {
+        layer.innerHTML = "";
+        layer.classList.remove("has-cue");
+      }
+    }
 
     function buildEnglishVttUrl() {
+      if (item.subtitleFile) return item.subtitleFile;
       if (activeSubBlobUrl) URL.revokeObjectURL(activeSubBlobUrl);
       const epObj = episodes.find((x) => x.season === season && x.number === episode);
       const epTitle = epObj ? `S${season}:E${episode} - ${epObj.name}` : item.title;
@@ -241,7 +308,7 @@
                 <button type="button" class="nx-badge nx-badge-btn${resolution === "720p" ? " active" : ""}" data-res="720p" title="Switch to 720p HD">720p HD</button>
                 <button type="button" class="nx-badge nx-badge-btn active" data-audio="English [Dub] (5.1)" title="Play with English Dubbed Audio + English Subtitles">EN Dub</button>
                 <button type="button" class="nx-badge nx-badge-btn" data-audio="Hindi [Dub] (5.1)" title="Play with Hindi Dubbed Audio + English Subtitles">Hindi Dub</button>
-                <span class="nx-badge" id="nx-top-sub-badge">${subTrack === "Off" ? "Subtitles OFF" : "EN Sub [CC]"}</span>
+                <button type="button" class="nx-badge nx-badge-btn${subTrack !== "Off" ? " active" : ""}" id="nx-top-sub-badge" title="Toggle English subtitles">${subTrack === "Off" ? "Subtitles OFF" : "EN Sub [CC]"}</button>
                 <button type="button" class="nx-badge nx-badge-btn nx-shield-badge active" id="nx-ad-shield-btn" title="YouTube Ad-Shield blocks tracking cookies, mutes & skips detected ad breaks">${P_ICONS.shield} Ad-Shield ON</button>
               </div>
             </div>
@@ -563,9 +630,11 @@
       // MODE B: Privacy-Enhanced YouTube Player (youtube-nocookie.com + Nikflix Ad-Shield + Clean Chrome Mask)
       if (activeMode === "yt" && (currentYtId || item.yt)) {
         activeVideoEl = null;
+        lastSubText = "";
         progressWrap.hidden = false;
         canvas.classList.remove("playing", "yt-live");
         const expectedVid = currentYtId || item.yt;
+        const hasCustomSubs = Boolean(item.subtitleFile);
         const progKey = `prog:${item.id}:s${season}e${episode}`;
         const savedStart = Math.max(0, Number(store.get(progKey, 0)) || 0);
         const coverBg = item.backdrop || item.poster || "";
@@ -587,6 +656,7 @@
             </div>
           </div>
           <div class="nx-click-shield" id="nx-yt-shield" title="Click to play or pause"></div>
+          ${hasCustomSubs ? '<div class="nx-sub-layer" id="nx-sub-layer" aria-live="polite"></div>' : ""}
           <div class="nx-ad-overlay" id="nx-ad-overlay" hidden>
             <strong>${P_ICONS.shield} Nikflix Ad-Shield Active</strong>
             <span>Blocking YouTube ad break and resuming your episode...</span>
@@ -630,7 +700,7 @@
             rel: 0,
             modestbranding: 1,
             iv_load_policy: 3,
-            cc_load_policy: subTrack === "Off" ? 0 : 1,
+            cc_load_policy: hasCustomSubs || subTrack === "Off" ? 0 : 1,
             cc_lang_pref: "en",
             hl: "en",
             playsinline: 1,
@@ -644,7 +714,7 @@
                 ev.target.setPlaybackQuality(resolution === "1080p" ? "hd1080" : "hd720");
               }
               try {
-                if (subTrack !== "Off") {
+                if (!hasCustomSubs && subTrack !== "Off") {
                   ev.target.loadModule?.("captions");
                   ev.target.setOption?.("captions", "track", { languageCode: "en" });
                 } else {
@@ -688,6 +758,7 @@
                     } catch {}
                   }
                   timeEl.textContent = "AD-SHIELD · SKIPPING";
+                  if (hasCustomSubs) renderCustomSubtitle(NaN);
                   return;
                 }
 
@@ -703,13 +774,14 @@
                 fill.style.width = `${pct.toFixed(2)}%`;
                 if (dur) seek.value = String(Math.round(pct * 10));
                 timeEl.textContent = `${fmtTime(cur)}  /  ${fmtTime(dur)}`;
+                if (hasCustomSubs) renderCustomSubtitle(cur);
 
                 const now = Date.now();
                 if (cur > 10 && now - lastSaveAt > 5000) {
                   lastSaveAt = now;
                   store.set(progKey, Math.floor(cur));
                 }
-              }, 300);
+              }, hasCustomSubs ? 150 : 300);
             },
             onStateChange: (ev) => {
               const st = ev.data;
@@ -720,7 +792,7 @@
               if (st === YT.PlayerState.PLAYING) {
                 hasStartedPlaying = true;
                 hideYtCoverSoon();
-                if (subTrack === "Off") {
+                if (hasCustomSubs || subTrack === "Off") {
                   try {
                     ev.target.unloadModule?.("captions");
                     ev.target.setOption?.("captions", "track", {});
@@ -802,14 +874,18 @@
       if (activeVideoEl) {
         activeVideoEl.currentTime = Math.max(0, activeVideoEl.currentTime - 10);
       } else if (ytPlayer?.getCurrentTime) {
-        ytPlayer.seekTo(Math.max(0, ytPlayer.getCurrentTime() - 10), true);
+        const nextT = Math.max(0, ytPlayer.getCurrentTime() - 10);
+        ytPlayer.seekTo(nextT, true);
+        if (item.subtitleFile) renderCustomSubtitle(nextT);
       }
     });
     $("#v-ff").addEventListener("click", () => {
       if (activeVideoEl) {
         activeVideoEl.currentTime = Math.min(activeVideoEl.duration || 0, activeVideoEl.currentTime + 10);
       } else if (ytPlayer?.getCurrentTime) {
-        ytPlayer.seekTo(Math.min(ytPlayer.getDuration() || 0, ytPlayer.getCurrentTime() + 10), true);
+        const nextT = Math.min(ytPlayer.getDuration() || 0, ytPlayer.getCurrentTime() + 10);
+        ytPlayer.seekTo(nextT, true);
+        if (item.subtitleFile) renderCustomSubtitle(nextT);
       }
     });
     $("#v-seek").addEventListener("input", (e) => {
@@ -818,7 +894,9 @@
       if (activeVideoEl && activeVideoEl.duration) {
         activeVideoEl.currentTime = pct * activeVideoEl.duration;
       } else if (ytPlayer?.getDuration) {
-        ytPlayer.seekTo(pct * ytPlayer.getDuration(), true);
+        const nextT = pct * ytPlayer.getDuration();
+        ytPlayer.seekTo(nextT, true);
+        if (item.subtitleFile) renderCustomSubtitle(nextT);
       }
     });
     $("#v-mute").addEventListener("click", () => {
@@ -1064,6 +1142,28 @@
       if (aBtn) applyAudioTrack(aBtn.dataset.audio);
     });
 
+    function applySubTrack(nextSub) {
+      subTrack = nextSub;
+      $("#nx-foot-sub").textContent = subTrack;
+      const topBadge = $("#nx-top-sub-badge");
+      if (topBadge) {
+        topBadge.textContent = subTrack === "Off" ? "Subtitles OFF" : "EN Sub [CC]";
+        topBadge.classList.toggle("active", subTrack !== "Off");
+      }
+      $$("[data-sub]").forEach((b) => b.classList.toggle("active", b.dataset.sub === subTrack));
+      if (activeVideoEl?.textTracks?.[0]) {
+        activeVideoEl.textTracks[0].mode = subTrack === "Off" ? "hidden" : "showing";
+      }
+      if (item.subtitleFile) {
+        renderCustomSubtitle(ytPlayer?.getCurrentTime ? ytPlayer.getCurrentTime() : NaN);
+      }
+      toast(`Subtitles: ${subTrack}`, "success");
+    }
+
+    $("#nx-top-sub-badge")?.addEventListener("click", () => {
+      applySubTrack(subTrack === "Off" ? "English [CC]" : "Off");
+    });
+
     $("#nx-panel-subs").addEventListener("click", (e) => {
       const rBtn = e.target.closest("[data-res]");
       if (rBtn) {
@@ -1077,13 +1177,7 @@
       }
       const sBtn = e.target.closest("[data-sub]");
       if (sBtn) {
-        subTrack = sBtn.dataset.sub;
-        $("#nx-foot-sub").textContent = subTrack;
-        $$("[data-sub]").forEach((b) => b.classList.toggle("active", b === sBtn));
-        if (activeVideoEl?.textTracks?.[0]) {
-          activeVideoEl.textTracks[0].mode = subTrack === "Off" ? "hidden" : "showing";
-        }
-        toast(`Subtitles: ${subTrack}`, "success");
+        applySubTrack(sBtn.dataset.sub);
       }
     });
 
@@ -1285,7 +1379,7 @@
       }).join("");
     }
 
-    await loadDrawerContent();
+    await Promise.all([loadDrawerContent(), loadCustomSubtitles()]);
     renderCanvas();
 
     // Similar titles row below the theater stage
